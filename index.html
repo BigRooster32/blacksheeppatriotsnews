@@ -360,3 +360,34 @@ a{color:inherit;text-decoration:none}.container{padding:20px;max-width:1220px;ma
 <p>Our mission is to cover local issues, coastal community life, faith, culture, national headlines, government accountability, public safety, weather, ocean conditions, and stories that matter to everyday people.</p>
 <p class="editor-note"><strong>Mission:</strong> Truth over comfort. Independent voice. Sourced reporting. Community-first coverage.</p>
 <p class="editor-note"><strong>Ownership:</strong> BlackSheep Patriots News is independently owned and oper
+
+<script>
+(function(){
+  function updateMothersDayCountdown(){
+    var target = new Date('2026-05-10T23:59:59-04:00').getTime();
+    var now = Date.now();
+    var distance = target - now;
+
+    var daysEl = document.getElementById('md-days');
+    var hoursEl = document.getElementById('md-hours');
+    var minsEl = document.getElementById('md-mins');
+    var secsEl = document.getElementById('md-secs');
+
+    if(!daysEl || !hoursEl || !minsEl || !secsEl){ return; }
+
+    if(distance <= 0){
+      daysEl.textContent = '0';
+      hoursEl.textContent = '0';
+      minsEl.textContent = '0';
+      secsEl.textContent = '0';
+      return;
+    }
+
+    daysEl.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+    hoursEl.textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minsEl.textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    secsEl.textContent = Math.floor((distance % (1000 * 60)) / 1000);
+  }
+
+  updateMothersDayCountdown();
+  setInterval(updateMother
