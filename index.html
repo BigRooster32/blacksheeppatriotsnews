@@ -26,10 +26,10 @@ body{margin:0;font-family:Arial;background:#050505;color:#fff;text-align:center}
 <div class="section">
 <h2>Mother's Day Countdown</h2>
 <div class="countdown">
-<div class="box"><span id="d">--</span>Days</div>
-<div class="box"><span id="h">--</span>Hours</div>
-<div class="box"><span id="m">--</span>Minutes</div>
-<div class="box"><span id="s">--</span>Seconds</div>
+<div class="box"><span id="days">--</span>Days</div>
+<div class="box"><span id="hours">--</span>Hours</div>
+<div class="box"><span id="minutes">--</span>Minutes</div>
+<div class="box"><span id="seconds">--</span>Seconds</div>
 </div>
 <a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Shop Now</a>
 </div>
@@ -37,20 +37,39 @@ body{margin:0;font-family:Arial;background:#050505;color:#fff;text-align:center}
 </div>
 
 <script>
-function countdown(){
-  const target=new Date("May 10, 2026 23:59:59").getTime();
-  const now=new Date().getTime();
-  const diff=target-now;
+(function () {
+  function updateCountdown() {
+    // Mother's Day 2026 ends at 11:59:59 PM Eastern Time
+    var target = new Date('2026-05-10T23:59:59-04:00').getTime();
+    var now = Date.now();
+    var diff = target - now;
 
-  if(diff<=0)return;
+    var days = document.getElementById('days');
+    var hours = document.getElementById('hours');
+    var minutes = document.getElementById('minutes');
+    var seconds = document.getElementById('seconds');
 
-  document.getElementById("d").innerText=Math.floor(diff/(1000*60*60*24));
-  document.getElementById("h").innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-  document.getElementById("m").innerText=Math.floor((diff%(1000*60*60))/(1000*60));
-  document.getElementById("s").innerText=Math.floor((diff%(1000*60))/1000);
-}
-setInterval(countdown,1000);
-countdown();
+    if (!days || !hours || !minutes || !seconds) return;
+
+    if (diff <= 0) {
+      days.textContent = '0';
+      hours.textContent = '0';
+      minutes.textContent = '0';
+      seconds.textContent = '0';
+      return;
+    }
+
+    days.textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+    hours.textContent = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes.textContent = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    seconds.textContent = Math.floor((diff % (1000 * 60)) / 1000);
+  }
+
+  window.addEventListener('load', function () {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+})();
 </script>
 
 </body>
