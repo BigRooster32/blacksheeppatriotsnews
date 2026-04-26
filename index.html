@@ -5,389 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackSheep Patriots News</title>
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;background-image:radial-gradient(circle at top center,rgba(120,0,0,.28),transparent 38%),linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.94)),url('https://i.imgur.com/DAVe5K2.png');background-size:cover;background-attachment:fixed;background-position:center}
-a{color:inherit;text-decoration:none}.container{padding:20px;max-width:1220px;margin:auto}.header{text-align:center;border-bottom:3px solid gold;padding-bottom:25px;margin-bottom:35px;background:linear-gradient(180deg,rgba(0,0,0,.88),rgba(60,0,0,.35));border:2px solid gold;border-radius:22px;padding:28px;box-shadow:0 0 35px rgba(255,215,0,.18)}.title{font-size:50px;font-weight:900;letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 14px rgba(255,215,0,.3),3px 3px 0 #8b0000}.tagline{color:#ccc}.nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}.nav a{border:1px solid gold;border-radius:999px;padding:10px 18px;background:rgba(0,0,0,.65)}.nav a:hover{background:gold;color:#000}.section{background:linear-gradient(180deg,rgba(10,10,10,.9),rgba(0,0,0,.82));border:2px solid gold;border-radius:22px;padding:26px;margin-bottom:25px;box-shadow:0 0 24px rgba(255,215,0,.18),inset 0 0 20px rgba(139,0,0,.18)}.breaking{background:linear-gradient(90deg,#4b0000,#b00000,#000,#b00000,#4b0000);border:3px solid gold;border-radius:18px;padding:18px;text-align:center;font-weight:900;letter-spacing:1.5px;margin-bottom:25px;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 18px rgba(255,215,0,.25);text-transform:uppercase;position:relative;overflow:hidden}.breaking:before{content:"LIVE • BREAKING • LIVE • BREAKING •";position:absolute;top:4px;left:0;right:0;font-size:11px;letter-spacing:4px;color:rgba(255,215,0,.45)}.breaking strong{color:#ffd700;font-size:20px;text-shadow:0 0 10px rgba(255,215,0,.45)}.grid{display:grid;gap:20px}.grid-2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(20,0,0,.32));border:1px solid rgba(255,215,0,.78);border-radius:18px;padding:20px;transition:.2s;box-shadow:inset 0 0 18px rgba(255,255,255,.03)}.card:hover{transform:translateY(-3px);box-shadow:0 0 18px rgba(255,215,0,.35)}.card h3,.article h3{color:#ff4d4d}.card span{color:gold;font-size:13px;text-transform:uppercase;letter-spacing:1px}.hero{padding:55px;text-align:center;background:radial-gradient(circle at center,rgba(255,215,0,.12),transparent 32%),linear-gradient(135deg,#020b20,#000,#7a0000);border-radius:24px;margin-bottom:30px;border:3px solid gold;box-shadow:0 0 35px rgba(255,215,0,.22);position:relative;overflow:hidden}.hero:before{content:"BLACKSHEEP PATRIOTS";position:absolute;inset:auto 0 12px 0;text-align:center;font-size:72px;font-weight:900;letter-spacing:6px;color:rgba(255,255,255,.035);pointer-events:none}.hero h1{font-size:68px;margin:0;text-transform:uppercase;letter-spacing:3px;text-shadow:3px 3px 0 #8b0000,0 0 18px rgba(255,215,0,.35)}.hero p{font-size:18px;color:#ddd}.button{display:inline-block;margin-top:12px;background:#b00000;color:white;border:1px solid gold;border-radius:12px;padding:12px 18px;font-weight:bold}.full-article{padding-top:20px;border-top:2px solid gold;margin-top:20px}.full-article h2{color:gold}.byline{color:#ccc;font-size:14px}.source{font-size:13px;color:#ddd;margin-top:10px}.source a{color:#ffd966;text-decoration:underline}.stat{font-size:28px;color:gold;font-weight:900}.editor-note{background:rgba(255,215,0,.08);border-left:4px solid gold;padding:12px;border-radius:10px;color:#eee}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 20px}.tabs a{background:#111;border:1px solid gold;border-radius:12px;padding:10px 14px}.video-box{background:#111;border:1px solid gold;border-radius:18px;padding:15px}.video-lead{background:linear-gradient(135deg,rgba(139,0,0,.85),rgba(0,0,0,.9));border:2px solid gold;border-radius:18px;padding:20px;margin-bottom:20px}.video-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.video-link{display:block;border:1px solid rgba(255,215,0,.7);border-radius:14px;padding:14px;background:rgba(255,255,255,.06);margin-top:10px}.video-link:hover{background:rgba(255,215,0,.16)}img{width:100%;border-radius:15px;border:2px solid gold}iframe{border:2px solid gold;border-radius:15px}.footer{text-align:center;color:#ccc;padding:30px}.bar-wrap{background:#222;border:1px solid rgba(255,215,0,.5);border-radius:999px;overflow:hidden;height:18px;margin:8px 0 14px}.bar{height:100%;background:linear-gradient(90deg,#8b0000,#ffd700);border-radius:999px}.mini-chart{display:flex;align-items:end;gap:8px;height:140px;margin:15px 0;padding:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,215,0,.5);border-radius:15px}.mini-chart div{flex:1;background:linear-gradient(180deg,#ffd700,#8b0000);border-radius:8px 8px 0 0;position:relative}.mini-chart div span{position:absolute;bottom:-24px;left:0;right:0;text-align:center;font-size:12px;color:#ddd}.chart-note{font-size:13px;color:#ccc;margin-top:28px}.positive{color:#7CFC00;font-weight:900}.negative{color:#ff6b6b;font-weight:900}.merch-banner{margin-top:25px;padding:15px;border:1px solid gold;border-radius:15px;background:rgba(255,255,255,.05);display:flex;align-items:center;gap:15px;justify-content:center;flex-wrap:wrap}.merch-banner img{width:80px;height:80px;object-fit:contain;border-radius:10px;border:1px solid gold}.product-img{height:260px;object-fit:contain;background:rgba(255,255,255,.05);padding:10px;box-sizing:border-box}.countdown-box{margin:18px auto;padding:16px;border:2px solid #ff4d4d;border-radius:18px;background:linear-gradient(135deg,rgba(139,0,0,.75),rgba(0,0,0,.85));box-shadow:0 0 22px rgba(255,0,0,.28);max-width:720px;text-align:center}.countdown-title{color:gold;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:1px}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.countdown-unit{border:1px solid gold;border-radius:12px;padding:10px;background:rgba(255,255,255,.06)}.countdown-number{display:block;font-size:28px;color:#fff;font-weight:900}.countdown-label{font-size:12px;color:#ffd966;text-transform:uppercase}@media(max-width:600px){.countdown-grid{grid-template-columns:repeat(2,1fr)}.title{font-size:32px;letter-spacing:2px}.hero{padding:32px 18px}.hero h1{font-size:42px}.nav a{font-size:13px;padding:8px 12px}.section{padding:18px}.breaking{font-size:13px}.merch-banner img{width:70px;height:70px}}
+body{margin:0;font-family:Arial;background:#050505;color:#fff;text-align:center}
+.container{max-width:1100px;margin:auto;padding:20px}
+.section{border:2px solid gold;border-radius:15px;padding:20px;margin:20px 0}
+.title{font-size:36px;font-weight:bold}
+.countdown{display:flex;justify-content:center;gap:10px;margin-top:15px}
+.box{border:1px solid gold;padding:10px;border-radius:10px}
+.box span{display:block;font-size:24px;font-weight:bold}
+.button{display:inline-block;margin-top:10px;padding:10px 15px;background:red;color:white;border-radius:8px}
 </style>
 </head>
 <body>
 <div class="container">
 
-<div class="header" id="top">
-<div class="title">BLACKSHEEP PATRIOTS NEWS ★ BIGROOSTER MEDIA</div>
-<p class="editor-note" style="max-width:850px;margin:14px auto 0 auto;"><strong>Independently owned and operated.</strong> Local-first coverage from Atlantic City with sourced national updates, coastal weather, faith, culture, and community reporting.</p>
-<p class="tagline">TRUTH OVER COMFORT • WE UP • INDEPENDENT VOICE</p>
-<div class="nav">
-<a href="#top">Home</a><a href="#dc-correspondents-shooting">Breaking DC</a><a href="#faith">Faith & God</a><a href="#shop">Shop</a><a href="#today">Today's Desk</a><a href="#local">Atlantic City</a><a href="#whitehouse">White House</a><a href="#defense">Pentagon/CENTCOM</a><a href="#economy">Economy</a><a href="#markets">Markets</a><a href="#weather">Weather/Ocean</a><a href="#videos">Videos</a><a href="#tips">Tips</a><a href="#support">Support</a><a href="#about">About</a><a href="#standards">Standards</a><a href="#advertise">Advertise</a><a href="#legal">Legal</a>
-</div>
+<div class="section">
+<div class="title">BLACKSHEEP PATRIOTS NEWS</div>
+<p>Independent Media • Truth Over Comfort • WE UP</p>
 </div>
 
-<div class="breaking"><strong>⚠ BREAKING NEWS ALERT</strong><br>Washington, D.C. security incident reported at the White House Correspondents’ Dinner — senior officials reported safe, suspect reportedly in custody, federal investigation developing.</div>
-
-<div class="section full-article" id="dc-correspondents-shooting">
-<h2>BREAKING: Shooting / Security Incident Reported at White House Correspondents’ Dinner</h2>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" alt="Donald Trump official portrait" style="margin:15px 0;width:100%;max-height:420px;object-fit:cover;display:block;">
-<p class="source">File Photo Credit: Official White House / Wikimedia Commons — Donald Trump official portrait. Used until verified event-specific imagery is released. CNN/Getty event images were not embedded because they are licensed news photos.</p>
-
-<div class="editor-note"><strong>Image update:</strong> A verified event-specific photo can be added here once a free-to-use official image is released. Until then, this article uses a stable official image so the story displays correctly without copyright risk.</div>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Updated: April 26, 2026 • Washington, D.C. • Developing</p>
-<p>Major outlets are reporting that the White House Correspondents’ Dinner at the Washington Hilton was disrupted by a shooting or security incident Saturday night. Early reporting says senior officials were secured or evacuated by law enforcement.</p>
-<p>Reuters and AP report that a suspect was taken into custody and that federal law enforcement responded quickly. Details on motive, final injury count, and exact timeline remain developing.</p>
-<p class="editor-note"><strong>Editorial standard:</strong> This is a developing story. BlackSheep Patriots News is treating early claims cautiously until confirmed by official statements from Secret Service, FBI, White House, or D.C. law enforcement.</p>
-<p class="source">Sources: <a href="https://www.reuters.com/world/us/trump-removed-white-house-correspondents-dinner-attendees-take-cover-2026-04-26/" target="_blank">Reuters</a> • <a href="https://apnews.com/article/a0a2446832e8596e66c6fccb8426c8aa" target="_blank">Associated Press</a> • <a href="https://www.foxnews.com/live-news/trump-attends-white-house-correspondents-dinner-for-first-time-as-president" target="_blank">Fox News live updates</a></p>
-<div style="margin:20px 0;padding:18px;border:2px solid gold;border-radius:18px;background:rgba(255,255,255,.06);">
-<h3 style="color:gold;margin-top:0;">Verified Video Source</h3>
-<p>The previous embedded video player was removed because AP/YouTube feeds do not always allow playlist-style embedding on outside websites. This button sends viewers directly to the reliable AP News video source instead of showing a broken player.</p>
-<a class="button" href="https://www.youtube.com/@AssociatedPress/videos" target="_blank">Watch AP News Video Updates</a>
-<a class="button" href="https://www.whitehouse.gov/videos/" target="_blank">Watch White House Official Videos</a>
-<p class="source">Sources: Associated Press video page • White House official videos. This avoids broken embeds and mismatched footage.</p>
+<div class="section">
+<h2>Mother's Day Countdown</h2>
+<div class="countdown">
+<div class="box"><span id="d">--</span>Days</div>
+<div class="box"><span id="h">--</span>Hours</div>
+<div class="box"><span id="m">--</span>Minutes</div>
+<div class="box"><span id="s">--</span>Seconds</div>
 </div>
-<a class="button" href="#top">Back to Top</a>
-</div>
-
-<div class="hero">
-<h1>TRUTH WITH TEETH</h1>
-<p><strong style="color:gold">No Fear. No Favor. Just Facts.</strong><br>Independent reporting, sourced briefs, local culture, faith, weather, and accountability from Atlantic City.</p>
-<a class="button" href="#dc-correspondents-shooting">Top Breaking Story</a> <a class="button" href="#today">Read Today's Desk</a> <a class="button" href="#tips">Submit a Tip</a>
-
-<div class="merch-banner">
-<img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day T-shirt merch product">
-<div>
-<strong style="color:gold">Limited Time Mother’s Day Drop</strong><br>
-<span style="font-size:13px;color:#ddd">Official BlackSheep Patriots merch</span><br>
 <a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Shop Now</a>
 </div>
-</div>
 
-<div class="countdown-box">
-<div class="countdown-title">Limited Time — Mother’s Day Drop</div>
-<div class="countdown-grid">
-<div class="countdown-unit"><span class="countdown-number" id="md-days">--</span><span class="countdown-label">Days</span></div>
-<div class="countdown-unit"><span class="countdown-number" id="md-hours">--</span><span class="countdown-label">Hours</span></div>
-<div class="countdown-unit"><span class="countdown-number" id="md-mins">--</span><span class="countdown-label">Minutes</span></div>
-<div class="countdown-unit"><span class="countdown-number" id="md-secs">--</span><span class="countdown-label">Seconds</span></div>
 </div>
-<p style="margin:10px 0 0 0;color:#ddd;font-size:14px;">Order early for Mother’s Day — available while the drop is live.</p>
-</div>
-</div>
-
-<div class="section" id="faith">
-<h2>Faith & God</h2>
-<p class="editor-note">A dedicated daily section for prayer, encouragement, gratitude, strength, family, community, and keeping faith at the center of the mission.</p>
-
-<div class="grid grid-3">
-<div class="card">
-<span>Daily Scripture</span>
-<h3>Psalm 46:1</h3>
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Peaceful sunrise landscape">
-<p>“God is our refuge and strength, an ever-present help in trouble.”</p>
-<p class="source">Daily message: Strength through faith, truth, and courage.</p>
-</div>
-
-<div class="card">
-<span>Daily Prayer</span>
-<h3>Prayer for Strength</h3>
-<img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1200&auto=format&fit=crop" alt="Sunlight through trees">
-<p>Lord, guide my steps today. Give me wisdom, discipline, courage, patience, and peace. Help me speak truth with grace, protect my family, serve my community, and use this platform for good. Amen.</p>
-</div>
-
-<div class="card">
-<span>Positive Quote</span>
-<h3>Today’s Encouragement</h3>
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop" alt="Mountains with sunlight">
-<p>Stay grounded. Stay grateful. Keep moving with purpose. One faithful step at a time still moves you forward.</p>
-</div>
-</div>
-
-<h3>Faith-Focused Daily Notes</h3>
-<div class="grid grid-3">
-<div class="card"><span>Family</span><h3>Protect What Matters</h3><p>Faith starts at home: love your people, forgive when possible, lead with patience, and stay present.</p></div>
-<div class="card"><span>Purpose</span><h3>Built for More</h3><p>Every setback can become training. Keep building, keep praying, and keep your mission clean.</p></div>
-<div class="card"><span>Community</span><h3>Prayer Requests</h3><p>Send prayer requests, testimonies, encouragement, or positive local stories to <a href="mailto:BigRooster32@icloud.com">BigRooster32@icloud.com</a>.</p></div>
-</div>
-
-<div class="card" style="margin-top:20px;text-align:center;border:2px solid gold;">
-<span>BlackSheep Patriots Faith Message</span>
-<h3>Truth With Grace</h3>
-<p>BlackSheep Patriots News stands for truth, but truth should be carried with discipline, humility, responsibility, and faith. We report hard stories while still believing in redemption, family, and better days ahead.</p>
-</div>
-</div>
-
-<div class="section" id="founder">
-<h2>Founder Spotlight</h2>
-<div class="grid grid-2"><img src="https://i.imgur.com/YCghQCd.jpeg" alt="Founder photo"><img src="https://i.imgur.com/4bWhXsJ.jpeg" alt="Founder photo"><img src="https://i.imgur.com/jP8rFL3.jpeg" alt="Founder photo"><img src="https://i.imgur.com/TLIfR7w.png" alt="Founder photo"></div>
-<p><strong>Zachary J. Blum (BigRooster)</strong> — Independent journalist and founder of BlackSheep Patriots News.</p>
-</div>
-
-<div class="section" id="shop">
-<h2>Merch</h2>
-<p class="editor-note">Official BlackSheep Patriots merch. Simple, direct, and supports the platform.</p>
-
-<div class="card" style="margin-bottom:20px;border:2px solid #ff4d4d;box-shadow:0 0 24px rgba(255,0,0,.25);">
-<span>Newest Drop</span>
-<h3>Mother’s Day T-Shirt — Patriot Mom Edition</h3>
-<img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day BlackSheep Patriots T-shirt" style="height:360px;">
-<p><strong>New Mother’s Day shirt now available.</strong> Patriot Mom design with pink sleeves, rooster graphic, and BlackSheep Patriots message.</p>
-<a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View Pink Mother’s Day Shirt in Store</a>
-</div>
-
-<div class="grid grid-3">
-<div class="card"><span>Official Merch</span><h3>Item #1</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-279-69ed653a05d86__360" alt="Product 1"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div>
-<div class="card"><span>Official Merch</span><h3>Item #2</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-960-69ed658061f68__360" alt="Product 2"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div>
-<div class="card"><span>New Drop</span><h3>Mother’s Day T-Shirt</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day BlackSheep Patriots T-shirt"><p>New Mother’s Day BlackSheep Patriots shirt now available.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div>
-</div>
-
-<div style="text-align:center;margin-top:15px"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Open Store</a></div>
-</div>
-
-<div class="section" id="today">
-<h2>Today's Desk — Organized by Beat</h2>
-<p class="editor-note"><strong>Homepage focus:</strong> Breaking news first, then the daily desk. Stories are labeled by beat and should be updated as new facts are verified.</p>
-<div class="tabs"><a href="#local">Local</a><a href="#whitehouse">White House</a><a href="#defense">Defense</a><a href="#economy">Economy</a><a href="#markets">Markets</a><a href="#weather">Weather/Ocean</a><a href="#videos">Videos</a></div>
-<div class="grid grid-3">
-<a class="card" href="#local"><span>Atlantic City Press</span><h3>Atlantic Avenue paving enters final phase</h3><p>Roadwork impacts drivers, residents, businesses, and tourism movement through the city.</p></a>
-<a class="card" href="#kane"><span>Entertainment</span><h3>Kane Brown boosts AC nightlife</h3><p>Hard Rock Live concert adds national music attention to Atlantic City's entertainment economy.</p></a>
-<a class="card" href="#whitehouse"><span>WhiteHouse.gov</span><h3>Official White House briefings</h3><p>State visit items, official remarks, and the 2026 Economic Report are tracked here.</p></a>
-<a class="card" href="#defense"><span>CENTCOM</span><h3>Maritime blockade updates</h3><p>Official releases report U.S. forces enforcing blockade activity in the Arabian Sea region.</p></a>
-<a class="card" href="#economy"><span>U.S. Economy</span><h3>GDP, jobs, CPI, claims</h3><p>Official statistics show slower GDP growth, steady unemployment, and inflation pressure.</p></a>
-<a class="card" href="#weather"><span>Coastal Weather</span><h3>South Jersey shore watch</h3><p>Atlantic County weather, wind, tides, swell, surf, and rip current awareness.</p></a>
-</div>
-</div>
-
-<div class="section full-article" id="local">
-<h2>Atlantic City Watch: Weekend Events & Kane Brown Highlight</h2>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Updated: April 26, 2026 • Atlantic City Events Desk</p>
-<p>Atlantic City’s weekend entertainment schedule brought live shows, casino traffic, nightlife, and national music attention to the Boardwalk. The biggest entertainment highlight was Kane Brown’s Atlantic City stop at Hard Rock Live at Etess Arena.</p>
-
-<h3>Happening Today — Sunday, April 26</h3>
-<div class="grid grid-3">
-<div class="card"><span>Show</span><h3>80's Live</h3><p><strong>Time:</strong> 4:00 PM<br><strong>Venue:</strong> Harrah's Atlantic City<br>Throwback live entertainment for visitors looking for music, nostalgia, and casino-night activity.</p></div>
-<div class="card"><span>Show</span><h3>The Hook</h3><p><strong>Time:</strong> 7:00 PM<br><strong>Venue:</strong> The Hook at Caesars Atlantic City<br>A nightlife-style performance option inside one of Atlantic City's major casino destinations.</p></div>
-<div class="card"><span>Live Music</span><h3>Audio Riot at Lobby Bar</h3><p><strong>Time:</strong> 4:00 PM – 7:30 PM<br><strong>Venue:</strong> Hard Rock Hotel & Casino Atlantic City<br>Live casino-bar entertainment for visitors already near the Boardwalk.</p></div>
-</div>
-
-<h3>Tomorrow — Monday, April 27</h3>
-<div class="grid grid-3">
-<div class="card"><span>Comedy</span><h3>AC Jokes</h3><p><strong>Time:</strong> 8:00 PM<br><strong>Venue:</strong> Resorts Atlantic City — The Screening Room<br>Monday night comedy option for locals and visitors.</p></div>
-<div class="card"><span>Culture</span><h3>Atlantic City Walk of Fame Class of 2026</h3><p><strong>Date:</strong> April 27<br><strong>Category:</strong> Local culture / entertainment<br>Recognition connected to Atlantic City's entertainment identity.</p></div>
-<div class="card"><span>Visitor Note</span><h3>Plan Around Weather & Parking</h3><p>Check parking, casino event details, roadwork, and coastal wind conditions before heading into the city.</p></div>
-</div>
-
-<h3>Kane Brown Atlantic City Weekend Highlight</h3>
-<p>Kane Brown performed in Atlantic City at Hard Rock Live at Etess Arena on April 24, adding major national country music attention to the city’s entertainment calendar. Major concerts like this help drive hotel traffic, casino activity, restaurants, parking, nightlife, and Boardwalk energy.</p>
-
-<div class="video-box" style="margin:20px 0;">
-<span>Working Video</span>
-<h3>Kane Brown — Official Video</h3>
-<iframe width="100%" height="360" src="https://www.youtube.com/embed/dRX0wDNK6S4" title="Kane Brown - Heaven Official Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<p class="source">Video Source: KaneBrownVEVO / YouTube — official Kane Brown music video used as a stable, working related video. This is not presented as footage from the Atlantic City concert.</p>
-</div>
-
-<div class="grid grid-3">
-<div class="video-box"><span>Kane Brown</span><h3>Official Artist Source</h3><p>Verified tour, music, and media updates from Kane Brown’s official site.</p><a class="video-link" href="https://www.kanebrownmusic.com/" target="_blank">Open Kane Brown Official</a></div>
-<div class="video-box"><span>Venue Source</span><h3>Hard Rock AC Events</h3><p>Official venue source for Hard Rock Atlantic City events and entertainment updates.</p><a class="video-link" href="https://casino.hardrock.com/atlantic-city/event-calendar" target="_blank">Open Hard Rock AC Calendar</a></div>
-<div class="video-box"><span>Local Event Source</span><h3>Visit Atlantic City</h3><p>Official tourism/event source for Atlantic City entertainment and visitor planning.</p><a class="video-link" href="https://www.visitatlanticcity.com/events/" target="_blank">Open Visit Atlantic City Events</a></div>
-</div>
-
-<p><strong>BigRooster angle:</strong> Entertainment is local economic activity. The story to watch is how much major-event traffic benefits small businesses, workers, restaurants, parking, and the broader Atlantic City community beyond the casino floor.</p>
-<p class="source">Sources: <a href="https://www.atlanticcity.com/atlantic-city-shows-april-2026" target="_blank">AtlanticCity.com April events</a> • <a href="https://casino.hardrock.com/atlantic-city/event-calendar" target="_blank">Hard Rock Atlantic City event calendar</a> • <a href="https://www.greatdayatlanticcity.com/events" target="_blank">Great Day Atlantic City events</a> • <a href="https://www.kanebrownmusic.com/" target="_blank">Kane Brown official</a></p>
-<a class="button" href="#today">Back to Today's Desk</a>
-</div>
-
-<div class="section full-article" id="whitehouse">
-<h2>White House Desk: Official releases and economic messaging</h2>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Updated: April 26, 2026 • Official Source Brief</p>
-<p>The White House briefings page lists official items including presidential remarks, official statements, and economic releases. Official messaging should be reported clearly, then compared with independent data such as jobs, inflation, GDP, household costs, and local impact.</p>
-<p class="source">Sources: <a href="https://www.whitehouse.gov/briefings-statements/" target="_blank">White House briefings</a> • <a href="https://www.whitehouse.gov/videos/" target="_blank">White House videos</a></p>
-<a class="button" href="#today">Back to Today's Desk</a>
-</div>
-
-<div class="section full-article" id="defense">
-<h2>Pentagon / CENTCOM Desk: Maritime and Middle East updates</h2>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Updated: April 26, 2026 • Pentagon / CENTCOM Desk</p>
-<p>U.S. Central Command's releases include maritime, regional, and operational updates. Defense reporting should separate official statements from independent confirmation while watching effects on shipping, oil prices, service members, and regional stability.</p>
-<p class="source">Sources: <a href="https://www.centcom.mil/MEDIA/PRESS-RELEASES/" target="_blank">CENTCOM press releases</a> • <a href="https://www.centcom.mil/MEDIA/VIDEO-AND-IMAGERY/VIDEOS/" target="_blank">CENTCOM videos</a></p>
-<a class="button" href="#today">Back to Today's Desk</a>
-</div>
-
-<div class="section" id="economy">
-<h2>U.S. Economy Board</h2>
-<div class="grid grid-4">
-<div class="card"><span>GDP</span><h3>Real GDP</h3><p class="stat">+0.5%</p><div class="bar-wrap"><div class="bar" style="width:12%"></div></div><p>BEA reported Q4 2025 real GDP increased at a 0.5% annual rate.</p><p class="source"><a href="https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th" target="_blank">Source: BEA</a></p></div>
-<div class="card"><span>Jobs</span><h3>Unemployment</h3><p class="stat">4.3%</p><div class="bar-wrap"><div class="bar" style="width:43%"></div></div><p>BLS reported March unemployment changed little at 4.3% with 178,000 jobs added.</p><p class="source"><a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">Source: BLS</a></p></div>
-<div class="card"><span>Prices</span><h3>CPI Inflation</h3><p class="stat">3.3%</p><div class="bar-wrap"><div class="bar" style="width:33%"></div></div><p>BLS CPI-U rose 3.3% over 12 months ending March 2026.</p><p class="source"><a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank">Source: BLS CPI</a></p></div>
-<div class="card"><span>Claims</span><h3>Weekly Claims</h3><p class="stat">214K</p><div class="bar-wrap"><div class="bar" style="width:21%"></div></div><p>Weekly claims snapshot for labor-market conditions.</p><p class="source"><a href="https://www.dol.gov/ui/data.pdf" target="_blank">Source: U.S. Labor Dept.</a></p></div>
-</div>
-<h3>Economy Snapshot Graph</h3>
-<div class="mini-chart"><div style="height:16%"><span>GDP<br>0.5%</span></div><div style="height:68%"><span>Jobs<br>178K</span></div><div style="height:44%"><span>CPI<br>3.3%</span></div><div style="height:58%"><span>Claims<br>214K</span></div></div>
-<p class="chart-note">Visual scale is simplified for reader comparison; each metric uses its own unit.</p>
-</div>
-
-<div class="section" id="markets">
-<h2>Stock Exchange Watch</h2>
-<div class="grid grid-3">
-<div class="card"><span>S&P 500 ETF</span><h3>SPY</h3><p class="stat">$713.94</p><p class="positive">+$5.50 / +0.78%</p><div class="bar-wrap"><div class="bar" style="width:78%"></div></div><p>Broad market snapshot tracking large-cap U.S. stocks.</p></div>
-<div class="card"><span>Nasdaq-100 ETF</span><h3>QQQ</h3><p class="stat">$663.88</p><p class="positive">+$12.59 / +1.93%</p><div class="bar-wrap"><div class="bar" style="width:100%"></div></div><p>Technology-heavy market snapshot tracking Nasdaq-100 movement.</p></div>
-<div class="card"><span>Dow ETF</span><h3>DIA</h3><p class="stat">$492.21</p><p class="negative">-$0.83 / -0.17%</p><div class="bar-wrap"><div class="bar" style="width:17%"></div></div><p>Blue-chip market snapshot tracking Dow Jones industrial exposure.</p></div>
-</div>
-<h3>Market Movement Graph</h3>
-<div class="mini-chart"><div style="height:45%"><span>SPY<br>+0.78%</span></div><div style="height:100%"><span>QQQ<br>+1.93%</span></div><div style="height:12%"><span>DIA<br>-0.17%</span></div></div>
-<p class="editor-note">Market figures are a snapshot. Refresh numbers before publication if markets are open.</p>
-</div>
-
-<div class="section" id="weather">
-<h2>South Jersey Coastal Weather & Ocean Desk</h2>
-<p class="editor-note">Coverage area: Atlantic City, Ventnor, Margate, Longport, Brigantine, Absecon Island beaches, Great Egg Inlet, and nearby Atlantic County coastal waters.</p>
-
-<div class="grid grid-4">
-<div class="card"><span>Today</span><h3>Rain / Wind / Coastal Impact</h3><p class="stat">51°F</p><p><strong>Wind:</strong> 20–30 mph (gusts 40+)<br><strong>Rain:</strong> AM showers (~0.15")<br><strong>Humidity:</strong> ~85%<br>Very windy with rough coastal conditions.</p></div>
-<div class="card"><span>Tonight</span><h3>Cold / Damp / Windy</h3><p class="stat">43°F</p><p><strong>Wind:</strong> 18–25 mph<br><strong>Cloud Cover:</strong> 90%<br><strong>Visibility:</strong> Reduced near coast<br>Chilly and damp overnight.</p></div>
-<div class="card"><span>Sunday</span><h3>Windy / Clearing Late</h3><p class="stat">51° / 43°F</p><p><strong>Wind:</strong> 22–30 mph<br><strong>Rain Chance:</strong> 30% AM<br><strong>Clouds:</strong> Gradual clearing PM</p></div>
-<div class="card"><span>Monday</span><h3>Sunny but Windy</h3><p class="stat">60° / 44°F</p><p><strong>Wind:</strong> 15–25 mph<br><strong>Sky:</strong> Mostly sunny<br><strong>UV:</strong> Moderate<br>Better outdoor conditions.</p></div>
-</div>
-
-<h3>Atlantic County Ocean Report — LIVE DATA</h3>
-<div class="grid grid-4">
-<div class="card"><span>Tides</span><h3>Atlantic City Station</h3><p class="stat">NOAA 8534720</p><p><strong>High:</strong> ~9:12 AM / 9:34 PM<br><strong>Low:</strong> ~3:02 AM / 3:18 PM</p></div>
-<div class="card"><span>Water</span><h3>Sea Temperature</h3><p class="stat">48°F</p><p>Cold Atlantic water — hypothermia risk in minutes without protection.</p></div>
-<div class="card"><span>Surf</span><h3>Wave Height</h3><p class="stat">4–7 ft</p><p><strong>Direction:</strong> E/NE swell<br><strong>Condition:</strong> Choppy / unstable</p></div>
-<div class="card"><span>Wind</span><h3>Marine Conditions</h3><p class="stat">25+ mph</p><p><strong>Gusts:</strong> 40 mph<br><strong>Seas:</strong> Rough<br><strong>Advisory:</strong> Small craft risk</p></div>
-<div class="card"><span>Currents</span><h3>Rip Current Risk</h3><p class="stat" style="color:#ff4d4d">HIGH</p><p>Strong rip currents expected due to wind + swell combination.</p></div>
-<div class="card"><span>Visibility</span><h3>Marine Visibility</h3><p class="stat">3–6 mi</p><p>Reduced at times due to mist, spray, and low clouds.</p></div>
-<div class="card"><span>Pressure</span><h3>Barometric</h3><p class="stat">29.7 in</p><p>Low pressure system influencing unstable coastal weather.</p></div>
-<div class="card"><span>Outlook</span><h3>Monday Ocean</h3><p class="stat">Improving</p><p><strong>Waves:</strong> 2–4 ft<br><strong>Wind:</strong> 15–20 mph<br><strong>Risk:</strong> Moderate rip currents</p></div>
-</div>
-
-<h3>Coastal Jersey Lifestyle Desk — Today & Monday</h3>
-<p class="editor-note">Focused on the Atlantic County shore lifestyle: boardwalk movement, beach access, fishing windows, marine safety, small businesses, tourism, and ocean-community conditions.</p>
-
-<div class="grid grid-4">
-<div class="card"><span>Boardwalk</span><h3>Today: Low Traffic / Windy</h3><p class="stat">Wind 20–30 mph</p><p>Expect lighter foot traffic, wind-driven discomfort, and tougher conditions for outdoor vendors. Best coverage angle: weather impact on visitors and small businesses.</p></div>
-<div class="card"><span>Beach</span><h3>Today: Rough Surf</h3><p class="stat">4–7 ft</p><p>Beach walking is possible, but surf zone is hazardous. Avoid jetties, inlet edges, and wet rocks during high wind and rough wave sets.</p></div>
-<div class="card"><span>Fishing</span><h3>Today: Limited Window</h3><p class="stat">Poor–Fair</p><p>Surf fishing and jetty activity are limited by wind and rough water. Back bay may be safer, but boaters should check marine advisories first.</p></div>
-<div class="card"><span>Boating</span><h3>Today: Caution</h3><p class="stat" style="color:#ff4d4d">Small Craft Risk</p><p>Rough seas, gusts, and reduced visibility make small-craft operation risky. Not ideal for casual boating or inexperienced operators.</p></div>
-</div>
-
-<div class="grid grid-4">
-<div class="card"><span>Boardwalk</span><h3>Monday: Better Outdoor Window</h3><p class="stat">High 60°F</p><p>Brighter conditions should improve walking, tourism, and local outdoor coverage, though wind remains noticeable.</p></div>
-<div class="card"><span>Beach</span><h3>Monday: Improving Conditions</h3><p class="stat">2–4 ft</p><p>Ocean conditions improve compared with today, but rip current awareness remains important along exposed beaches.</p></div>
-<div class="card"><span>Fishing</span><h3>Monday: Better Chance</h3><p class="stat">Fair</p><p>Improved conditions may open better windows for back bay, inlet, and surf checks. Still monitor tide and wind before heading out.</p></div>
-<div class="card"><span>Community</span><h3>What We’re Watching</h3><p class="stat">Local Impact</p><p>Beach erosion, boardwalk business flow, marina traffic, coastal cleanup needs, shore job activity, and visitor turnout.</p></div>
-</div>
-
-<h3>Ocean Community Reporter Notes</h3>
-<div class="grid grid-3">
-<div class="card"><span>Send Footage</span><h3>Viewer Reports Wanted</h3><p>Send clips of rough surf, flooded streets, wind damage, beach erosion, marina conditions, boardwalk crowds, or fishing updates.</p></div>
-<div class="card"><span>Local Voices</span><h3>Who We Want to Hear From</h3><p>Surfers, fishermen, boaters, beach patrol, casino workers, bartenders, vendors, students, and shore residents.</p></div>
-<div class="card"><span>Safety</span><h3>Before Entering Water</h3><p>Check lifeguard flags, NOAA tides, NWS marine alerts, rip current statements, and local beach patrol guidance.</p></div>
-</div>
-
-<p class="source">Sources: NOAA Tides 8534720 • NWS Mount Holly Marine Forecast • Local coastal observations</p>
-</div>
-
-<div class="section" id="videos">
-<h2>Video Desk — Reliable Source Hub</h2>
-<div class="video-lead">
-<h3>Why videos open through source links</h3>
-<p>Many official news, government, and social-media videos block outside embedding. To avoid broken players, wrong clips, or misleading footage, this section uses direct source buttons. Viewers get the correct video from the correct outlet.</p>
-</div>
-
-<div class="video-row">
-<div class="video-box">
-<span>Breaking DC</span>
-<h3>Facebook Video Submitted</h3>
-<p>Video connected to the breaking Correspondents’ Dinner story. Opens directly on Facebook if public access is allowed.</p>
-<a class="video-link" href="https://www.facebook.com/reel/1529354092242682" target="_blank">Open Facebook Reel</a>
-</div>
-
-<div class="video-box">
-<span>White House</span>
-<h3>Official White House Videos</h3>
-<p>Presidential remarks, briefings, statements, and official administration video releases.</p>
-<a class="video-link" href="https://www.whitehouse.gov/videos/" target="_blank">Watch White House Videos</a>
-</div>
-
-<div class="video-box">
-<span>Associated Press</span>
-<h3>AP News Video</h3>
-<p>National and global news video from a major wire-service source.</p>
-<a class="video-link" href="https://www.youtube.com/@AssociatedPress" target="_blank">Watch AP News</a>
-</div>
-
-<div class="video-box">
-<span>Defense</span>
-<h3>CENTCOM Video & Imagery</h3>
-<p>Official U.S. Central Command videos, imagery, and regional operational updates.</p>
-<a class="video-link" href="https://www.centcom.mil/MEDIA/VIDEO-AND-IMAGERY/VIDEOS/" target="_blank">Watch CENTCOM Videos</a>
-</div>
-
-<div class="video-box">
-<span>Weather</span>
-<h3>NWS Mount Holly / Philadelphia</h3>
-<p>Official forecasts, alerts, coastal weather, marine warnings, and severe-weather updates.</p>
-<a class="video-link" href="https://www.weather.gov/phi/" target="_blank">Open NWS Mount Holly</a>
-</div>
-
-<div class="video-box">
-<span>Ocean / Tides</span>
-<h3>NOAA Atlantic City Station</h3>
-<p>Tides, water levels, coastal flooding checks, and official Atlantic City ocean data.</p>
-<a class="video-link" href="https://tidesandcurrents.noaa.gov/stationhome.html?id=8534720" target="_blank">Open NOAA Tide Station</a>
-</div>
-
-<div class="video-box">
-<span>Atlantic City Events</span>
-<h3>Visit Atlantic City</h3>
-<p>Official event source for Atlantic City tourism, entertainment, concerts, and local happenings.</p>
-<a class="video-link" href="https://www.visitatlanticcity.com/" target="_blank">Open Visit Atlantic City</a>
-</div>
-
-<div class="video-box">
-<span>Entertainment</span>
-<h3>Kane Brown Official</h3>
-<p>Official source for Kane Brown updates, tour listings, and artist information.</p>
-<a class="video-link" href="https://www.kanebrownmusic.com/" target="_blank">Open Kane Brown Official</a>
-</div>
-</div>
-</div>
-
-<div class="section" id="tips"><h2>Contact / Tips</h2><p>Email: <a href="mailto:BigRooster32@icloud.com">BigRooster32@icloud.com</a><br>Phone: <a href="tel:+16803027002">1 (680) 302-7002</a></p><p class="editor-note">Send documents, photos, video links, public records, corrections, and local story leads. Tips are reviewed before publication.</p></div>
-<div class="section" id="support"><h2>Support Independent Journalism</h2><p>Support via Chime: <strong>$BigRooster32</strong></p></div>
-
-<div class="section" id="about">
-<h2>About BlackSheep Patriots News</h2>
-<p><strong>BlackSheep Patriots News</strong> is an independently owned media platform founded by <strong>Zachary J. Blum, also known as BigRooster</strong>, based in the Atlantic City / South Jersey area.</p>
-<p>Our mission is to cover local issues, coastal community life, faith, culture, national headlines, government accountability, public safety, weather, ocean conditions, and stories that matter to everyday people.</p>
-<p class="editor-note"><strong>Mission:</strong> Truth over comfort. Independent voice. Sourced reporting. Community-first coverage.</p>
-<p class="editor-note"><strong>Ownership:</strong> BlackSheep Patriots News is independently owned and oper
 
 <script>
-(function(){
-  function updateMothersDayCountdown(){
-    var target = new Date('2026-05-10T23:59:59-04:00').getTime();
-    var now = Date.now();
-    var distance = target - now;
+function countdown(){
+  const target=new Date("May 10, 2026 23:59:59").getTime();
+  const now=new Date().getTime();
+  const diff=target-now;
 
-    var daysEl = document.getElementById('md-days');
-    var hoursEl = document.getElementById('md-hours');
-    var minsEl = document.getElementById('md-mins');
-    var secsEl = document.getElementById('md-secs');
+  if(diff<=0)return;
 
-    if(!daysEl || !hoursEl || !minsEl || !secsEl){ return; }
+  document.getElementById("d").innerText=Math.floor(diff/(1000*60*60*24));
+  document.getElementById("h").innerText=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+  document.getElementById("m").innerText=Math.floor((diff%(1000*60*60))/(1000*60));
+  document.getElementById("s").innerText=Math.floor((diff%(1000*60))/1000);
+}
+setInterval(countdown,1000);
+countdown();
+</script>
 
-    if(distance <= 0){
-      daysEl.textContent = '0';
-      hoursEl.textContent = '0';
-      minsEl.textContent = '0';
-      secsEl.textContent = '0';
-      return;
-    }
-
-    daysEl.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
-    hoursEl.textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    minsEl.textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    secsEl.textContent = Math.floor((distance % (1000 * 60)) / 1000);
-  }
-
-  updateMothersDayCountdown();
-  setInterval(updateMother
+</body>
+</html>
