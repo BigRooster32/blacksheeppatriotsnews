@@ -75,23 +75,24 @@ body, p, span, a, div, h1, h2, h3, strong { color:#ffffff !important; }
 
 <div class="section" id="today">
 <h2>Homepage News Dashboard</h2>
-<p class="homepage-note">Quick previews, homepage videos, and clickable cards. Visitors can watch the featured entertainment video here, then click cards to open full sections.</p>
+<p class="homepage-note">Watch featured videos directly on the homepage. Use the cards below to open full sections.</p>
 
-<div class="homepage-video-feature">
+<div class="homepage-video-feature" id="home-entertainment-video">
 <h2>Entertainment Feature: Busboys Trailer</h2>
-<p class="homepage-note"><strong>Busboys</strong> starring Theo Von and David Spade — featured on the homepage for visitors to watch directly.</p>
+<p class="homepage-note"><strong>Busboys</strong> starring Theo Von and David Spade — featured here so visitors can watch without leaving the homepage.</p>
 <div class="video-frame">
 <iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Busboys Official Trailer Theo Von David Spade" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <p class="editor-note">Theo Von is a Black Sheep Patriot.</p>
+<a class="button" href="#entertainment">Open Full Entertainment Section</a>
 </div>
 
 <h2>Today’s Top Videos</h2>
 <div class="video-grid">
-<div class="video-box"><span>Funny</span><h3>Comedy / Funny Clip Slot</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Funny video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Current placeholder: Busboys trailer. Replace with today’s funny clip when selected.</p></div>
-<div class="video-box"><span>Drama</span><h3>Drama / Culture Clip Slot</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Drama video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Current placeholder: Busboys trailer. Replace with today’s drama/culture video when selected.</p></div>
-<div class="video-box"><span>Stocks</span><h3>Stock Market Video Slot</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Stock market video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Replace with today’s stock market video link.</p></div>
-<div class="video-box"><span>Trade</span><h3>Trade / Imports / Exports Video Slot</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Trade video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Replace with today’s trade, imports, exports, or supply-chain video link.</p></div>
+<div class="video-box"><span>Funny</span><h3>Funny / Comedy Video</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Funny video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Placeholder: Busboys trailer. Replace this embed link with today’s funny video.</p></div>
+<div class="video-box"><span>Drama</span><h3>Drama / Culture Video</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Drama video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Placeholder: Busboys trailer. Replace this embed link with today’s drama/culture video.</p></div>
+<div class="video-box"><span>Stocks</span><h3>Stock Market Video</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Stock market video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Placeholder: replace with today’s stock market video.</p></div>
+<div class="video-box"><span>Trade</span><h3>Trade / Imports / Exports Video</h3><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Trade video slot" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="source">Placeholder: replace with today’s trade/import-export video.</p></div>
 </div>
 
 <div class="tabs">
@@ -103,8 +104,8 @@ body, p, span, a, div, h1, h2, h3, strong { color:#ffffff !important; }
 <a class="card" href="#entertainment">
 <span>Entertainment</span>
 <h3>Busboys — Theo Von & David Spade</h3>
-<div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Busboys Official Trailer Theo Von David Spade" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-<p>Watch the trailer directly on the homepage, then click for the full entertainment write-up.</p>
+<img class="card-img" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop" alt="Movie theater entertainment preview">
+<p>Trailer plays above on the homepage. Click here for the full entertainment write-up.</p>
 <p class="editor-note">Theo Von is a Black Sheep Patriot.</p>
 </a>
 
@@ -155,77 +156,17 @@ body, p, span, a, div, h1, h2, h3, strong { color:#ffffff !important; }
 <div class="mini-chart"><div style="height:70%"><span>Temp</span></div><div style="height:54%"><span>Water</span></div><div style="height:88%"><span>Wind</span></div><div style="height:100%"><span>Surf</span></div></div>
 </a>
 
-<a class="card" href="#whitehouse">
-<span>Government</span>
-<h3>White House Desk</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="White House and government preview">
-<p>Official briefings, videos, public statements, and policy-impact notes.</p>
-</a>
-
-<a class="card" href="#defense">
-<span>Defense</span>
-<h3>Pentagon / CENTCOM</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=1200&auto=format&fit=crop" alt="Defense preview">
-<p>Official military releases, regional stability, shipping, oil, and trade impact.</p>
-</a>
-
-<a class="card" href="#videos">
-<span>Videos</span>
-<h3>Reliable Source Hub</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop" alt="Video and news source preview">
-<p>AP, White House, CENTCOM, NOAA, NWS, and other official source links.</p>
-</a>
-
-<a class="card" href="#faith">
-<span>Faith & God</span>
-<h3>Daily Prayer / Scripture</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1200&auto=format&fit=crop" alt="Faith and encouragement preview">
-<p>Prayer, encouragement, gratitude, strength, family, and faith-centered reminders.</p>
-</a>
-
-<a class="card" href="#biography">
-<span>Founder</span>
-<h3>Zachary J. Blum Biography</h3>
-<img class="card-img" src="bio-assets/image1.jpeg" alt="Founder biography preview">
-<p>Survival, loss, fatherhood, faith, rebuilding, and the mission behind the platform.</p>
-</a>
-
-<a class="card" href="#shop">
-<span>Merch</span>
-<h3>Mother’s Day Drop</h3>
-<img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="BlackSheep Patriots merch preview">
-<p>Official BlackSheep Patriots merch and limited-time releases.</p>
-</a>
-
-<a class="card" href="#tips">
-<span>Contact</span>
-<h3>Tips / Corrections / Leads</h3>
-<p>Send documents, photos, video links, public records, corrections, and local story leads.</p>
-</a>
-
-<a class="card" href="#about">
-<span>About</span>
-<h3>Mission / Ownership</h3>
-<p>Independent media platform owned and operated by Zachary J. Blum / BigRooster Media.</p>
-</a>
-
-<a class="card" href="#standards">
-<span>Standards</span>
-<h3>Verification / Corrections</h3>
-<p>Claims checked, opinion labeled, sources separated, and corrections handled clearly.</p>
-</a>
-
-<a class="card" href="#advertise">
-<span>Advertise</span>
-<h3>Sponsor / Partner</h3>
-<p>Local businesses, creators, events, restaurants, and community partners.</p>
-</a>
-
-<a class="card" href="#legal">
-<span>Legal</span>
-<h3>Disclaimer / Policy</h3>
-<p>Editorial, source, correction, sponsored-content, financial, and legal disclaimers.</p>
-</a>
+<a class="card" href="#whitehouse"><span>Government</span><h3>White House Desk</h3><p>Official briefings, videos, public statements, and policy-impact notes.</p></a>
+<a class="card" href="#defense"><span>Defense</span><h3>Pentagon / CENTCOM</h3><p>Official military releases, regional stability, shipping, oil, and trade impact.</p></a>
+<a class="card" href="#videos"><span>Videos</span><h3>Reliable Source Hub</h3><p>AP, White House, CENTCOM, NOAA, NWS, and other official source links.</p></a>
+<a class="card" href="#faith"><span>Faith & God</span><h3>Daily Prayer / Scripture</h3><p>Prayer, encouragement, gratitude, strength, family, and faith-centered reminders.</p></a>
+<a class="card" href="#biography"><span>Founder</span><h3>Zachary J. Blum Biography</h3><p>Survival, loss, fatherhood, faith, rebuilding, and the mission behind the platform.</p></a>
+<a class="card" href="#shop"><span>Merch</span><h3>Mother’s Day Drop</h3><p>Official BlackSheep Patriots merch and limited-time releases.</p></a>
+<a class="card" href="#tips"><span>Contact</span><h3>Tips / Corrections / Leads</h3><p>Send documents, photos, video links, public records, corrections, and local story leads.</p></a>
+<a class="card" href="#about"><span>About</span><h3>Mission / Ownership</h3><p>Independent media platform owned and operated by Zachary J. Blum / BigRooster Media.</p></a>
+<a class="card" href="#standards"><span>Standards</span><h3>Verification / Corrections</h3><p>Claims checked, opinion labeled, sources separated, and corrections handled clearly.</p></a>
+<a class="card" href="#advertise"><span>Advertise</span><h3>Sponsor / Partner</h3><p>Local businesses, creators, events, restaurants, and community partners.</p></a>
+<a class="card" href="#legal"><span>Legal</span><h3>Disclaimer / Policy</h3><p>Editorial, source, correction, sponsored-content, financial, and legal disclaimers.</p></a>
 
 </div>
 </div>
