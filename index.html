@@ -155,6 +155,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:#f
 </div>
 <script>
 (function(){
+  // COUNTDOWN
   function updateCountdown(){
     var target = new Date('2026-05-10T23:59:59-04:00').getTime();
     var now = Date.now();
@@ -167,9 +168,36 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:#f
     m.textContent=Math.floor((diff%(1000*60*60))/(1000*60));
     s.textContent=Math.floor((diff%(1000*60))/1000);
   }
-  updateCountdown();
-  setInterval(updateCountdown,1000);
-})();
-</script>
-</body>
-</html>
+
+  // HIDE ALL FULL SECTIONS ON LOAD
+  function hideAllSections(){
+    document.querySelectorAll('.detail-section').forEach(function(sec){
+      sec.style.display = 'none';
+    });
+  }
+
+  // SHOW ONE SECTION
+  function showSection(id){
+    hideAllSections();
+    var el = document.getElementById(id);
+    if(el){
+      el.style.display = 'block';
+      window.scrollTo({top: el.offsetTop - 20, behavior:'smooth'});
+    }
+  }
+
+  // HANDLE NAV CLICKS
+  function setupNav(){
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        var target = this.getAttribute('href').replace('#','');
+        if(document.getElementById(target) && document.getElementById(target).classList.contains('detail-section')){
+          e.preventDefault();
+          showSection(target);
+        }
+      });
+    });
+  }
+
+  // INIT
+  window.
