@@ -74,317 +74,207 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:#f
   background:linear-gradient(90deg,#b00000,#ffffff,#0057ff) !important;
   color:#000 !important;
 }
-</style>
-</head>
-<body>
-<div class="container">
 
-<div class="header" id="top">
-<div class="title">BLACKSHEEP PATRIOTS NEWS ★ BIGROOSTER MEDIA</div>
-<p class="editor-note" style="max-width:850px;margin:14px auto 0 auto;"><strong>Independently owned and operated.</strong> Local-first coverage from Atlantic City with sourced national updates, coastal weather, faith, culture, and community reporting.</p>
-<p class="tagline">TRUTH OVER COMFORT • WE UP • INDEPENDENT VOICE</p>
-<div class="nav">
-<a href="#top">Home</a><a href="#breaking">Breaking</a><a href="#faith">Faith & God</a><a href="#biography">Biography</a><a href="#shop">Shop</a><a href="#today">Today's Desk</a><a href="#local">Atlantic City</a><a href="#whitehouse">White House</a><a href="#defense">Pentagon/CENTCOM</a><a href="#economy">Economy</a><a href="#jobs">Jobs</a><a href="#markets">Markets</a><a href="#trade">Trade</a><a href="#weather">Weather/Ocean</a><a href="#videos">Videos</a><a href="#tips">Tips</a><a href="#about">About</a><a href="#standards">Standards</a><a href="#legal">Legal</a><a href="#advertise">Advertise</a>
-</div>
-</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="breaking"><strong>⚠ BREAKING NEWS ALERT</strong><br>Washington, D.C. security incident at White House Correspondents’ Dinner — senior officials reported safe, suspect reportedly in custody, federal investigation developing.</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="section full-article detail-section" id="breaking">
-<h2>BREAKING: Shooting / Security Incident Reported at White House Correspondents’ Dinner</h2>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" alt="Donald Trump official portrait" style="margin:15px 0;width:100%;max-height:420px;object-fit:cover;display:block;">
-<p class="source">Photo Credit: Official White House / Wikimedia Commons — Donald Trump official portrait. File image used until verified event imagery is available.</p>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Developing</p>
-<p>Major outlets are reporting that the White House Correspondents’ Dinner at the Washington Hilton was disrupted by a shooting or security incident. Early reporting says senior officials were secured or evacuated by law enforcement.</p>
-<p class="editor-note"><strong>Editorial standard:</strong> This is a developing story. Early claims should be handled cautiously until confirmed by official law enforcement or White House statements.</p>
-<div style="margin:20px 0;padding:18px;border:2px solid gold;border-radius:18px;background:rgba(255,255,255,.06);"><h3 style="color:gold;margin-top:0;">Verified Video Sources</h3><p>Official and reliable video links are used to avoid broken embeds or mismatched footage.</p><a class="button" href="https://www.youtube.com/@AssociatedPress/videos" target="_blank">Watch AP News Video Updates</a> <a class="button" href="https://www.whitehouse.gov/videos/" target="_blank">Watch White House Official Videos</a></div>
-</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="hero">
-<h1>TRUTH WITH TEETH</h1>
-<p><strong style="color:gold">No Fear. No Favor. Just Facts.</strong><br>Independent reporting, sourced briefs, local culture, faith, weather, and accountability from Atlantic City.</p>
-<a class="button" href="#breaking">Top Breaking Story</a> <a class="button" href="#today">Read Today's Desk</a> <a class="button" href="#tips">Submit a Tip</a>
-<div class="merch-banner"><img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day T-shirt"><div><strong style="color:gold">Limited Time Mother’s Day Drop</strong><br><span style="font-size:13px;color:#ddd">Official BlackSheep Patriots merch</span><br><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Shop Now</a></div></div>
-<div class="countdown-box"><div class="countdown-title">Limited Time — Mother’s Day Drop</div><div class="countdown-grid"><div class="countdown-unit"><span class="countdown-number" id="md-days">--</span><span class="countdown-label">Days</span></div><div class="countdown-unit"><span class="countdown-number" id="md-hours">--</span><span class="countdown-label">Hours</span></div><div class="countdown-unit"><span class="countdown-number" id="md-mins">--</span><span class="countdown-label">Minutes</span></div><div class="countdown-unit"><span class="countdown-number" id="md-secs">--</span><span class="countdown-label">Seconds</span></div></div><p style="margin:10px 0 0 0;color:#ddd;font-size:14px;">Order early for Mother’s Day — available while the drop is live.</p></div>
-</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="section" id="biography-preview">
-<h2>Founder Biography Preview</h2>
-<div class="bio-preview">
-<div>
-<p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> built BlackSheep Patriots News from survival, loss, fatherhood, faith, mistakes, rebuilding, and the belief that truth matters more than comfort.</p>
-<p>This preview highlights the story behind the platform without taking over the homepage. The full biography is available in the Biography tab.</p>
-<a class="button" href="#biography">Read Full Biography</a>
-</div>
-<div class="bio-preview-photos">
-<img src="bio-assets/image1.jpeg" alt="Biography preview image 1">
-<img src="bio-assets/image2.jpeg" alt="Biography preview image 2">
-<img src="bio-assets/image4.jpeg" alt="Biography preview image 3">
-<img src="bio-assets/image5.jpeg" alt="Biography preview image 4">
-<img src="bio-assets/image6.jpeg" alt="Biography preview image 5">
-<img src="bio-assets/image7.jpeg" alt="Biography preview image 6">
-</div>
-</div>
-</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="section full-article detail-section" id="biography">
-<h2>Biography Tab: Becoming BigRooster — The Full Story of Zachary J. Blum</h2>
-<p class="byline">Founder Biography • BlackSheep Patriots News / BigRooster Media</p>
-<p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> is the founder of BlackSheep Patriots News and BigRooster Media. His story is built from survival, fatherhood, grief, mistakes, accountability, rebuilding, faith, and the mission behind an independent media platform rooted in Atlantic City and South Jersey.</p>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<div class="bio-callout"><strong>Mission Statement:</strong> Truth Over Comfort. No corporate backing. No political affiliation. No filter. Just real, community-rooted reporting from someone who has lived enough life to know the difference between what is shown — and what is actually real.</div>
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 22%,transparent 72%,rgba(0,87,255,.10));pointer-events:none;opacity:.75}
+.card::after{content:"";position:absolute;left:-40%;top:0;width:35%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:.6s;pointer-events:none}
+.card:hover::after{left:120%}
+.card:hover{transform:translateY(-6px) scale(1.012) !important}
+img{box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}
+.card-img{height:190px !important;transition:.35s ease;filter:saturate(1.15) contrast(1.05)}
+.card:hover .card-img{transform:scale(1.035);filter:saturate(1.35) contrast(1.1)}
+.stat{color:#fff !important;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}
+.data-pill,.editor-note,.source,.byline{background:rgba(0,0,0,.18);border-color:rgba(255,255,255,.35)}
+.data-pill strong{color:#fff;text-shadow:0 0 10px rgba(255,255,255,.45)}
+.mini-chart,.bar-wrap{background:rgba(0,0,0,.22) !important;border-color:rgba(255,255,255,.42) !important;box-shadow:inset 0 0 18px rgba(255,255,255,.04)}
+.mini-chart div,.bar{background:linear-gradient(180deg,#ffffff,#0057ff 48%,#b00000) !important;box-shadow:0 0 12px rgba(255,255,255,.28)}
+.footer{border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px;box-shadow:0 0 20px rgba(255,255,255,.12)}
 
-<h3>Biography Photo Gallery</h3>
-<p class="editor-note">Full biography photo gallery featuring images from Zachary J. Blum’s story, family, sons, friends, and life journey.</p>
-<div class="grid grid-3 bio-gallery">
-<img src="bio-assets/image1.jpeg" alt="Biography image 1">
-<img src="bio-assets/image2.jpeg" alt="Biography image 2">
-<img src="bio-assets/image3.png" alt="Biography image 3">
-<img src="bio-assets/image4.jpeg" alt="Biography image 4">
-<img src="bio-assets/image5.jpeg" alt="Biography image 5">
-<img src="bio-assets/image6.jpeg" alt="Biography image 6">
-<img src="bio-assets/image7.jpeg" alt="Biography image 7">
-<img src="bio-assets/image8.png" alt="Biography image 8">
-<img src="bio-assets/image9.jpeg" alt="Biography image 9">
-</div>
-
-<div class="bio-story">
-<h3>Early Life</h3>
-<p>I was born in Ilion, New York in September 1989. From the beginning, life did not come slow or easy — it came fast, unpredictable, and heavy.</p>
-<p>At five years old, I moved with my mother to Canton, New York. That is where I grew up tough — playing football, lacrosse, hockey — riding dirt bikes, snowmobiles, four-wheelers, and anything with wheels or an engine. I lived outside, constantly moving, learning early that staying still was not an option.</p>
-<p>In 2002, everything shifted. We moved to Greenville, South Carolina. Different environment, different energy — but something in me never settled there.</p>
-
-<h3>Hard Lessons and Turning Points</h3>
-<p>At 14 years old, trying to find identity, structure, and belonging in a place that did not feel like home, I made a decision that pulled me in the wrong direction. I became involved with a gang in the Greenville area. At that age, it felt like loyalty, protection, and purpose. Looking back, it was the beginning of a path that came with consequences, lessons, and realities I had to face head-on.</p>
-<p>By August 25, 2005, at just fifteen years old, I made one of the biggest decisions of my life. I left my mother’s house and went back to Herkimer, New York to live with my father, Keith Blum. My aunt and uncle, Darlene Brewer and Dale Brewer Sr., helped me make that turning point happen.</p>
-
-<h3>Friends, Music, and Loss</h3>
-<p>Back in Herkimer, I found my people. Johnathan “Nabby” Nabinger and Raymond Pinney were not just friends — we were together every day. We grew up side by side through our teenage years and into our early twenties. Raymond and I spent years making rap music, building something creative out of where we came from.</p>
-<p>Losing Nabby in 2014 and Raymond in 2016 hit deeply. Those losses were not just moments — they were turning points. They shaped how I move, how I think, and how I carry everything forward.</p>
-
-<h3>Fatherhood</h3>
-<p>In 2010, my son Miguel was born in Ilion, New York. His mother and I raised him together as a co-parenting team, even while living separate lives. For the first nine years of his life, I was consistently present — showing up, learning what it meant to be a father, and doing my part alongside his mother to raise him the best we could.</p>
-<p>Over time, things became unstable. After the loss of my twin sons in 2016, my life took a turn. Mentally, emotionally, and environmentally, I was not in a place that I felt was right for raising a child the way he deserved. I made one of the hardest decisions of my life and stepped back so Miguel could have stability with his mother full-time. Not because I did not love him — but because I did.</p>
-
-<h3>Loss Upon Loss</h3>
-<p>In 2016, my identical twin sons — Zachary John Blum Jr. and Zain Xavier Blum — were born on May 5, 2016. They passed away the same day. There are no words that fully explain that kind of pain. It is not something you move past — it becomes part of you.</p>
-<p>Then in January 2019, my nephews died in a house fire in Herkimer, New York. Loss stacked on loss, year after year. The kind of weight that breaks most people. I did not break.</p>
-
-<h3>The Raleigh Decision</h3>
-<p>After everything I had been through, I called my father, Keith Blum, and asked him for help getting out. He bought me a Greyhound bus ticket to Charlotte, North Carolina. At around 5:25 in the morning in Raleigh, I was sitting there with that ticket — and something in me said: stop.</p>
-<p>I walked to the counter and asked, “How much is a ticket to Myrtle Beach?” It was thirty-three dollars. I took it. That decision changed my life. I landed in Myrtle Beach, found two jobs, got stable, and started rebuilding from nothing.</p>
-
-<h3>More Trials and the Road Back</h3>
-<p>In October 2019, someone I was close with, Khrystina, stopped responding. Days later, I saw her face tied to a story about a murdered newborn. She had told me the baby was mine. The timeline matched. I contacted law enforcement, was brought in, questioned, and left carrying even more weight.</p>
-<p>Life became movement again — New York, Myrtle Beach, Florida, kitchens, construction, hard labor, and survival. In October 2021, I returned to New York, made mistakes, and paid for them. I served a year in state prison and completed parole. Then I got back to work.</p>
-<p>In early August 2025, I was involved in a motorcycle accident that disrupted everything. I still kept going, working at a Walmart Distribution Center through August and September. Stopping has never been an option.</p>
-
-<h3>Atlantic City and the Mission</h3>
-<p>After everything, I reconnected with Jordan. I told her there was nothing left for me where I was. She asked where I wanted to go. I did not know that night, but I woke up the next morning with the answer: Atlantic City, New Jersey. We got on a train and made the move. No guarantees. No safety net. Just belief.</p>
-<p>In Atlantic City, I built BlackSheep Patriots News from the ground up. No funding. No team. No backing. Just me. I designed it, wrote it, built it, and published it. At the same time, I returned to school, pursuing communications while actively living it every day.</p>
-<p>Before that, I built an audience through AI-driven video content. Now BigRooster Media operates across journalism, video, and merchandise as a full independent brand rooted in South Jersey.</p>
-
-<h3>WE UP</h3>
-<p>Everything I have been through — bad decisions, loss, pain, survival, rebuilding — built the foundation for what I am doing now. I do not speak from theory. I speak from experience.</p>
-<p><strong>This is not a finished story. I am still building. Still moving. Still becoming. WE UP.</strong></p>
-</div>
-</div>
-
-<div class="section detail-section" id="faith"><h2>Faith & God</h2><p class="editor-note">A dedicated daily section for prayer, encouragement, gratitude, strength, family, community, and keeping faith at the center of the mission.</p><div class="grid grid-3"><div class="card"><span>Daily Scripture</span><h3>Psalm 46:1</h3><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Peaceful sunrise"><p>“God is our refuge and strength, an ever-present help in trouble.”</p></div><div class="card"><span>Daily Prayer</span><h3>Prayer for Strength</h3><img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1200&auto=format&fit=crop" alt="Sunlight trees"><p>Lord, guide my steps today. Give me wisdom, discipline, courage, patience, and peace. Amen.</p></div><div class="card"><span>Positive Quote</span><h3>Today’s Encouragement</h3><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop" alt="Mountains"><p>Stay grounded. Stay grateful. Keep moving with purpose. One faithful step at a time still moves you forward.</p></div></div></div>
-
-<div class="section detail-section" id="founder"><h2>Founder Spotlight</h2><div class="grid grid-2"><img src="https://i.imgur.com/YCghQCd.jpeg" alt="Founder photo"><img src="https://i.imgur.com/4bWhXsJ.jpeg" alt="Founder photo"><img src="https://i.imgur.com/jP8rFL3.jpeg" alt="Founder photo"><img src="https://i.imgur.com/TLIfR7w.png" alt="Founder photo"></div><p><strong>Zachary J. Blum (BigRooster)</strong> — Independent journalist and founder of BlackSheep Patriots News.</p></div>
-
-<div class="section detail-section" id="shop"><h2>Merch</h2><p class="editor-note">Official BlackSheep Patriots merch. Simple, direct, and supports the platform.</p><div class="card" style="margin-bottom:20px;border:2px solid #ff4d4d;box-shadow:0 0 24px rgba(255,0,0,.25);"><span>Newest Drop</span><h3>Mother’s Day T-Shirt — Patriot Mom Edition</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day shirt" style="height:360px;"><p><strong>New Mother’s Day shirt now available.</strong> Patriot Mom design with pink sleeves, rooster graphic, and BlackSheep Patriots message.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View Pink Mother’s Day Shirt in Store</a></div><div class="grid grid-3"><div class="card"><span>Official Merch</span><h3>Item #1</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-279-69ed653a05d86__360" alt="Product 1"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div><div class="card"><span>Official Merch</span><h3>Item #2</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-960-69ed658061f68__360" alt="Product 2"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div><div class="card"><span>New Drop</span><h3>Mother’s Day T-Shirt</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day shirt"><p>New Mother’s Day BlackSheep Patriots shirt now available.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div></div></div>
-
-<div class="section" id="today">
-<h2>Homepage News Dashboard</h2>
-<p class="homepage-note">Quick previews only. Click a tab or card to open the full section, article, data board, source hub, or contact page.</p>
-
-<div class="tabs">
-<a href="#breaking">Breaking</a>
-<a href="#local">Atlantic City</a>
-<a href="#economy">Economy</a>
-<a href="#markets">Markets</a>
-<a href="#weather">Weather/Ocean</a>
-<a href="#whitehouse">White House</a>
-<a href="#defense">Defense</a>
-<a href="#faith">Faith</a>
-<a href="#shop">Shop</a>
-<a href="#biography">Biography</a>
-</div>
-
-<div class="grid grid-3">
-<a class="card" href="#breaking">
-<span>Breaking</span>
-<h3>Developing National Story</h3>
-<p>Top alert, source notes, and verified video/source links.</p>
-<p class="editor-note">Click to open full breaking coverage.</p>
-</a>
-
-<a class="card" href="#local">
-<span>Atlantic City</span>
-<h3>Local Events / Tourism / Culture</h3>
-<p>Kane Brown highlight, casino activity, local shows, Boardwalk notes, and visitor impact.</p>
-<p class="editor-note">Click to read the full Atlantic City section.</p>
-</a>
-
-<a class="card" href="#biography">
-<span>Founder</span>
-<h3>Zachary J. Blum Biography</h3>
-<p>Survival, loss, fatherhood, faith, rebuilding, and the mission behind BlackSheep Patriots News.</p>
-<p class="editor-note">Click to read the full biography.</p>
-</a>
-</div>
-</div>
-
-<div class="section" id="homepage-samples">
-<h2>Homepage Data & Section Previews</h2>
-<p class="homepage-note">Homepage cards show quick visuals only. Viewers click a card to open the full section, article, data board, source hub, or contact page.</p>
-
-<div class="grid grid-3">
-
-<a class="card" href="#local">
-<span>Atlantic City</span>
-<h3>Events / Tourism / Boardwalk</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?q=80&w=1200&auto=format&fit=crop" alt="Atlantic City boardwalk preview">
-<div class="data-row"><div class="data-pill"><strong>3+</strong>Event Notes</div><div class="data-pill"><strong>AC</strong>Local Watch</div></div>
-<p>Casino activity, live shows, entertainment, tourism, Boardwalk notes, and South Jersey culture.</p>
-<p class="editor-note">Click for full Atlantic City coverage.</p>
-</a>
-
-<a class="card" href="#economy">
-<span>Economy</span>
-<h3>GDP / Jobs / CPI / Claims</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Economy data preview">
-<div class="data-row"><div class="data-pill"><strong>+0.5%</strong>GDP</div><div class="data-pill"><strong>4.3%</strong>Unemployment</div><div class="data-pill"><strong>3.3%</strong>CPI</div><div class="data-pill"><strong>214K</strong>Claims</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:16%"><span>GDP</span></div><div style="height:68%"><span>Jobs</span></div><div style="height:44%"><span>CPI</span></div><div style="height:58%"><span>Claims</span></div></div>
-<p>Snapshot only. Full explanations and source links stay in the economy tab.</p>
-</a>
-
-<a class="card" href="#markets">
-<span>Stocks</span>
-<h3>SPY / QQQ / DIA</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop" alt="Stock market preview">
-<div class="data-row"><div class="data-pill"><strong>$713.94</strong>SPY</div><div class="data-pill"><strong>$663.88</strong>QQQ</div><div class="data-pill"><strong>$492.21</strong>DIA</div><div class="data-pill"><strong>Daily</strong>Market Move</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:45%"><span>SPY</span></div><div style="height:100%"><span>QQQ</span></div><div style="height:12%"><span>DIA</span></div></div>
-<p><span class="positive">QQQ +1.93%</span> • <span class="negative">DIA -0.17%</span></p>
-<p>Click for the full stock exchange board.</p>
-</a>
-
-<a class="card" href="#trade">
-<span>Trade</span>
-<h3>Imports / Exports</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop" alt="Shipping containers trade preview">
-<div class="data-row"><div class="data-pill"><strong>$330B</strong>Imports</div><div class="data-pill"><strong>$265B</strong>Exports</div><div class="data-pill"><strong>Ports</strong>Supply Chain</div><div class="data-pill"><strong>Trade</strong>Balance</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:100%"><span>Imports</span></div><div style="height:80%"><span>Exports</span></div><div style="height:38%"><span>Goods</span></div><div style="height:54%"><span>Services</span></div></div>
-<p>Imports, exports, ports, shipping, and trade balance preview.</p>
-<p class="editor-note">Click for full trade board.</p>
-</a>
-
-<a class="card" href="#weather">
-<span>Weather / Ocean</span>
-<h3>South Jersey Coastal Stats</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Coastal weather preview">
-<div class="data-row"><div class="data-pill"><strong>60°</strong>High</div><div class="data-pill"><strong>44°</strong>Low</div><div class="data-pill"><strong>48°</strong>Water</div><div class="data-pill"><strong>High</strong>Rip Risk</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:70%"><span>Temp</span></div><div style="height:54%"><span>Water</span></div><div style="height:88%"><span>Wind</span></div><div style="height:100%"><span>Surf</span></div></div>
-<p>Wind, tides, surf, water temperature, rip-current risk, fishing, and Boardwalk conditions.</p>
-<p class="editor-note">Click for full weather/ocean desk.</p>
-</a>
-
-<a class="card" href="#jobs">
-<span>Job Market</span>
-<h3>Labor / Hiring / Claims</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Job market preview">
-<div class="data-row"><div class="data-pill"><strong>4.3%</strong>Unemployment</div><div class="data-pill"><strong>178K</strong>Jobs</div><div class="data-pill"><strong>214K</strong>Claims</div><div class="data-pill"><strong>Hiring</strong>Watch</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:55%"><span>Jobs</span></div><div style="height:43%"><span>Unemp.</span></div><div style="height:64%"><span>Claims</span></div><div style="height:70%"><span>Wages</span></div></div>
-<p>Quick labor-market preview. Click for the full job market section.</p>
-</a>
-
-<a class="card" href="#whitehouse">
-<span>Government</span>
-<h3>White House Desk</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="Government building preview">
-<p>Official releases, briefings, videos, and policy messaging organized separately from commentary.</p>
-<p class="editor-note">Click for full White House tab.</p>
-</a>
-
-<a class="card" href="#defense">
-<span>Defense</span>
-<h3>Pentagon / CENTCOM</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=1200&auto=format&fit=crop" alt="Defense preview image">
-<p>Official U.S. Central Command links, regional updates, video/image hub, and defense-source separation.</p>
-<p class="editor-note">Click for full defense tab.</p>
-</a>
-
-<a class="card" href="#videos">
-<span>Videos</span>
-<h3>Reliable Source Hub</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop" alt="News video source preview">
-<p>AP, White House, CENTCOM, NOAA, NWS Mount Holly, and Visit Atlantic City source buttons.</p>
-<p class="editor-note">Click for videos and official source links.</p>
-</a>
-
-<a class="card" href="#faith">
-<span>Faith & God</span>
-<h3>Daily Scripture + Prayer</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Faith and sunrise preview">
-<p>Scripture, prayer, positive quote, gratitude, strength, and community encouragement.</p>
-<p class="editor-note">Click for the faith section.</p>
-</a>
-
-<a class="card" href="#shop">
-<span>Merch</span>
-<h3>Mother’s Day Drop</h3>
-<img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day merch" style="height:150px;object-fit:contain;background:rgba(255,255,255,.05);">
-<p>Official BlackSheep Patriots merch with countdown and shop link.</p>
-</a>
-
-<a class="card" href="#standards">
-<span>Editorial Standards</span>
-<h3>Verification / Corrections</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop" alt="Editorial standards preview">
-<p>How BlackSheep Patriots News separates reporting, commentary, sourcing, corrections, and developing stories.</p>
-<p class="editor-note">Click for standards and corrections policy.</p>
-</a>
-
-<a class="card" href="#legal">
-<span>Legal</span>
-<h3>Disclaimer / Policy Notice</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop" alt="Legal disclaimer preview">
-<p>Important legal, editorial, opinion, source, corrections, and sponsored-content disclaimers.</p>
-<p class="editor-note">Click for full legal notice.</p>
-</a>
-
-<a class="card" href="#tips">
-<span>Contact</span>
-<h3>Tips / Corrections / Leads</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Contact desk preview">
-<p>Send documents, photos, videos, public records, corrections, local leads, and community tips.</p>
-<p class="editor-note">Click for contact information.</p>
-</a>
-
-</div>
-</div>
-
-<div class="section detail-section" id="trade">
-<h2>Trade Desk: Imports / Exports / Supply Chain</h2>
-<img class="card-img" src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop" alt="Shipping containers and trade logistics" style="height:260px;">
-<p class="byline">Trade Snapshot • BlackSheep Patriots News</p>
-<p>This section tracks imports, exports, ports, supply-chain pressure, trade balance, goods movement, and how national trade activity affects local businesses, prices, fuel, food, retail, and Atlantic City tourism.</p>
-<div class="grid grid-4">
-<div class="card"><span>Imports</span><h3>Goods Coming In</h3><p class="stat">$330B</p><div class="bar-wrap"><div class="bar" style="width:100%"></div></div><p>Imported goods snapshot.</p></div>
-<div class="card"><span>Exports</span><h3>Goods Going Out</h3><p class="stat">$265B</p><div class="bar-wrap"><div class="bar" style="width:80%"></div></div><p>Exported goods snapshot.</p></div>
-<div class="card"><span>Balance</span><h3>Trade Gap</h3><p class="stat">-$65B</p><div class="bar-wrap"><div class="bar" style="width:65%"></div></div><p>Import/export difference snapshot.</p></div>
-<div class="card"><span>Supply Chain</span><h3>Port Watch</h3><p class="stat">Active</p><div class="bar-wrap"><div class="bar" style="width:74%"></div></div><p>Ports, shipping, and inventory pressure.</p></div>
-</div>
-<h3>Trade Movement Graph</h3>
-<div class="mini-chart"><div style="height:100%"><span>Imports<br>$330B</span></div><div style="height:80%"><span>Exports<br>$265B</span></div><div style="height:45%"><span>Gap<br>$65B</span></div><div style="height:70%"><span>Ports<br>Active</span></div></div>
-<p class="editor-note">Figures are placeholders for presentation until updated with official Census Bureau / BEA trade data.</p>
-<p class="source">Source placeholders: U.S. Census Bureau trade data • Bureau of Economic Analysis • Port authority releases.</p>
-</div>
-
-<div class="section detail-section" id="jobs">
-<h2>Job Market Desk</h2>
-<img class="card-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Workers and job market" style="height:260px;">
-<p class="byline">Labor Snapshot • BlackSheep Patriots News</p>
-<p>This section tracks unemployment, job creation, weekly claims, hiring co
+/* 🇺🇸 PREMIUM FINAL NEWSROOM GLASS DESIGN */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(176,0,0,.22),transparent 18%,transparent 82%,rgba(0,87,255,.22)),radial-gradient(circle at 50% 0%,rgba(255,255,255,.18),transparent 36%);z-index:-1}
+.container{position:relative}
+.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:linear-gradient(180deg,rgba(3,9,26,.46),rgba(0,0,0,.22)) !important;border-color:rgba(255,255,255,.62) !important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 28px rgba(0,87,255,.22),0 0 26px rgba(176,0,0,.18),inset 0 0 24px rgba(255,255,255,.06) !important;backdrop-filter:blur(7px) saturate(135%) !important}
+.header{position:relative;overflow:hidden;border-top:2px solid rgba(255,255,255,.9) !important;border-bottom:2px solid rgba(176,0,0,.9) !important}
+.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.85;box-shadow:0 0 12px rgba(255,255,255,.55)}
+.header,.hero,.section{position:relative;overflow:hidden}
+.hero{box-shadow:0 0 42px rgba(255,255,255,.20),0 0 38px rgba(0,87,255,.26),0 0 32px rgba(176,0,0,.24) !important}
+.title{font-size:clamp(34px,5.8vw,72px) !important;line-height:1.02;filter:drop-shadow(0 0 10px rgba(255,255,255,.55)) drop-shadow(0 0 18px rgba(0,87,255,.35)) !important}
+.tagline{letter-spacing:4px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,.35)}
+.nav a,.tabs a,.button,.video-link{border-color:rgba(255,255,255,.68) !important;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25)) !important;box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px}
+.breaking{border-color:#fff !important;background:linear-gradient(90deg,rgba(122,0,0,.88),rgba(0,0,0,.72),rgba(0,42,122,.78),rgba(122,0,0,.88)) !important;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 24px rgba(0,87,255,.32),inset 0 0 18px rgba(255,255,255,.08) !important}
+.card{position:relative;overflow:hidden;transform:translateZ(0)}
+.card::before{content:"";position:abso
