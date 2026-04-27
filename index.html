@@ -315,4 +315,120 @@ body, p, span, a, div, strong { color:#ffffff; }
 <h2>Legal / Editorial Disclaimer</h2>
 <p><strong>BlackSheep Patriots News</strong> publishes reporting, sourced summaries, opinion, commentary, faith-based notes, public-interest updates, weather information, market/economy snapshots, entertainment coverage, and community content.</p>
 <p>Content is for general informational and editorial purposes only. It is not legal, financial, medical, investment, emergency, or professional advice.</p>
-<p>Developing stories may change. Serious claims should be verified thro
+<p>Developing stories may change. Serious claims should be verified through documents, public records, official statements, credible named sources, or multiple reliable reports.</p>
+<p>Market, economy, trade, jobs, housing, and weather figures may be snapshots or placeholders unless clearly labeled as live data from an official source. Readers should verify time-sensitive information through official agencies before making decisions.</p>
+<p>Sponsored material, advertising, affiliate links, or promotional content should be clearly labeled. Corrections should be made when information is inaccurate or incomplete.</p>
+</div>
+
+<div class="section" id="homepage-mission-legal">
+<h2>Mission, Standards & Legal Notice</h2>
+<div class="grid grid-3">
+<a class="card" href="#about"><span>Mission</span><h3>Truth Over Comfort</h3><p>Independent voice, sourced reporting, and community-first coverage.</p></a>
+<a class="card" href="#standards"><span>Standards</span><h3>Verification / Corrections</h3><p>Claims should be checked, opinion should be labeled, and corrections should be made.</p></a>
+<a class="card" href="#legal"><span>Legal</span><h3>Editorial Disclaimer</h3><p>Content is informational and editorial, not legal, financial, medical, emergency, or investment advice.</p></a>
+</div>
+</div>
+
+<div class="footer">© 2026 BlackSheep Patriots News ★ BigRooster Media<br>Independently owned and operated by Zachary J. Blum. Truth over comfort. WE UP.</div>
+</div>
+
+<script>
+(function(){
+  const detailSelector = '.detail-section';
+  const homePanelSelector = '.container > *:not(.header):not(.detail-section):not(.footer)';
+
+  function updateCountdown(){
+    const target = new Date('2026-05-10T23:59:59-04:00').getTime();
+    const diff = target - Date.now();
+    const d=document.getElementById('md-days'), h=document.getElementById('md-hours'), m=document.getElementById('md-mins'), s=document.getElementById('md-secs');
+    if(!d||!h||!m||!s)return;
+    if(diff<=0){d.textContent='0';h.textContent='0';m.textContent='0';s.textContent='0';return;}
+    d.textContent=Math.floor(diff/(1000*60*60*24));
+    h.textContent=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    m.textContent=Math.floor((diff%(1000*60*60))/(1000*60));
+    s.textContent=Math.floor((diff%(1000*60))/1000);
+  }
+
+  function detailSections(){ return Array.from(document.querySelectorAll(detailSelector)); }
+  function homePanels(){ return Array.from(document.querySelectorAll(homePanelSelector)); }
+
+  function removeBackButtons(){
+    document.querySelectorAll('.rooster-back-wrap').forEach(el=>el.remove());
+  }
+
+  function addBackButton(section){
+    removeBackButtons();
+    const wrap=document.createElement('div');
+    wrap.className='rooster-back-wrap';
+    wrap.innerHTML = '<a class="rooster-back-button" href="#top" aria-label="Back to Home"><span class="rooster-icon">🐓</span><span><strong>Back to Home</strong><small>BlackSheep Patriots • WE UP</small></span></a>';
+    section.insertBefore(wrap, section.firstChild);
+  }
+
+  function showHome(push){
+    removeBackButtons();
+    detailSections().forEach(sec=>sec.style.display='none');
+    homePanels().forEach(panel=>panel.style.display='');
+    const footer=document.querySelector('.footer');
+    if(footer) footer.style.display='block';
+    if(push) history.pushState(null,'','#top');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function showPage(id,push){
+    const section=document.getElementById(id);
+    if(!section || !section.classList.contains('detail-section')){ showHome(push); return; }
+    homePanels().forEach(panel=>panel.style.display='none');
+    detailSections().forEach(sec=>sec.style.display='none');
+    section.style.display='block';
+    addBackButton(section);
+    const footer=document.querySelector('.footer');
+    if(footer) footer.style.display='block';
+    if(push) history.pushState(null,'','#'+id);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function handleHash(push){
+    const id=location.hash.replace('#','');
+    if(!id || id==='top') showHome(false);
+    else showPage(id,false);
+  }
+
+  function setupLinks(){
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click',function(e){
+        const id=this.getAttribute('href').replace('#','');
+        if(!id || id==='top'){
+          e.preventDefault();
+          showHome(true);
+          return;
+        }
+        const section=document.getElementById(id);
+        if(section && section.classList.contains('detail-section')){
+          e.preventDefault();
+          showPage(id,true);
+        }
+      });
+    });
+  }
+
+  window.addEventListener('popstate',()=>handleHash(false));
+  window.addEventListener('DOMContentLoaded',function(){
+    setupLinks();
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+    handleHash(false);
+  });
+})();
+</script>
+
+<style>
+/* Rooster tactical-style Back to Home button */
+.rooster-back-wrap{margin:0 0 22px 0;display:flex;justify-content:flex-start}
+.rooster-back-button{display:inline-flex;align-items:center;gap:12px;border:2px solid rgba(255,255,255,.85);border-radius:999px;padding:10px 18px;background:linear-gradient(90deg,rgba(176,0,0,.72),rgba(255,255,255,.28),rgba(0,87,255,.72));box-shadow:0 0 18px rgba(255,0,0,.35),0 0 22px rgba(0,87,255,.35),inset 0 0 14px rgba(255,255,255,.12);font-weight:900;text-transform:uppercase;letter-spacing:.7px;color:#fff!important;animation:patriotPulseGlow 1.8s ease-in-out infinite}
+.rooster-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:34px;background:linear-gradient(135deg,#0b1b3f,#111,#7a0000);border:2px solid #fff;box-shadow:0 0 15px rgba(255,255,255,.35)}
+.rooster-back-button small{display:block;font-size:11px;letter-spacing:1px;color:#fff;opacity:.9;margin-top:2px}
+.rooster-back-button:hover{transform:translateY(-2px) scale(1.02);background:linear-gradient(90deg,#b00000,#fff,#0057ff)!important;color:#000!important}
+.rooster-back-button:hover small,.rooster-back-button:hover strong{color:#000!important}
+</style>
+</body>
+</html>
