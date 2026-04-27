@@ -38,19 +38,54 @@ html{scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;font-family:Ar
 .rooster-back-wrap::after{content:"Click to return home";font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.82);text-shadow:0 0 8px rgba(0,87,255,.7);margin-top:8px}
 @media(max-width:700px){.rooster-back-button{min-height:92px!important;border-radius:18px!important}.rooster-back-button::after{font-size:32px!important}}
 
-/* PREMIUM NEWSROOM — AMERICAN FLAG FRAME (CLEAN) */
-/* remove filled overlay causing black center */
-body::before{content:"";position:fixed;inset:10px;border:3px solid transparent;pointer-events:none;z-index:999;background:linear-gradient(90deg,#b00000 0 20%,#fff 20% 40%,#0057ff 40% 60%,#fff 60% 80%,#b00000 80% 100%) border-box;mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask-composite:xor}
-/* top blue field with stars */
-body::after{content:"★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";position:fixed;left:10px;right:10px;top:10px;height:26px;display:flex;align-items:center;justify-content:center;font-size:14px;letter-spacing:12px;color:#fff;pointer-events:none;z-index:1001;background:#002868;border-top-left-radius:8px;border-top-right-radius:8px;box-shadow:0 0 14px rgba(0,87,255,.5)}
-/* side stripes (true flag feel: red/white only) */
-.patriot-frame-left,.patriot-frame-right{position:fixed;top:38px;bottom:10px;width:10px;z-index:1000;pointer-events:none;background:repeating-linear-gradient(180deg,#b00000 0 16px,#fff 16px 32px);}
+/* AMERICAN FLAG FRAME — FIXED (NO OVERLAY) */
+/* remove problematic overlay entirely */
+body::before{content:none!important}
+
+/* top blue band with stars */
+body::after{content:"★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★";position:fixed;left:10px;right:10px;top:10px;height:26px;display:flex;align-items:center;justify-content:center;font-size:14px;letter-spacing:12px;color:#fff;pointer-events:none;z-index:1001;background:#002868;border-radius:8px}
+
+/* side stripes */
+.patriot-frame-left,.patriot-frame-right{position:fixed;top:38px;bottom:10px;width:10px;z-index:1000;pointer-events:none;background:repeating-linear-gradient(180deg,#b00000 0 16px,#fff 16px 32px)}
 .patriot-frame-left{left:10px}.patriot-frame-right{right:10px}
-/* bottom stripe bar */
+
+/* bottom stripes */
 .patriot-frame-bottom{position:fixed;left:10px;right:10px;bottom:10px;height:10px;z-index:1001;pointer-events:none;background:repeating-linear-gradient(90deg,#b00000 0 22px,#fff 22px 44px)}
-/* remove boxy glow */
-.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{border-color:rgba(255,255,255,.65)!important;box-shadow:0 0 18px rgba(0,87,255,.18),0 0 16px rgba(176,0,0,.14),inset 0 0 16px rgba(255,255,255,.05)!important}
-@media(max-width:700px){body::before{inset:6px}body::after{letter-spacing:6px;font-size:10px;left:6px;right:6px;height:20px}.patriot-frame-left,.patriot-frame-right{width:6px;top:30px;bottom:6px}.patriot-frame-left{left:6px}.patriot-frame-right{right:6px}.patriot-frame-bottom{left:6px;right:6px;height:6px}.container{padding-left:12px;padding-right:12px}}body::after{letter-spacing:6px;font-size:10px;left:8px;right:8px;height:22px}.patriot-frame-left,.patriot-frame-right{width:7px;top:32px;bottom:8px}.patriot-frame-left{left:4px}.patriot-frame-right{right:4px}.patriot-frame-bottom{left:8px;right:8px;height:9px}.hero{padding:26px 16px}.container{padding-left:14px;padding-right:14px}}
+
+@media(max-width:700px){
+body::after{letter-spacing:6px;font-size:10px;left:6px;right:6px;height:20px}
+.patriot-frame-left,.patriot-frame-right{width:6px;top:30px;bottom:6px}
+.patriot-frame-left{left:6px}.patriot-frame-right{right:6px}
+.patriot-frame-bottom{left:6px;right:6px;height:6px}
+}body::after{letter-spacing:6px;font-size:10px;left:6px;right:6px;height:20px}.patriot-frame-left,.patriot-frame-right{width:6px;top:30px;bottom:6px}.patriot-frame-left{left:6px}.patriot-frame-right{right:6px}.patriot-frame-bottom{left:6px;right:6px;height:6px}.container{padding-left:12px;padding-right:12px}}body::after{letter-spacing:6px;font-size:10px;left:8px;right:8px;height:22px}.patriot-frame-left,.patriot-frame-right{width:7px;top:32px;bottom:8px}.patriot-frame-left{left:4px}.patriot-frame-right{right:4px}.patriot-frame-bottom{left:8px;right:8px;height:9px}.hero{padding:26px 16px}.container{padding-left:14px;padding-right:14px}}
+
+/* FLAG FRAME ANIMATION UPGRADE — SAFE OVERRIDE */
+body::after{
+  background:linear-gradient(90deg,#001f5c,#003a9b,#002868,#003a9b,#001f5c)!important;
+  background-size:300% 100%!important;
+  animation:starBandWave 6s ease-in-out infinite, starGlowPulse 2.8s ease-in-out infinite!important;
+  text-shadow:0 0 8px #fff,0 0 16px rgba(255,255,255,.9),0 0 22px rgba(0,87,255,.8)!important;
+}
+@keyframes starBandWave{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes starGlowPulse{0%,100%{filter:brightness(1);box-shadow:0 0 12px rgba(0,87,255,.45)}50%{filter:brightness(1.35);box-shadow:0 0 24px rgba(255,255,255,.55),0 0 28px rgba(0,87,255,.75)}}
+.patriot-frame-left,.patriot-frame-right{
+  background:repeating-linear-gradient(180deg,#b00000 0 16px,#fff 16px 32px)!important;
+  background-size:100% 64px!important;
+  animation:flagStripeWaveY 3.8s linear infinite!important;
+  box-shadow:0 0 10px rgba(255,255,255,.22),0 0 18px rgba(176,0,0,.30),0 0 18px rgba(0,87,255,.20)!important;
+}
+.patriot-frame-right{animation-direction:reverse!important}
+.patriot-frame-bottom{
+  background:repeating-linear-gradient(90deg,#b00000 0 22px,#fff 22px 44px,#b00000 44px 66px,#fff 66px 88px)!important;
+  background-size:176px 100%!important;
+  animation:flagStripeWaveX 4.4s linear infinite!important;
+  box-shadow:0 0 16px rgba(255,255,255,.24),0 0 18px rgba(176,0,0,.22),0 0 18px rgba(0,87,255,.22)!important;
+}
+@keyframes flagStripeWaveY{0%{background-position:0 0}100%{background-position:0 64px}}
+@keyframes flagStripeWaveX{0%{background-position:0 0}100%{background-position:176px 0}}
+body.frame-scrolled::after{filter:brightness(1.45) saturate(1.25)!important;box-shadow:0 0 30px rgba(255,255,255,.65),0 0 36px rgba(0,87,255,.9)!important}
+body.frame-scrolled .patriot-frame-left,body.frame-scrolled .patriot-frame-right,body.frame-scrolled .patriot-frame-bottom{filter:brightness(1.25) saturate(1.35)!important;box-shadow:0 0 24px rgba(255,255,255,.35),0 0 26px rgba(176,0,0,.45),0 0 26px rgba(0,87,255,.45)!important}
+@media(max-width:700px){body::after{animation:starBandWave 7s ease-in-out infinite,starGlowPulse 3.5s ease-in-out infinite!important}.patriot-frame-left,.patriot-frame-right{animation-duration:5s!important}.patriot-frame-bottom{animation-duration:5.5s!important}}
 </style>
 </head>
 <body>
