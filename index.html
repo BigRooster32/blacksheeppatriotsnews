@@ -146,14 +146,10 @@ body::before{display:none!important}body::after{content:"★ BREAKING NEWS ★ B
     if(now > target) target = calc(year + 1);
     return target;
   }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
+  function setCountdown(id,value){var el=document.getElementById(id);if(el)el.textContent=value;}
+  function pad(n){return String(n).padStart(2,'0');}
   function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
+    var diff = getNextMothersDay() - new Date();
     if(diff < 0) diff = 0;
     var totalSeconds = Math.floor(diff / 1000);
     var days = Math.floor(totalSeconds / 86400);
@@ -162,470 +158,128 @@ body::before{display:none!important}body::after{content:"★ BREAKING NEWS ★ B
     totalSeconds %= 3600;
     var minutes = Math.floor(totalSeconds / 60);
     var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
+    setCountdown('md-days',days);
+    setCountdown('md-hours',pad(hours));
+    setCountdown('md-mins',pad(minutes));
+    setCountdown('md-secs',pad(seconds));
   }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateMothersDayCountdown);else updateMothersDayCountdown();
+  setInterval(updateMothersDayCountdown,1000);
+})();
+</script>
+
+<div class="section" id="quality-of-life"><h2>Quality of Life Command Center</h2><p class="homepage-note">Priority order: what affects people’s daily life first — weather, safety, food, money, jobs, housing, trade, and markets.</p><div class="grid grid-4"><a class="card" href="#weather"><span>1 • Weather</span><h3>Live Weather Command</h3><p class="stat" id="weather-ac-qol">Loading</p><p>Atlantic City, NYC, D.C., Richmond, Los Angeles, Dallas, Chicago, Florida coast, Alaska, Hawaii, and Puerto Rico weather board.</p></a><a class="card" href="#ocean"><span>1B • Ocean</span><h3>Ocean Statistics Command</h3><p class="stat">11 zones</p><p>South Jersey, NYC, Florida, Myrtle Beach, Alaska, Hawaii, Puerto Rico, tides, wind, waves, water temps, and marine links.</p></a><a class="card" href="#crime"><span>2 • Safety</span><h3>Crime Tracker Live</h3><p class="stat">4 zones</p><p>Public-source crime tracker by agency releases and enforcement dashboards.</p></a><a class="card" href="#food"><span>3 • Food</span><h3>Food Supply Chain Watch</h3><p class="stat">6 feeds</p><p>Food prices, recalls, USDA/FDA alerts, crops, trucking, ports, funding, and process updates.</p></a><a class="card" href="#treasury"><span>4 • Money</span><h3>U.S. Treasury Tracker</h3><p class="stat">$37T+</p><p>Debt, cash balance, receipts, outlays, interest, auctions, OFAC, and sanctions watch.</p></a><a class="card" href="#economy"><span>5 • Economy</span><h3>Economy Board</h3><p class="stat">3.3%</p><p>Inflation, GDP, claims, unemployment, and household pressure.</p></a><a class="card" href="#jobs"><span>6 • Work</span><h3>Job Market Desk</h3><p class="stat">4.3%</p><p>Unemployment, jobs added, claims, benefits rolls, and work-quality pressure.</p></a><a class="card" href="#articles"><span>7 • Articles</span><h3>Full Article Library</h3><p class="stat">10</p><p>Clickable stories that open into full readable article pages.</p></a></div></div>
+
+<div class="section" id="biography-preview"><h2>Founder Biography Preview</h2><div class="bio-preview"><div><p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> built BlackSheep Patriots News from survival, loss, fatherhood, faith, mistakes, rebuilding, and the belief that truth matters more than comfort.</p><a class="button" href="#biography">Read Full Biography</a></div><div class="bio-preview-photos"><img src="bio-assets/image1.jpeg" alt="Biography preview 1"><img src="bio-assets/image2.jpeg" alt="Biography preview 2"><img src="bio-assets/image4.jpeg" alt="Biography preview 3"></div></div></div>
+
+<div class="section detail-section" id="weather"><h2>Live Weather Command Center</h2><p class="byline">Full live API weather board • current conditions, wind, and 3-day forecast for all tracked locations.</p><div class="weather-updated" id="weather-live-status">Live API loading...</div><div class="live-data-strip" id="weatherLiveStrip"></div><div class="sports-ticker"><div class="ticker-track" id="weatherLiveTicker">🌦 Loading live weather...</div></div><div class="grid grid-4" id="weatherLiveGrid"></div><h3>Current Temperature + Conditions Graph</h3><div class="mini-chart" id="weatherLiveGraph"></div><p class="source">Live weather data: Open-Meteo API. Updates every 10 minutes where browser/network permissions allow.</p></div>
+
+<div class="section detail-section" id="ocean"><h2>Ocean Statistics Command Center</h2><p class="byline">Marine Desk • South Jersey, NYC, Florida, Myrtle Beach, Alaska, Hawaii, Puerto Rico • NOAA/NWS links and marine-risk board.</p><div class="live-data-strip"><div class="live-data-pill"><span>Tracked zones</span><strong>11</strong><small>NJ / NY / FL / SC / AK / HI / PR</small></div><div class="live-data-pill"><span>NOAA</span><strong>Live links</strong><small>Tides, buoys, beach, marine</small></div></div><div class="grid grid-4"><div class="card"><h3>Atlantic City</h3><p class="stat">2.6 ft</p><p>Water 52°F • NE 12 mph • moderate surf/current watch.</p></div><div class="card"><h3>NY Harbor</h3><p class="stat">2.1 ft</p><p>Water 50°F • E 10 mph • harbor active.</p></div><div class="card"><h3>Key West</h3><p class="stat">2.4 ft</p><p>Water 77°F • E 16 mph • boating watch.</p></div><div class="card"><h3>Daytona Beach</h3><p class="stat">2.8 ft</p><p>Water 73°F • E 14 mph • surf watch.</p></div><div class="card"><h3>Myrtle Beach</h3><p class="stat">2.7 ft</p><p>Water 66°F • E 11 mph • beach watch.</p></div><div class="card"><h3>Punta Gorda</h3><p class="stat">1.8 ft</p><p>Water 76°F • Gulf wind watch.</p></div><div class="card"><h3>Honolulu / Oahu</h3><p class="stat">4.1 ft</p><p>Water 77°F • E 17 mph • Pacific swell active.</p></div><div class="card"><h3>San Juan</h3><p class="stat">3.5 ft</p><p>Water 81°F • E 16 mph • rip-current watch.</p></div></div><h3>Ocean Movement Graph</h3><div class="mini-chart"><div style="height:52%"><span>AC<br>2.6</span></div><div style="height:42%"><span>NYC<br>2.1</span></div><div style="height:48%"><span>Key<br>2.4</span></div><div style="height:56%"><span>Daytona<br>2.8</span></div><div style="height:54%"><span>Myrtle<br>2.7</span></div><div style="height:82%"><span>HI<br>4.1</span></div></div></div>
+
+<div class="section detail-section" id="crime"><h2>Crime Tracker Live</h2><p class="byline">Justice Desk • FBI / BJS / DOJ / DEA / ATF / U.S. Marshals public-source tracker • Atlantic City / South Jersey priority lane</p><div class="live-data-strip"><div class="live-data-pill"><span>Crime data hub</span><strong>FBI CDE</strong><small>Agency / state / offense data</small></div><div class="live-data-pill"><span>Federal districts</span><strong>94</strong><small>U.S. Attorney districts</small></div><div class="live-data-pill"><span>Primary feeds</span><strong>6</strong><small>FBI / BJS / DOJ / DEA / ATF / USMS</small></div><div class="live-data-pill"><span>Local priority</span><strong>AC / SJ</strong><small>Atlantic City + South Jersey</small></div></div><div class="grid grid-4"><div class="card"><span>FBI</span><h3>Violent Crime</h3><p class="stat">82/100</p><p>Homicide, robbery, aggravated assault, and violent-crime trend monitoring.</p><div class="bar-wrap"><div class="bar" style="width:82%"></div></div></div><div class="card"><span>FBI</span><h3>Property Crime</h3><p class="stat">70/100</p><p>Burglary, theft, vehicle theft, retail crime, and neighborhood pressure.</p><div class="bar-wrap"><div class="bar" style="width:70%"></div></div></div><div class="card"><span>DEA</span><h3>Narcotics / Fentanyl</h3><p class="stat">76/100</p><p>Federal narcotics enforcement, fentanyl seizures, cartel networks, and overdose risk.</p><div class="bar-wrap"><div class="bar" style="width:76%"></div></div></div><div class="card"><span>ATF</span><h3>Firearms Cases</h3><p class="stat">74/100</p><p>Gun trafficking, illegal possession, straw purchases, violent offender cases.</p><div class="bar-wrap"><div class="bar" style="width:74%"></div></div></div></div><h3>Crime Pressure Graph</h3><div class="mini-chart"><div style="height:82%"><span>Violent<br>82</span></div><div style="height:70%"><span>Property<br>70</span></div><div style="height:76%"><span>Drugs<br>76</span></div><div style="height:74%"><span>Firearms<br>74</span></div></div></div>
+
+<div class="section detail-section" id="food"><h2>Food Supply Chain Watch</h2><p class="byline">USDA / FDA / FSIS / BLS / AMS / ERS tracker for food prices, recalls, agriculture, freight, ports, and funding.</p><div class="live-data-strip"><div class="live-data-pill"><span>Food price watch</span><strong>2.4%</strong><small>Food-at-home pressure board</small></div><div class="live-data-pill"><span>Official feeds</span><strong>6</strong><small>USDA / FDA / FSIS / BLS / AMS / ERS</small></div><div class="live-data-pill"><span>Movement lanes</span><strong>4</strong><small>Ports / rail / trucking / cold chain</small></div><div class="live-data-pill"><span>Recall watch</span><strong>2 feeds</strong><small>FDA + FSIS</small></div></div><div class="grid grid-4"><div class="card"><h3>BLS Food Inflation</h3><p class="stat">2.4%</p><p>Food-at-home and restaurant cost pressure.</p><div class="bar-wrap"><div class="bar" style="width:48%"></div></div></div><div class="card"><h3>USDA Crop / Livestock</h3><p class="stat">6 reports</p><p>Crop progress, livestock, grain stocks, planting, drought, yields, fertilizer, and farm income.</p><div class="bar-wrap"><div class="bar" style="width:76%"></div></div></div><div class="card"><h3>FDA / FSIS Recalls</h3><p class="stat">2 feeds</p><p>Food recalls, outbreaks, contamination, meat, poultry, labeling, and safety alerts.</p><div class="bar-wrap"><div class="bar" style="width:68%"></div></div></div><div class="card"><h3>Ports / Cold Chain</h3><p class="stat">4 lanes</p><p>Ports, trucking, rail, refrigerated storage, diesel costs, and fresh food movement.</p><div class="bar-wrap"><div class="bar" style="width:72%"></div></div></div></div></div>
+
+<div class="section detail-section" id="treasury"><h2>U.S. Treasury Tracker</h2><p class="byline">Live no-key FiscalData API where browser allows • debt, cash balance, receipts, outlays, interest, auctions, OFAC, sanctions, and federal money movement.</p><div class="weather-updated" id="treasuryStatus">Treasury API loading...</div><div class="live-data-strip"><div class="live-data-pill"><span>Total public debt</span><strong id="treasuryDebt">Loading</strong><small>Debt to the Penny API</small></div><div class="live-data-pill"><span>Debt held by public</span><strong id="treasuryPublicDebt">Loading</strong><small>Debt to the Penny API</small></div><div class="live-data-pill"><span>Cash balance</span><strong id="treasuryCash">Loading</strong><small>Daily Treasury Statement API</small></div><div class="live-data-pill"><span>Interest watch</span><strong>$1T+/yr</strong><small>Annual pressure board</small></div></div><div class="grid grid-4"><div class="card"><span>Debt</span><h3>Total Public Debt</h3><p class="stat" id="treasuryDebtCard">Loading</p><p>Total public debt outstanding.</p><div class="bar-wrap"><div class="bar" style="width:95%"></div></div></div><div class="card"><span>Public Debt</span><h3>Debt Held by Public</h3><p class="stat" id="treasuryPublicDebtCard">Loading</p><p>Debt held outside federal government accounts.</p><div class="bar-wrap"><div class="bar" style="width:82%"></div></div></div><div class="card"><span>TGA</span><h3>Treasury Cash Balance</h3><p class="stat" id="treasuryCashCard">Loading</p><p>Federal cash balance used to manage daily government operations.</p><div class="bar-wrap"><div class="bar" style="width:62%"></div></div></div><div class="card"><span>OFAC</span><h3>Sanctions Watch</h3><p class="stat">Active</p><p>Sanctions, illicit finance, shadow-fleet shipping, and cyber actor tracking.</p><div class="bar-wrap"><div class="bar" style="width:80%"></div></div></div></div></div>
+
+<div class="section detail-section" id="economy"><h2>U.S. Economy Board</h2><p class="byline">GDP, inflation, unemployment, claims, housing pressure, market pressure, trade pressure, consumer stress, and household impact.</p><div class="live-data-strip"><div class="live-data-pill"><span>GDP</span><strong>+0.5%</strong><small>Real GDP snapshot</small></div><div class="live-data-pill"><span>CPI inflation</span><strong>3.3%</strong><small>Consumer price pressure</small></div><div class="live-data-pill"><span>Unemployment</span><strong>4.3%</strong><small>Labor market board</small></div><div class="live-data-pill"><span>Initial claims</span><strong>214K</strong><small>Weekly jobless pressure</small></div><div class="live-data-pill"><span>Mortgage rate</span><strong>6.23%</strong><small>Housing affordability</small></div><div class="live-data-pill"><span>Trade gap</span><strong>-$65B</strong><small>Imports vs exports</small></div></div><h3>Economy Graph</h3><div class="mini-chart"><div style="height:12%"><span>GDP<br>0.5%</span></div><div style="height:65%"><span>CPI<br>3.3%</span></div><div style="height:60%"><span>Jobs<br>4.3%</span></div><div style="height:58%"><span>Claims<br>214K</span></div><div style="height:62%"><span>Mortgage<br>6.23%</span></div><div style="height:45%"><span>Trade<br>-65B</span></div></div></div>
+
+<div class="section detail-section" id="jobs"><h2>Job Market Desk</h2><div class="grid grid-4"><div class="card"><h3>Jobless Rate</h3><p class="stat">4.3%</p></div><div class="card"><h3>Jobs Added</h3><p class="stat">178K</p></div><div class="card"><h3>Initial Claims</h3><p class="stat">214K</p></div><div class="card"><h3>Benefits Rolls</h3><p class="stat">1.82M</p></div></div></div>
+<div class="section detail-section" id="housing"><h2>Housing Market Watch</h2><div class="grid grid-4"><div class="card"><h3>30-Year Fixed</h3><p class="stat">6.23%</p></div><div class="card"><h3>Median Listing</h3><p class="stat">$415K</p></div><div class="card"><h3>Active Listings</h3><p class="stat">964K</p></div><div class="card"><h3>Median Days</h3><p class="stat">57</p></div></div></div>
+<div class="section detail-section" id="trade"><h2>Trade Desk</h2><div class="grid grid-4"><div class="card"><h3>Imports</h3><p class="stat">$330B</p></div><div class="card"><h3>Exports</h3><p class="stat">$265B</p></div><div class="card"><h3>Trade Gap</h3><p class="stat">-$65B</p></div><div class="card"><h3>Ports</h3><p class="stat">70/100</p></div></div></div>
+<div class="section detail-section" id="markets"><h2>Stock Exchange Watch</h2><div class="grid grid-3"><div class="card"><h3>SPY</h3><p class="stat">$715.17</p><p class="positive">+0.16%</p></div><div class="card"><h3>QQQ</h3><p class="stat">$664.23</p><p class="positive">+0.05%</p></div><div class="card"><h3>DIA</h3><p class="stat">$491.83</p><p class="negative">-0.08%</p></div></div></div>
+
+<div class="section detail-section" id="articles">
+  <h2>Articles Library</h2>
+  <p class="homepage-note">Choose an article below. Each card opens a full readable article page for viewers.</p>
+  <div class="live-data-strip">
+    <div class="live-data-pill"><span>Published articles</span><strong>10</strong><small>Full readable articles</small></div>
+    <div class="live-data-pill"><span>Author</span><strong>Zachary J. Blum</strong><small>BlackSheep Patriots News</small></div>
+    <div class="live-data-pill"><span>Main beat</span><strong>AC / SJ</strong><small>Local + national impact</small></div>
+    <div class="live-data-pill"><span>Reader path</span><strong>Click → Read</strong><small>Article cards open full stories</small></div>
+  </div>
+  <div class="grid grid-3">
+    <a class="card" href="#article-coastal"><span>Breaking / Infrastructure</span><h3>Coastal Resilience Funding Review</h3><p>Federal coastal funding, shoreline protection, insurance pressure, construction jobs, and Atlantic City impact.</p></a>
+    <a class="card" href="#article-ac-week"><span>Atlantic City</span><h3>Atlantic City This Week</h3><p>Events, restaurants, weather, Boardwalk movement, and public safety watch points.</p></a>
+    <a class="card" href="#article-founder"><span>Founder Story</span><h3>Becoming BigRooster</h3><p>Founder biography: survival, fatherhood, grief, faith, rebuilding, and the mission.</p></a>
+    <a class="card" href="#article-defense"><span>Military & Defense</span><h3>Strait of Hormuz Watch</h3><p>Oil, shipping, sanctions, naval posture, and market risk.</p></a>
+    <a class="card" href="#article-economy"><span>Economy</span><h3>Economy Numbers for Real People</h3><p>GDP, inflation, jobs, housing, food prices, and real-life pressure.</p></a>
+    <a class="card" href="#article-food"><span>Food Supply</span><h3>Food Supply Chain Watch</h3><p>Prices, recalls, farms, freight, ports, restaurants, and food access.</p></a>
+    <a class="card" href="#article-crime"><span>Crime Tracker</span><h3>How to Read Crime News</h3><p>Arrests, charges, convictions, scanner traffic, and why wording matters.</p></a>
+    <a class="card" href="#article-entertainment"><span>Entertainment</span><h3>Busboys, Comedy & Culture</h3><p>Working-class comedy, podcasts, trailers, and viral entertainment.</p></a>
+    <a class="card" href="#article-merch"><span>Brand / Merch</span><h3>Turning a News Brand Into a Movement</h3><p>Merch, identity, recognition, and community support.</p></a>
+  </div>
+  <h3>Article Coverage Graph</h3>
+  <div class="mini-chart">
+    <div style="height:92%"><span>Local<br>92</span></div><div style="height:86%"><span>Bio<br>86</span></div><div style="height:78%"><span>Faith<br>78</span></div><div style="height:88%"><span>Defense<br>88</span></div><div style="height:80%"><span>Economy<br>80</span></div><div style="height:74%"><span>Food<br>74</span></div>
+  </div>
+</div>
+
+<div class="section detail-section full-article" id="article-coastal"><h2>Coastal Resilience Funding Review</h2><p class="byline">By Zachary J. Blum — BlackSheep Patriots News</p><p>Federal regulators are reviewing a coastal resilience funding package after severe spring storms raised pressure on flood defenses, shoreline protection, infrastructure, insurance markets, and local emergency planning.</p><p>For Atlantic City and South Jersey, this affects drainage, roads, beach access, tourism, construction jobs, insurance costs, and long-term protection for neighborhoods near the coast.</p></div>
+<div class="section detail-section full-article" id="article-ac-week"><h2>Atlantic City This Week: Events, Restaurants, Weather & Public Safety</h2><p class="byline">By Zachary J. Blum — BlackSheep Patriots News</p><p>Atlantic City moves through the week with tourism, restaurants, Boardwalk traffic, weather, public safety, and local business all connected. The strongest local coverage should track events, restaurant highlights, weather impact, and official public-safety updates.</p></div>
+<div class="section detail-section full-article" id="article-founder"><h2>Becoming BigRooster: The Founder Story</h2><p class="byline">Founder Biography • BlackSheep Patriots News / BigRooster Media</p><p>Zachary J. Blum, known as BigRooster, built BlackSheep Patriots News from survival, loss, fatherhood, faith, mistakes, accountability, and rebuilding. The platform is rooted in Atlantic City, South Jersey, and the belief that truth matters more than comfort.</p><p><a class="button" href="#biography">Read Full Biography</a></p></div>
+<div class="section detail-section full-article" id="article-defense"><h2>Strait of Hormuz Watch: Oil, Shipping, Sanctions & U.S. Military Risk</h2><p class="byline">Military & Defense Desk • BlackSheep Patriots News</p><p>The Strait of Hormuz is one of the world’s most important maritime chokepoints. Tension there can affect oil prices, shipping insurance, sanctions enforcement, military posture, and household fuel costs.</p></div>
+<div class="section detail-section full-article" id="article-economy"><h2>What the Economy Numbers Mean for Real People</h2><p class="byline">Economy Desk • BlackSheep Patriots News</p><p>GDP, inflation, unemployment, jobless claims, mortgage rates, and stock indexes show up in everyday life through groceries, rent, insurance, gas, hiring, layoffs, and small-business pressure.</p></div>
+<div class="section detail-section full-article" id="article-food"><h2>Food Supply Chain Watch: Prices, Recalls, Farms & Freight</h2><p class="byline">Food Supply Desk • BlackSheep Patriots News</p><p>Food supply is a quality-of-life issue. Prices, recalls, trucking, fuel, ports, crop yields, livestock reports, and cold-chain movement all affect grocery stores, restaurants, schools, and food banks.</p></div>
+<div class="section detail-section full-article" id="article-crime"><h2>How to Read Crime News Without Getting Misled</h2><p class="byline">Crime Tracker Desk • BlackSheep Patriots News</p><p>Crime coverage must separate confirmed facts, allegations, charges, indictments, convictions, and sentencing. An arrest is not a conviction, and scanner traffic is not confirmation.</p></div>
+<div class="section detail-section full-article" id="article-entertainment"><h2>Busboys, Comedy & Working-Class Culture</h2><p class="byline">Entertainment Desk • BlackSheep Patriots News</p><p>Entertainment belongs on a news site because culture is part of public life. What people watch, laugh at, share, and argue about often reveals what audiences care about.</p></div>
+<div class="section detail-section full-article" id="article-merch"><h2>Turning a News Brand Into a Movement</h2><p class="byline">Brand Desk • BlackSheep Patriots News</p><p>Merch is not just clothing. For an independent media brand, it becomes a walking billboard, a loyalty symbol, and a way for supporters to help the platform grow.</p></div>
+
+<div class="section detail-section" id="faith"><h2>Faith & God</h2><p class="editor-note">A daily section for prayer, encouragement, gratitude, strength, family, community, and keeping faith at the center of the mission.</p><div class="grid grid-3"><div class="card"><span>Daily Scripture</span><h3>Psalm 46:1</h3><p>“God is our refuge and strength, an ever-present help in trouble.”</p></div><div class="card"><span>Daily Prayer</span><h3>Prayer for Strength</h3><p>Lord, guide my steps today. Give me wisdom, discipline, courage, patience, and peace. Amen.</p></div><div class="card"><span>Encouragement</span><h3>Today’s Word</h3><p>Stay grounded. Stay grateful. Keep moving with purpose.</p></div></div></div>
+<div class="section detail-section" id="shop"><h2>Merch: Official BlackSheep Patriots Gear</h2><div class="grid grid-3"><div class="card"><h3>Mother’s Day T-Shirt</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day shirt"><p>Featured limited-time shirt for Mother’s Day.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View Store</a></div><div class="card"><h3>Brand Direction</h3><p>Future merch: rooster logos, 1776 sleeve marks, faith designs, WE UP slogans, and South Jersey identity.</p></div><div class="card"><h3>Supporters</h3><p>Merch gives readers a way to support the platform without paywalls.</p></div></div></div>
+<div class="section detail-section" id="whitehouse"><h2>White House Command Desk</h2><p class="byline">Official briefings, executive actions, videos, funding, and local policy impact.</p><div class="grid grid-3"><div class="card"><h3>Briefings & Statements</h3><p class="stat">Daily</p><p>Track official releases, statements, press briefings, policy changes, and national priorities.</p></div><div class="card"><h3>White House Videos</h3><p class="stat">Live Link</p><p>Official speeches, events, livestream clips, and remarks.</p></div><div class="card"><h3>Local Impact Desk</h3><p class="stat">AC Watch</p><p>Translate federal policy into South Jersey effects: jobs, housing, safety, infrastructure, and coastal funding.</p></div></div></div>
+<div class="section detail-section" id="entertainment"><h2>Entertainment Command</h2><p class="byline">Movies, streaming, comedy, podcasts, viral clips, and audience engagement.</p><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Busboys Trailer" allowfullscreen></iframe></div><div class="live-data-strip"><div class="live-data-pill"><span>Featured movie</span><strong>Busboys</strong><small>Theo Von / David Spade lane</small></div><div class="live-data-pill"><span>Culture score</span><strong>80/100</strong><small>Shareable entertainment lane</small></div></div></div>
+<div class="section detail-section" id="videos"><h2>Video Desk</h2><p class="byline">Embedded videos, official feeds, commentary lanes, local clips, trailers, and trend links.</p><div class="video-grid"><div class="video-frame"><iframe src="https://www.youtube.com/embed/SEVbq2DvsEQ" title="Busboys Trailer" allowfullscreen></iframe></div></div></div>
+<div class="section detail-section" id="tips"><h2>Contact / Tips</h2><p>Email: <a href="mailto:BigRooster32@icloud.com">BigRooster32@icloud.com</a><br>Phone: <a href="tel:+16803027002">1 (680) 302-7002</a></p></div>
+<div class="section detail-section" id="about"><h2>About BlackSheep Patriots News</h2><p>Independently owned and operated by Zachary J. Blum / BigRooster Media.</p></div>
+<div class="section detail-section" id="standards"><h2>Editorial Standards & Corrections Policy</h2><p>Claims should be checked against official statements, public records, direct evidence, credible sources, or firsthand documentation.</p></div>
+<div class="section detail-section" id="advertise"><h2>Advertise / Sponsor / Partner</h2><p>Local businesses, creators, events, restaurants, shops, and community organizations can support through ads, sponsored posts, and partnerships.</p></div>
+<div class="section detail-section" id="legal"><h2>Legal / Editorial Disclaimer</h2><p>Content is for general informational and editorial purposes only. It is not legal, financial, medical, investment, emergency, or professional advice.</p></div>
+<div class="section detail-section" id="biography"><h2>Biography: Becoming BigRooster — Zachary J. Blum</h2><p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> is the founder of BlackSheep Patriots News and BigRooster Media. His story is built from survival, fatherhood, grief, mistakes, accountability, rebuilding, faith, and the mission behind an independent media platform rooted in Atlantic City and South Jersey.</p></div>
+<div class="section detail-section" id="local"><h2>Atlantic City Desk</h2><p>Local-first reporting lane for Atlantic City events, restaurants, public safety, Boardwalk movement, tourism, weather, and small-business coverage.</p></div>
+<div class="section detail-section" id="sports"><h2>Sports Desk</h2><p>Sports scores, schedules, local games, major league highlights, and regional team tracking can be added here.</p></div>
+<div class="section detail-section" id="conspiracy"><h2>Analysis Desk</h2><p>Analysis section for sourced investigations, public records, timelines, and clearly labeled opinion or commentary.</p></div>
+<div class="section detail-section" id="today"><h2>Daily News Desk</h2><p>Daily command center for weather, local updates, economy, defense, food supply, articles, and videos.</p></div>
+<div class="section detail-section" id="defense"><h2>Military & Defense Update</h2><p class="byline">Public-source defense desk • CENTCOM / DoD / Treasury / DOJ / maritime chokepoints.</p><div class="grid grid-4"><div class="card"><h3>Strait of Hormuz</h3><p class="stat">20%+</p><p>Large share of global petroleum liquids moves through this chokepoint. Watch oil, shipping insurance, sanctions, and naval posture.</p></div><div class="card"><h3>CENTCOM</h3><p class="stat">Active</p><p>Track official public releases only.</p></div><div class="card"><h3>Sanctions</h3><p class="stat">OFAC</p><p>Monitor public Treasury sanctions actions.</p></div><div class="card"><h3>Market Risk</h3><p class="stat">High</p><p>Energy-route disruptions can pressure fuel and household costs.</p></div></div></div>
+<div class="footer">© 2026 BlackSheep Patriots News ★ BigRooster Media<br>Independently owned and operated by Zachary J. Blum. Truth over comfort. WE UP.</div>
+</div>
+
+<script>
+/* HARD RESET PAGE ROUTER — RESTORED */
+(function(){
+  function details(){return Array.from(document.querySelectorAll('.detail-section'));}
+  function panels(){return Array.from(document.querySelectorAll('.container > *')).filter(function(el){return !el.classList.contains('header')&&!el.classList.contains('detail-section')&&!el.classList.contains('footer')&&el.tagName!=='SCRIPT';});}
+  function clearBack(){document.querySelectorAll('.rooster-back-wrap').forEach(function(el){el.remove();});}
+  function addBack(sec){clearBack();var title=(sec.querySelector('h2')&&sec.querySelector('h2').textContent)?sec.querySelector('h2').textContent:'Section';var wrap=document.createElement('div');wrap.className='rooster-back-wrap';wrap.innerHTML='<a class="rooster-back-button" href="#top" data-home="true"><span class="backhome-label">BACK HOME</span></a><div class="page-kicker">Now viewing: '+title+'</div>';sec.insertBefore(wrap,sec.firstChild);}
+  function showHome(){document.body.classList.remove('site-page-open');clearBack();details().forEach(function(s){s.classList.remove('active-page');s.style.setProperty('display','none','important');});panels().forEach(function(p){p.classList.add('home-panel');p.style.display='';});}
+  function showSection(id){var sec=document.getElementById(id);if(!sec||!sec.classList.contains('detail-section')){showHome();return;}document.body.classList.add('site-page-open');panels().forEach(function(p){p.classList.add('home-panel');p.style.setProperty('display','none','important');});details().forEach(function(s){s.classList.remove('active-page');s.style.setProperty('display','none','important');});sec.classList.add('active-page');sec.style.setProperty('display','block','important');addBack(sec);window.scrollTo({top:0,behavior:'smooth'});}
+  function route(){var id=(location.hash||'#top').replace('#','');if(!id||id==='top'||id==='home')showHome();else showSection(id);}
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').replace('#','');e.preventDefault();history.pushState(null,'',id?'#'+id:'#top');route();},true);
+  window.addEventListener('hashchange',route);window.addEventListener('popstate',route);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',route);else route();
 })();
 </script>
 <script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+/* LIVE TREASURY API — RESTORED */
 (function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
+  function money(n){n=Number(n);if(!isFinite(n))return 'N/A';if(n>=1e12)return '$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return '$'+(n/1e9).toFixed(1)+'B';return '$'+Math.round(n).toLocaleString();}
+  function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+  async function getJSON(u){var r=await fetch(u);if(!r.ok)throw new Error('fetch failed');return r.json();}
+  async function runTreasury(){try{var debt=await getJSON('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page[size]=1');var row=debt.data&&debt.data[0];var total=money(row.tot_pub_debt_out_amt), pub=money(row.debt_held_public_amt);set('treasuryDebt',total);set('treasuryPublicDebt',pub);set('treasuryDebtCard',total);set('treasuryPublicDebtCard',pub);var status=document.getElementById('treasuryStatus');if(status)status.textContent='Treasury API active • Debt data updated '+row.record_date;}catch(e){set('treasuryDebt','$37T+');set('treasuryPublicDebt','N/A');set('treasuryDebtCard','$37T+');set('treasuryPublicDebtCard','N/A');}try{var cash=await getJSON('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance?sort=-record_date&page[size]=1');var r=cash.data&&cash.data[0];var val=money(r.open_today_bal||r.close_today_bal||r.account_balance);set('treasuryCash',val);set('treasuryCashCard',val);}catch(e){set('treasuryCash','Daily');set('treasuryCashCard','Daily');}}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',runTreasury);else runTreasury();setInterval(runTreasury,3600000);
 })();
 </script>
 <script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+/* FULL LIVE WEATHER API — RESTORED */
 (function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
+  var WMO={0:'Clear',1:'Mainly clear',2:'Partly cloudy',3:'Cloudy',45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Showers',82:'Heavy showers',95:'Thunderstorm',96:'Storm + hail',99:'Severe storm'};
+  var LOCS=[['Atlantic City',39.3643,-74.4229,'ac'],['Herkimer',43.0256,-74.9852,'herkimer'],['NYC',40.7128,-74.0060,'nyc'],['Washington D.C.',38.9072,-77.0369,'dc'],['Richmond VA',37.5407,-77.4360,'richmond'],['Los Angeles',34.0522,-118.2437,'la'],['Dallas',32.7767,-96.7970,'dallas'],['Chicago',41.8781,-87.6298,'chicago'],['Punta Gorda',26.9298,-82.0454,'punta'],['Pompano Beach',26.2379,-80.1248,'pompano'],['Key West',24.5551,-81.7800,'keywest'],['Daytona Beach',29.2108,-81.0228,'daytona'],['Myrtle Beach',33.6891,-78.8867,'myrtle'],['Anchorage',61.2181,-149.9003,'anchorage'],['Honolulu',21.3099,-157.8581,'honolulu'],['San Juan PR',18.4655,-66.1057,'sanjuan']];
+  function f(n){return Math.round(n)+'°F';}function c(x){return WMO[x]||'Live';}function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+  async function getWeather(row){var name=row[0],lat=row[1],lon=row[2],key=row[3];var url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=temperature_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&forecast_days=3';var r=await fetch(url);var d=await r.json();return{name:name,key:key,temp:f(d.current.temperature_2m),cond:c(d.current.weather_code),wind:Math.round(d.current.wind_speed_10m)+' mph',hi:d.daily.temperature_2m_max.map(f),lo:d.daily.temperature_2m_min.map(f),codes:d.daily.weather_code.map(c)};}
+  function render(rows){var strip=document.getElementById('weatherLiveStrip'),grid=document.getElementById('weatherLiveGrid'),graph=document.getElementById('weatherLiveGraph'),ticker=document.getElementById('weatherLiveTicker');if(strip)strip.innerHTML=rows.map(function(r){return '<div class="live-data-pill"><span>'+r.name+'</span><strong>'+r.temp+'</strong><small>'+r.cond+' • Wind '+r.wind+' • Tue '+r.hi[0]+'/'+r.lo[0]+' • Wed '+r.hi[1]+'/'+r.lo[1]+' • Thu '+r.hi[2]+'/'+r.lo[2]+'</small></div>';}).join('');if(grid)grid.innerHTML=rows.map(function(r){return '<div class="card"><h3>'+r.name+'</h3><p class="stat">'+r.temp+'</p><p><strong>Current:</strong> '+r.cond+'<br><strong>Wind:</strong> '+r.wind+'<br><strong>Tuesday:</strong> '+r.hi[0]+' / '+r.lo[0]+' — '+r.codes[0]+'<br><strong>Wednesday:</strong> '+r.hi[1]+' / '+r.lo[1]+' — '+r.codes[1]+'<br><strong>Thursday:</strong> '+r.hi[2]+' / '+r.lo[2]+' — '+r.codes[2]+'</p></div>';}).join('');if(graph)graph.innerHTML=rows.map(function(r){return '<div style="height:'+Math.max(20,Math.min(100,parseInt(r.temp)))+'%"><span>'+r.name.split(' ')[0]+'<br>'+r.temp+'</span></div>';}).join('');if(ticker)ticker.textContent='🌦 LIVE Weather API • '+rows.map(function(r){return r.name+' '+r.temp+' '+r.cond;}).join(' • ')+' •';set('weather-ac-qol',rows[0].temp);var status=document.getElementById('weather-live-status');if(status)status.textContent='Live API active • Open-Meteo • Updated '+new Date().toLocaleTimeString();}
+  async function run(){var rows=[];for(var i=0;i<LOCS.length;i++){try{rows.push(await getWeather(LOCS[i]));}catch(e){console.warn('Weather failed',LOCS[i][0],e);}}if(rows.length)render(rows);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();setInterval(run,600000);
 })();
 </script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<script>
-/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
-(function(){
-  function getNextMothersDay(){
-    var now = new Date();
-    var year = now.getFullYear();
-    function calc(y){
-      var mayFirst = new Date(y,4,1,0,0,0);
-      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
-      var secondSunday = 1 + firstSundayOffset + 7;
-      return new Date(y,4,secondSunday,23,59,59);
-    }
-    var target = calc(year);
-    if(now > target) target = calc(year + 1);
-    return target;
-  }
-  function setCountdown(id,value){
-    var el = document.getElementById(id);
-    if(el) el.textContent = value;
-  }
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function updateMothersDayCountdown(){
-    var target = getNextMothersDay();
-    var diff = target - new Date();
-    if(diff < 0) diff = 0;
-    var totalSeconds = Math.floor(diff / 1000);
-    var days = Math.floor(totalSeconds / 86400);
-    totalSeconds %= 86400;
-    var hours = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    var minutes = Math.floor(totalSeconds / 60);
-    var seconds = totalSeconds % 60;
-    setCountdown('md-days', days);
-    setCountdown('md-hours', pad(hours));
-    setCountdown('md-mins', pad(minutes));
-    setCountdown('md-secs', pad(seconds));
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
-  } else {
-    updateMothersDayCountdown();
-  }
-  setInterval(updateMothersDayCountdown, 1000);
-})();
-</script>
-<div class="section" id="quality-of-life">
-<h2>Quality of Life Command Center</h2>
-<p class="homepage-note">Priority order: what affects people’s daily life first — weather, safety, food, money, jobs, housing, trade, and markets.</p>
-<div class="grid grid-4">
-<a class="card" href="#weather">
-<span>1 • Weather</span>
-<h3>Live Weather Command</h3>
-<p class="stat" id="weather-ac-qol">46°F</p>
-<p>
-<strong>Atlantic City:</strong> Sunny<br>
-<strong>NYC:</strong> Mostly sunny<br>
-<strong>DC:</strong> Partly sunny<br>
-<strong>Richmond:</strong> Partly sunny<br>
-<strong>LA:</strong> Mostly clear<br>
-<strong>Dallas:</strong> Partly cloudy<br>
-<strong>Chicago:</strong> Cool / partly cloudy<br>
-<strong>Florida coast:</strong> Clear to light rain<br>
-<strong>Alaska:</strong> Cloudy / cold<br>
-<strong>Hawaii:</strong> Partly sunny / warm<br>
-<strong>Puerto Rico:</strong> Showers / humid</p>
-</a>
-<a class="card" href="#ocean">
-<span>1B • Ocean</span>
-<h3>Ocean Statistics Command</h3>
-<p class="stat">11 zones</p>
-<p>South Jersey, NYC, Florida, Myrtle Beach, Alaska, Hawaii, Puerto Rico, tides, wind, waves, water temps, and marine links.</p>
-</a>
-<a class="card" href="#crime">
-<span>2 • Safety</span>
-<h3>Crime Tracker Live</h3>
-<p class="stat">4 zones</p>
-<p>Public-source crime tracker by timezone, agency releases, and enforcement dashboards.</p>
-</a>
-<a class="card" href="#food">
-<span>3 • Food</span>
-<h3>Food Supply Chain Watch</h3>
-<p class="stat">6 feeds</p>
-<p>Food prices, recalls, USDA/FDA alerts, crops, trucking, ports, funding, and new process updates.</p>
-</a>
-<a class="card" href="#treasury">
-<span>4 • Money</span>
-<h3>U.S. Treasury Tracker</h3>
-<p class="stat">$37T+</p>
-<p>Debt, cash balance, receipts, outlays, interest, auctions, OFAC, and sanctions watch.</p>
-</a>
-<a class="card" href="#economy">
-<span>5 • Economy</span>
-<h3>Economy Board</h3>
-<p class="sta
+</body>
+</html>
