@@ -212,57 +212,28 @@ body.breaking-live .breaking{
 (function(){const WMO={0:'Clear',1:'Mainly clear',2:'Partly cloudy',3:'Cloudy',45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Showers',82:'Heavy showers',95:'Thunderstorm',96:'Storm + hail',99:'Severe storm'};const LOCS=[['Atlantic City',39.3643,-74.4229,'ac'],['Herkimer',43.0256,-74.9852,'herkimer'],['NYC',40.7128,-74.0060,'nyc'],['Washington D.C.',38.9072,-77.0369,'dc'],['Richmond VA',37.5407,-77.4360,'richmond'],['Los Angeles',34.0522,-118.2437,'la'],['Dallas',32.7767,-96.7970,'dallas'],['Chicago',41.8781,-87.6298,'chicago'],['Punta Gorda',26.9298,-82.0454,'punta'],['Pompano Beach',26.2379,-80.1248,'pompano'],['Key West',24.5551,-81.7800,'keywest'],['Daytona Beach',29.2108,-81.0228,'daytona'],['Myrtle Beach',33.6891,-78.8867,'myrtle'],['Anchorage',61.2181,-149.9003,'anchorage'],['Honolulu',21.3099,-157.8581,'honolulu'],['San Juan PR',18.4655,-66.1057,'sanjuan']];const f=n=>Math.round(n)+'°F',c=x=>WMO[x]||'Live';function set(id,v){let e=document.getElementById(id);if(e)e.textContent=v}async function getWeather(row){let[name,lat,lon,key]=row;let url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=temperature_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&forecast_days=3';let r=await fetch(url);let d=await r.json();return{name,key,temp:f(d.current.temperature_2m),cond:c(d.current.weather_code),wind:Math.round(d.current.wind_speed_10m)+' mph',hi:d.daily.temperature_2m_max.map(f),lo:d.daily.temperature_2m_min.map(f),codes:d.daily.weather_code.map(c)}}function render(rows){let strip=document.getElementById('weatherLiveStrip'),grid=document.getElementById('weatherLiveGrid'),graph=document.getElementById('weatherLiveGraph'),ticker=document.getElementById('weatherLiveTicker');if(strip)strip.innerHTML=rows.map(r=>'<div class="live-data-pill"><span>'+r.name+'</span><strong>'+r.temp+'</strong><small>'+r.cond+' • Wind '+r.wind+' • Tue '+r.hi[0]+'/'+r.lo[0]+' • Wed '+r.hi[1]+'/'+r.lo[1]+' • Thu '+r.hi[2]+'/'+r.lo[2]+'</small></div>').join('');if(grid)grid.innerHTML=rows.map(r=>'<div class="card"><h3>'+r.name+'</h3><p class="stat" id="weather-'+r.key+'">'+r.temp+'</p><p class="weather-small"><strong>Current condition:</strong> '+r.cond+'<br><strong>Wind:</strong> '+r.wind+'<br><strong>Tuesday:</strong> '+r.hi[0]+' / '+r.lo[0]+' — '+r.codes[0]+'<br><strong>Wednesday:</strong> '+r.hi[1]+' / '+r.lo[1]+' — '+r.codes[1]+'<br><strong>Thursday:</strong> '+r.hi[2]+' / '+r.lo[2]+' — '+r.codes[2]+'</p></div>').join('');if(graph)graph.innerHTML=rows.map(r=>'<div style="height:'+Math.max(20,Math.min(100,parseInt(r.temp)))+'%"><span>'+r.name.split(' ')[0]+'<br>'+r.cond.split(' ')[0]+'</span></div>').join('');if(ticker)ticker.textContent='🌦 LIVE Weather API • '+rows.map(r=>r.name+' '+r.temp+' '+r.cond).join(' • ')+' •';set('weather-ac-home',rows[0].temp);set('weather-ac-dash',rows[0].temp);set('weather-ac-qol',rows[0].temp);set('weather-keywest-home',(rows.find(r=>r.key==='keywest')||{}).temp||'--°F');let sum=document.getElementById('weather-home-summary');if(sum)sum.innerHTML='<strong>AC:</strong> '+rows[0].cond+' • <strong>DC:</strong> '+rows[3].cond+' • <strong>LA:</strong> '+rows[5].cond+' • <strong>Dallas:</strong> '+rows[6].cond+' • <strong>Alaska:</strong> '+rows[13].cond+' • <strong>Hawaii:</strong> '+rows[14].cond+' • <strong>Puerto Rico:</strong> '+rows[15].cond;let status=document.getElementById('weather-live-status');if(status)status.textContent='Live API active • Open-Meteo • Updated '+new Date().toLocaleTimeString()}async function run(){let rows=[];for(let row of LOCS){try{rows.push(await getWeather(row))}catch(e){console.warn('Weather failed',row[0],e)}}if(rows.length)render(rows)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();setInterval(run,600000)})();
 </script>
 <script>
-/* FAIL-SAFE NAVIGATION — ANCHOR FIRST, ENHANCEMENT SECOND */
-(function(){
-  function clearTools(){document.querySelectorAll('.section-open-tools').forEach(function(el){el.remove();});}
-  function navLinks(){return Array.from(document.querySelectorAll('.nav a[href^="#"]'));}
-  function setActive(id){navLinks().forEach(function(a){a.classList.toggle('active-tab',a.getAttribute('href')==='#'+id);});}
-  function addTools(sec){
-    if(!sec || sec.querySelector('.section-open-tools')) return;
-    var title=(sec.querySelector('h2')||{}).textContent||'Section';
-    var tools=document.createElement('div');
-    tools.className='section-open-tools';
-    tools.innerHTML='<a class="section-back-home" href="#top">← Back Home</a><div class="section-kicker">Viewing full section: '+title+'</div>';
-    sec.insertBefore(tools,sec.firstChild);
-  }
-  function openHash(){
-    var id=(location.hash||'#top').replace('#','');
-    if(!id || id==='top' || id==='home'){
-      clearTools();
-      setActive('');
-      setTimeout(function(){document.getElementById('top')?.scrollIntoView({behavior:'smooth',block:'start'});},10);
-      return;
-    }
-    var sec=document.getElementById(id);
-    if(!sec){return;}
-    if(sec.classList.contains('detail-section')){
-      clearTools();
-      addTools(sec);
-      setActive(id);
-    }
-    setTimeout(function(){sec.scrollIntoView({behavior:'smooth',block:'start'});},10);
-  }
-  document.addEventListener('click',function(e){
-    var a=e.target.closest('a[href^="#"]');
-    if(!a)return;
-    var id=a.getAttribute('href').replace('#','');
-    var sec=id?document.getElementById(id):null;
-    if(!id || id==='top' || id==='home'){
+/* PRESENTATION-SAFE NAVIGATION — NO HIDING, NO ROUTER, NO FAILURE */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.detail-section').forEach(function (section) {
+    section.style.display = 'block';
+    section.style.visibility = 'visible';
+    section.style.opacity = '1';
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var href = link.getAttribute('href');
+      if (!href || href === '#') return;
+      var target = document.querySelector(href);
+      if (!target) return;
       e.preventDefault();
-      history.pushState(null,'','#top');
-      openHash();
-      return;
-    }
-    if(sec){
-      e.preventDefault();
-      history.pushState(null,'','#'+id);
-      openHash();
-    }
-  },true);
-  window.addEventListener('hashchange',openHash);
-  window.addEventListener('popstate',openHash);
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',openHash);else openHash();
-})();
+      history.pushState(null, '', href);
+      document.querySelectorAll('.nav a').forEach(function (a) { a.classList.remove('active-tab'); });
+      if (link.closest('.nav')) link.classList.add('active-tab');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
 </script>
 </body>
 </html>
