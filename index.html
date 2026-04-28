@@ -5,568 +5,627 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackSheep Patriots News</title>
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;background-image:radial-gradient(circle at top center,rgba(120,0,0,.16),transparent 42%),linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.08)),url('https://i.imgur.com/DAVe5K2.png');background-size:cover;background-attachment:fixed;background-position:center}a{color:inherit;text-decoration:none}.container{padding:20px;max-width:1220px;margin:auto}.header{text-align:center;border:2px solid gold;border-radius:22px;padding:28px;margin-bottom:30px;background:rgba(0,0,0,.12);box-shadow:0 0 35px rgba(255,215,0,.18);backdrop-filter:blur(2px)}.title{font-size:46px;font-weight:900;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(90deg,#ff0000,#ffffff,#0057ff,#ffffff,#ff0000);background-size:300% 300%;animation:patrioticFlow 6s ease-in-out infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent !important;text-shadow:none}.tagline{background:linear-gradient(90deg,#ff0000,#ffffff,#0000ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}.nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}.nav a{border:1px solid gold;border-radius:999px;padding:9px 15px;background:rgba(0,0,0,.08)}.nav a:hover{background:gold;color:#000}.section{background:rgba(0,0,0,.10);border:2px solid gold;border-radius:22px;padding:26px;margin-bottom:25px;box-shadow:0 0 24px rgba(255,215,0,.18),inset 0 0 20px rgba(139,0,0,.14);backdrop-filter:blur(2px)}.breaking{background:linear-gradient(90deg,#4b0000,#b00000,#000,#b00000,#4b0000);border:3px solid gold;border-radius:18px;padding:18px;text-align:center;font-weight:900;letter-spacing:1.5px;margin-bottom:25px;box-shadow:0 0 28px rgba(255,0,0,.45),0 0 18px rgba(255,215,0,.25);text-transform:uppercase}.breaking strong{color:#ffd700;font-size:20px}.hero{padding:45px;text-align:center;background:rgba(0,0,0,.10);border-radius:24px;margin-bottom:30px;border:3px solid gold;box-shadow:0 0 35px rgba(255,215,0,.22);backdrop-filter:blur(2px)}.hero h1{font-size:58px;margin:0;text-transform:uppercase;letter-spacing:3px;background:linear-gradient(90deg,#ff0000,#ffffff,#0057ff,#ffffff,#ff0000);background-size:300% 300%;animation:patrioticFlow 6s ease-in-out infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent !important;text-shadow:none}.hero p{font-size:18px;color:#ddd}.button{display:inline-block;margin-top:12px;background:#b00000;color:white;border:1px solid gold;border-radius:12px;padding:12px 18px;font-weight:bold}.grid{display:grid;gap:20px}.grid-2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.card{background:rgba(255,255,255,.14);border:1px solid rgba(255,215,0,.78);border-radius:18px;padding:20px;transition:.2s;backdrop-filter:blur(2px)}.card:hover{transform:translateY(-3px);box-shadow:0 0 18px rgba(255,215,0,.35)}.card h3{background:linear-gradient(90deg,#ff0000,#ffffff,#0057ff,#ffffff,#ff0000);background-size:300% 300%;animation:patrioticFlow 6s ease-in-out infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent !important}.card span{color:gold;font-size:13px;text-transform:uppercase;letter-spacing:1px}.full-article{padding-top:20px;border-top:2px solid gold;margin-top:20px}.detail-section{display:none}.detail-section.active-page{display:block!important}.homepage-note{font-size:14px;color:#ddd;margin-top:10px}.open-card{cursor:pointer}.full-article h2{background:linear-gradient(90deg,#ff0000,#ffffff,#0000ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.byline{color:#ccc;font-size:14px}.source{font-size:13px;color:#ddd;margin-top:10px}.source a{color:#ffd966;text-decoration:underline}.stat{font-size:28px;color:gold;font-weight:900}.editor-note{background:rgba(255,215,0,.08);border-left:4px solid gold;padding:12px;border-radius:10px;color:#eee}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 20px}.tabs a{background:#111;border:1px solid gold;border-radius:12px;padding:10px 14px}.video-box{background:rgba(0,0,0,.08);border:1px solid gold;border-radius:18px;padding:15px}.video-link{display:block;border:1px solid rgba(255,215,0,.7);border-radius:14px;padding:14px;background:rgba(255,255,255,.06);margin-top:10px}.video-link:hover{background:rgba(255,215,0,.16)}img{width:100%;border-radius:15px;border:2px solid gold}.footer{text-align:center;color:#ccc;padding:30px}.bar-wrap{background:#222;border:1px solid rgba(255,215,0,.5);border-radius:999px;overflow:hidden;height:18px;margin:8px 0 14px}.bar{height:100%;background:linear-gradient(90deg,#8b0000,#ffd700);border-radius:999px}.mini-chart{display:flex;align-items:end;gap:8px;height:140px;margin:15px 0;padding:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,215,0,.5);border-radius:15px}.mini-chart div{flex:1;background:linear-gradient(180deg,#ffd700,#8b0000);border-radius:8px 8px 0 0;position:relative}.mini-chart div span{position:absolute;bottom:-24px;left:0;right:0;text-align:center;font-size:12px;color:#ddd}.chart-note{font-size:13px;color:#ccc;margin-top:28px}.positive{color:#7CFC00;font-weight:900}.negative{color:#ff6b6b;font-weight:900}.merch-banner{margin-top:25px;padding:15px;border:1px solid gold;border-radius:15px;background:rgba(255,255,255,.05);display:flex;align-items:center;gap:15px;justify-content:center;flex-wrap:wrap}.merch-banner img{width:90px;height:90px;object-fit:contain;border-radius:10px;border:1px solid gold}.product-img{height:260px;object-fit:contain;background:rgba(255,255,255,.05);padding:10px;box-sizing:border-box}.card-img{height:155px;object-fit:cover;margin-bottom:12px}.data-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.data-pill{border:1px solid rgba(255,215,0,.55);border-radius:12px;padding:9px;background:rgba(255,255,255,.05);font-size:13px}.data-pill strong{display:block;color:gold;font-size:18px}.wide-preview{grid-column:1/-1}.mini-line{height:90px;display:flex;align-items:end;gap:6px;margin-top:12px}.mini-line div{flex:1;background:linear-gradient(180deg,#ffd700,#8b0000);border-radius:8px 8px 0 0;min-height:12px}.source-tag{font-size:12px;color:#ccc;margin-top:10px}.card-img{height:155px;object-fit:cover;margin-bottom:12px}.data-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.data-pill{border:1px solid rgba(255,215,0,.55);border-radius:12px;padding:9px;background:rgba(255,255,255,.05);font-size:13px}.data-pill strong{display:block;color:gold;font-size:18px}.wide-preview{grid-column:1/-1}.mini-line{height:90px;display:flex;align-items:end;gap:6px;margin-top:12px}.mini-line div{flex:1;background:linear-gradient(180deg,#ffd700,#8b0000);border-radius:8px 8px 0 0;min-height:12px}.source-tag{font-size:12px;color:#ccc;margin-top:10px}.card-img{height:155px;object-fit:cover;margin-bottom:12px}.data-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.data-pill{border:1px solid rgba(255,215,0,.55);border-radius:12px;padding:9px;background:rgba(255,255,255,.05);font-size:13px}.data-pill strong{display:block;color:gold;font-size:18px}.wide-preview{grid-column:1/-1}.mini-line{height:90px;display:flex;align-items:end;gap:6px;margin-top:12px}.mini-line div{flex:1;background:linear-gradient(180deg,#ffd700,#8b0000);border-radius:8px 8px 0 0;min-height:12px}.source-tag{font-size:12px;color:#ccc;margin-top:10px}.bio-lead{font-size:18px;line-height:1.65;color:#eee}.bio-preview{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}.bio-preview-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.bio-preview-photos img{height:135px;object-fit:cover;background:#111}.bio-preview .button{margin-right:8px}@media(max-width:800px){.bio-preview{grid-template-columns:1fr}.bio-preview-photos img{height:115px}}.bio-story p{line-height:1.7;color:#ddd;text-align:left}.bio-story h3{color:gold;margin-top:28px}.bio-gallery img{height:240px;object-fit:cover;background:#111}.bio-callout{border:2px solid #ff4d4d;background:rgba(139,0,0,.22);border-radius:18px;padding:18px;margin:20px 0}.countdown-box{margin:18px auto;padding:16px;border:2px solid #ff4d4d;border-radius:18px;background:linear-gradient(135deg,rgba(139,0,0,.75),rgba(0,0,0,.85));box-shadow:0 0 22px rgba(255,0,0,.28);max-width:720px;text-align:center}.countdown-title{color:gold;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:1px}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.countdown-unit{border:1px solid gold;border-radius:12px;padding:10px;background:rgba(255,255,255,.06)}.countdown-number{display:block;font-size:28px;color:#fff;font-weight:900}.countdown-label{font-size:12px;color:#ffd966;text-transform:uppercase}@media(max-width:600px){.countdown-grid{grid-template-columns:repeat(2,1fr)}.title{font-size:32px}.hero h1{font-size:40px}.section{padding:18px}.nav a{font-size:13px;padding:8px 12px}}
-
-/* 🇺🇸 ANIMATED PATRIOTIC GLOBAL TEXT UPGRADE */
-@keyframes patrioticFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-
-.title,
-.hero h1,
-.section h2,
-.full-article h2,
-.card h3,
-.tagline{
-  background:linear-gradient(90deg,#ff0000,#ffffff,#0057ff,#ffffff,#ff0000);
-  background-size:300% 300%;
-  animation:patrioticFlow 6s ease-in-out infinite;
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.section h2,.full-article h2{font-weight:900;letter-spacing:1px}
-.card h3{font-weight:900}
-.nav a:hover{background:linear-gradient(90deg,#ff0000,#ffffff,#0057ff);color:#000;box-shadow:0 0 14px rgba(255,255,255,.35)}
-.card:hover{transform:translateY(-3px);box-shadow:0 0 22px rgba(255,255,255,.22),0 0 18px rgba(255,0,0,.18),0 0 18px rgba(0,87,255,.18)}
-
-/* 🇺🇸 NEXT LEVEL PATRIOTIC TEXT: SHIMMER + STARS + RED/BLUE PULSE */
-@keyframes superPatriotText{
-  0%{background-position:0 0,-180% 0,0% 50%}
-  50%{background-position:18px 12px,40% 0,100% 50%}
-  100%{background-position:36px 24px,220% 0,0% 50%}
-}
-@keyframes patriotPulseGlow{
-  0%{box-shadow:0 0 12px rgba(255,0,0,.28),0 0 18px rgba(0,87,255,.18)}
-  50%{box-shadow:0 0 28px rgba(255,0,0,.55),0 0 34px rgba(0,87,255,.45),0 0 18px rgba(255,255,255,.30)}
-  100%{box-shadow:0 0 12px rgba(255,0,0,.28),0 0 18px rgba(0,87,255,.18)}
-}
-
-.title,
-.hero h1,
-.section h2,
-.full-article h2,
-.card h3,
-.tagline{
-  background-image:
-    radial-gradient(circle at 20% 30%,rgba(255,255,255,.95) 0 1.2px,transparent 1.6px),
-    linear-gradient(115deg,transparent 0%,rgba(255,255,255,.95) 45%,transparent 55%),
-    linear-gradient(90deg,#b00000,#ffffff,#0057ff,#ffffff,#b00000);
-  background-size:28px 28px,220% 100%,350% 350%;
-  animation:superPatriotText 5.5s ease-in-out infinite;
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent !important;
-  filter:drop-shadow(0 0 8px rgba(255,255,255,.25));
-}
-
-.card:hover,
-.nav a:hover,
-.button:hover,
-.video-link:hover{
-  animation:patriotPulseGlow 1.4s ease-in-out infinite;
-  border-color:#ffffff;
-}
-
-.nav a:hover,
-.button:hover,
-.video-link:hover{
-  background:linear-gradient(90deg,#b00000,#ffffff,#0057ff) !important;
-  color:#000 !important;
-}
-
-/* PROFESSIONAL NAVIGATION RESTORE — HOMEPAGE + CLEAN SECTION VIEW */
-html{scroll-padding-top:120px}
-.nav{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,.72);border:1px solid rgba(255,215,0,.65);border-radius:18px;padding:10px;backdrop-filter:blur(8px)}
-.nav a.active-tab{background:linear-gradient(90deg,#b00000,#ffffff,#0057ff)!important;color:#000!important;box-shadow:0 0 18px rgba(255,255,255,.55)}
-body.site-page-open .breaking,
-body.site-page-open .hero,
-body.site-page-open #biography-preview,
-body.site-page-open #today,
-body.site-page-open #homepage-samples{display:none!important}
-body.site-page-open .detail-section{display:none!important}
-body.site-page-open .detail-section.active-page{display:block!important;animation:sectionReveal .28s ease-out}
-body:not(.site-page-open) .detail-section{display:none!important}
-.presentation-back-home{display:inline-block;margin:0 0 18px 0;border:2px solid gold;border-radius:999px;padding:10px 16px;background:rgba(0,0,0,.45);color:gold!important;font-weight:900;text-transform:uppercase;letter-spacing:.8px;box-shadow:0 0 14px rgba(255,215,0,.28)}
-.presentation-back-home:hover{background:gold!important;color:#000!important}
-@keyframes sectionReveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-
+html{scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff;background:#050505;background-image:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.16)),url('https://i.imgur.com/DAVe5K2.png');background-size:cover;background-attachment:fixed;background-position:center}a{color:inherit;text-decoration:none}.container{padding:10px;max-width:1220px;margin:auto}.header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner{background:rgba(0,0,0,.30);border:2px solid rgba(255,255,255,.75);border-radius:24px;box-shadow:0 0 26px rgba(0,87,255,.22),0 0 24px rgba(176,0,0,.18),inset 0 0 22px rgba(255,255,255,.06);backdrop-filter:blur(6px) saturate(130%)}.header{text-align:center;padding:8px 10px;margin-bottom:14px;overflow:visible}.title{font-size:clamp(22px,3.1vw,40px);font-weight:900;letter-spacing:1.4px;text-transform:uppercase;line-height:1.02}.tagline{font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:12px;margin:6px 0}.title,.tagline,.hero h1,.section h2,.card h3,.full-article h2{background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.95) 0 1.2px,transparent 1.6px),linear-gradient(115deg,transparent 0%,rgba(255,255,255,.95) 45%,transparent 55%),linear-gradient(90deg,#b00000,#fff,#0057ff,#fff,#b00000);background-size:28px 28px,220% 100%,350% 350%;animation:superPatriotText 5.5s ease-in-out infinite;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent!important;filter:drop-shadow(0 0 8px rgba(255,255,255,.25))}@keyframes superPatriotText{0%{background-position:0 0,-180% 0,0% 50%}50%{background-position:18px 12px,40% 0,100% 50%}100%{background-position:36px 24px,220% 0,0% 50%}}@keyframes patriotPulseGlow{0%{box-shadow:0 0 12px rgba(255,0,0,.28),0 0 18px rgba(0,87,255,.18)}50%{box-shadow:0 0 28px rgba(255,0,0,.55),0 0 34px rgba(0,87,255,.45),0 0 18px rgba(255,255,255,.30)}100%{box-shadow:0 0 12px rgba(255,0,0,.28),0 0 18px rgba(0,87,255,.18)}}.nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px;overflow:visible;max-height:none;padding:4px 4px 7px}.nav a{padding:5px 9px;font-size:11px;line-height:1.05;min-height:25px}.nav a,.tabs a,.button,.video-link{flex:0 0 auto;border:1px solid rgba(255,255,255,.70);border-radius:999px;padding:6px 10px;font-size:12px;background:linear-gradient(180deg,rgba(8,18,45,.55),rgba(0,0,0,.25));box-shadow:inset 0 0 12px rgba(255,255,255,.05),0 0 10px rgba(0,87,255,.14);text-transform:uppercase;letter-spacing:.5px;font-weight:900}.nav a:hover,.tabs a:hover,.button:hover,.video-link:hover{background:linear-gradient(90deg,#b00000,#fff,#0057ff)!important;color:#000!important;animation:patriotPulseGlow 1.4s ease-in-out infinite}.breaking{background:linear-gradient(90deg,rgba(122,0,0,.9),rgba(0,0,0,.72),rgba(0,42,122,.8),rgba(122,0,0,.9));border:2px solid #fff;border-radius:18px;padding:16px;text-align:center;font-weight:900;letter-spacing:1.5px;margin-bottom:22px;text-transform:uppercase}.hero{padding:34px 24px;text-align:center;margin-bottom:25px;position:relative;overflow:hidden}.hero h1{font-size:clamp(42px,6vw,82px);margin:0;text-transform:uppercase;letter-spacing:4px}.hero p{font-size:18px;color:#eee}.section{position:relative;padding:24px;margin-bottom:24px;overflow:hidden}.header::before,.hero::before,.section::before{content:"";position:absolute;left:18px;right:18px;top:8px;height:2px;background:linear-gradient(90deg,transparent,#ff0000,#fff,#0057ff,transparent);opacity:.88;box-shadow:0 0 12px rgba(255,255,255,.55)}.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.card{position:relative;overflow:hidden;padding:18px;transition:.25s}.card:hover{transform:translateY(-5px);animation:patriotPulseGlow 1.4s ease-in-out infinite}.card span{color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:900}.detail-section{display:none!important}.detail-section.active-page{display:block!important;animation:pageReveal .35s ease-out}.site-page-open .home-panel{display:none!important}.site-page-open .detail-section.active-page{display:block!important}.detail-section:target{display:block!important}@keyframes pageReveal{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}.homepage-note,.byline,.source,.editor-note{font-size:14px;color:#eee;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.35);padding:12px;border-radius:12px}.source a{color:#fff;text-decoration:underline}.stat{font-size:30px;color:#fff;font-weight:900;text-shadow:0 0 10px rgba(255,255,255,.5),0 0 16px rgba(0,87,255,.35)}img{width:100%;border-radius:15px;border:2px solid rgba(255,255,255,.65);box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18);object-position:center}.card-img{height:190px;object-fit:cover;margin-bottom:12px}.product-img{height:240px;object-fit:contain;background:rgba(255,255,255,.08);padding:10px}.tabs{display:flex;flex-wrap:nowrap;gap:5px;overflow-x:auto;overflow-y:hidden;margin:6px 0 14px;padding-bottom:6px}.data-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.data-pill{border:1px solid rgba(255,255,255,.45);border-radius:12px;padding:9px;background:rgba(0,0,0,.18);font-size:13px}.data-pill strong{display:block;color:#fff;font-size:18px}.bar-wrap{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.42);border-radius:999px;overflow:hidden;height:18px;margin:8px 0 14px}.bar{height:100%;background:linear-gradient(90deg,#b00000,#fff,#0057ff);border-radius:999px}.mini-chart{display:flex;align-items:end;gap:8px;height:140px;margin:15px 0 28px;padding:12px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.42);border-radius:15px}.mini-chart div{flex:1;background:linear-gradient(180deg,#fff,#0057ff 48%,#b00000);border-radius:8px 8px 0 0;position:relative}.mini-chart div span{position:absolute;bottom:-28px;left:0;right:0;text-align:center;font-size:12px;color:#eee}.positive{color:#7CFC00;font-weight:900}.negative{color:#ff6b6b;font-weight:900}.video-box{padding:15px}.video-frame{position:relative;width:100%;aspect-ratio:16/9;border:2px solid rgba(255,255,255,.72);border-radius:18px;overflow:hidden;background:#000}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.homepage-video-feature{margin:20px 0 26px}.merch-banner{margin-top:25px;padding:15px;display:flex;align-items:center;gap:15px;justify-content:center;flex-wrap:wrap}.merch-banner img{width:90px;height:90px;object-fit:contain}.bio-preview{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}.bio-preview-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.bio-preview-photos img{height:135px;object-fit:cover}.bio-lead{font-size:18px;line-height:1.65}.bio-story p{line-height:1.7;color:#eee}.bio-gallery img{height:240px;object-fit:cover}.bio-callout{border:2px solid rgba(255,255,255,.65);background:rgba(139,0,0,.22);border-radius:18px;padding:18px;margin:20px 0}.countdown-box{margin:18px auto;padding:16px;max-width:720px;text-align:center}.countdown-title{color:#fff;font-size:22px;font-weight:900;text-transform:uppercase}.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.countdown-unit{border:1px solid rgba(255,255,255,.65);border-radius:12px;padding:10px;background:rgba(255,255,255,.08)}.countdown-number{display:block;font-size:28px;color:#fff;font-weight:900}.footer{text-align:center;color:#eee;padding:26px;border-top:1px solid rgba(255,255,255,.45);background:linear-gradient(90deg,rgba(176,0,0,.28),rgba(0,0,0,.18),rgba(0,87,255,.28));border-radius:18px;margin-top:20px}.rooster-back-wrap{margin:0 0 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid rgba(255,255,255,.38);border-radius:24px;padding:14px;background:linear-gradient(90deg,rgba(90,0,0,.48),rgba(0,0,0,.30),rgba(0,34,90,.48))}.rooster-back-button{display:flex;align-items:center;justify-content:flex-start;gap:22px;width:min(720px,100%);min-height:126px;border:3px solid gold;border-radius:26px;padding:14px 30px;background:linear-gradient(90deg,rgba(0,30,95,.92) 0 30%,rgba(0,0,0,.16) 30% 100%),repeating-linear-gradient(180deg,#9b0000 0 12px,#f2f2f2 12px 24px);box-shadow:0 0 22px rgba(255,215,0,.75),0 0 35px rgba(0,87,255,.55),inset 0 0 28px rgba(0,0,0,.45);font-weight:900;text-transform:uppercase;letter-spacing:2px;color:gold!important;position:relative;overflow:hidden;transition:.2s}.rooster-back-button::before{content:"★ ★ ★ ★ ★";position:absolute;left:20px;top:12px;color:rgba(255,255,255,.85);font-size:16px;letter-spacing:7px;z-index:1}.rooster-back-button::after{content:"";position:absolute;top:0;left:-70%;width:48%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-25deg);animation:shine 3.2s infinite;z-index:2}.rooster-back-button>*{position:relative;z-index:3}.rooster-back-button strong{font-size:clamp(34px,6vw,64px);line-height:.9;color:gold!important;text-shadow:0 2px 0 #4a2600,0 0 10px rgba(0,0,0,.9),0 0 20px rgba(255,215,0,.85)}@keyframes shine{0%{left:-70%}100%{left:135%}}.rooster-back-button:hover{transform:translateY(-3px) scale(1.02);color:gold!important}.rooster-icon{position:relative;flex:0 0 auto;width:112px;height:112px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 22%,#ffffff 0 10%,#071b46 11% 42%,#111 43% 66%,#8b0000 67% 100%);border:3px solid gold;box-shadow:0 0 18px gold,inset 0 0 18px rgba(0,0,0,.72);overflow:hidden}.rooster-icon svg{width:92px;height:92px;filter:drop-shadow(0 0 6px #000) drop-shadow(0 0 6px rgba(255,215,0,.75))}.page-kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#fff;font-weight:900}.site-page-open .detail-section{max-width:1180px;margin:24px auto}.site-page-open .detail-section::after{content:"";display:block;height:3px;margin-top:24px;border-radius:99px;background:linear-gradient(90deg,transparent,#b00000,#fff,#0057ff,transparent)}@media(max-width:800px){.bio-preview{grid-template-columns:1fr}.bio-preview-photos img{height:115px}}@media(max-width:600px){.countdown-grid{grid-template-columns:repeat(2,1fr)}.section{padding:18px}}
+.rooster-back-wrap{justify-content:center!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:8px!important;display:flex!important;flex-direction:column!important;align-items:center!important}.rooster-back-button{width:min(760px,100%)!important;min-height:145px!important;border:3px solid gold!important;border-radius:26px!important;padding:0 28px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;background-image:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.18)),url('ChatGPT Image Apr 27, 2026, 02_55_07 PM.png'),linear-gradient(90deg,#8b0000,#ffffff,#0057ff)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;box-shadow:0 0 26px rgba(255,215,0,.75),0 0 34px rgba(0,87,255,.55),0 0 28px rgba(176,0,0,.5)!important;overflow:hidden!important;position:relative!important;color:gold!important;text-decoration:none!important}.rooster-back-button::before{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.22) 45%,transparent 60%)!important;animation:shine 3.3s infinite!important;z-index:2!important;pointer-events:none!important}.rooster-back-button::after{content:""!important;position:absolute!important;inset:0!important;border-radius:22px!important;box-shadow:inset 0 0 30px rgba(0,0,0,.35),inset 0 0 20px rgba(255,215,0,.18)!important;z-index:3!important;pointer-events:none!important}.backhome-label{position:relative!important;z-index:5!important;font-size:clamp(34px,6vw,68px)!important;line-height:1!important;font-weight:900!important;letter-spacing:2px!important;color:gold!important;text-shadow:0 3px 0 #4a2600,0 0 12px #000,0 0 24px rgba(255,215,0,.95)!important}.rooster-back-button:hover{transform:translateY(-4px) scale(1.025)!important;filter:saturate(1.22) contrast(1.12) brightness(1.05)!important;box-shadow:0 0 34px rgba(255,215,0,.95),0 0 44px rgba(0,87,255,.75),0 0 38px rgba(176,0,0,.68)!important}.rooster-back-button:active{transform:translateY(1px) scale(.985)!important;filter:saturate(1.35) contrast(1.18)!important}.rooster-back-button:focus-visible{outline:3px solid gold!important;outline-offset:5px!important}.rooster-back-wrap::after{content:"Click to return home";font-size:12px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.82);text-shadow:0 0 8px rgba(0,87,255,.7);margin-top:8px}@media(max-width:700px){.rooster-back-button{min-height:92px!important;border-radius:18px!important}.rooster-back-button::after{font-size:32px!important}}
+body::before{display:none!important}body::after{content:"★ BREAKING NEWS ★ BREAKING NEWS ★ BREAKING NEWS ★";position:fixed;top:0;left:0;right:0;height:16px;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:5px;color:#fff;z-index:9999;background:linear-gradient(90deg,#7a0000,#ff0000,#ffffff,#0057ff,#7a0000);background-size:300% 100%;animation:breakingBannerPulse 2s ease-in-out infinite;box-shadow:0 0 12px rgba(255,0,0,.7),0 0 16px rgba(0,87,255,.45);text-shadow:0 0 8px #fff}.patriot-frame-left,.patriot-frame-right{position:fixed;top:16px;bottom:0;width:8px;z-index:9998;pointer-events:none;background:repeating-linear-gradient(180deg,#b00000 0 18px,#fff 18px 36px);animation:flagWaveSide 3.5s linear infinite}.patriot-frame-left{left:0}.patriot-frame-right{right:0}.patriot-frame-bottom{position:fixed;bottom:0;left:0;right:0;height:8px;z-index:9999;pointer-events:none;background:repeating-linear-gradient(90deg,#b00000 0 28px,#fff 28px 56px);animation:flagWaveBottom 4s linear infinite}@keyframes breakingBannerPulse{0%{background-position:0% 50%;filter:brightness(1)}50%{background-position:100% 50%;filter:brightness(1.25)}100%{background-position:0% 50%;filter:brightness(1)}}@keyframes flagWaveSide{0%{background-position:0 0}100%{background-position:0 72px}}@keyframes flagWaveBottom{0%{background-position:0 0}100%{background-position:112px 0}}@media(max-width:700px){body::after{height:12px;font-size:8px;letter-spacing:2px}.patriot-frame-left,.patriot-frame-right{top:12px;width:5px}.patriot-frame-bottom{height:5px}}
+.sports-ticker{overflow:hidden;white-space:nowrap;border:2px solid rgba(255,255,255,.72);border-radius:14px;margin:12px 0;background:linear-gradient(90deg,#050505,#111,#050505);box-shadow:0 0 18px rgba(0,87,255,.35),0 0 12px rgba(176,0,0,.25),inset 0 0 12px rgba(255,255,255,.08)}.ticker-track{display:inline-block;padding:10px 0;font-weight:900;letter-spacing:1px;animation:tickerMove 18s linear infinite;text-shadow:0 0 8px rgba(255,255,255,.55)}@keyframes tickerMove{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}.sports-ticker:hover .ticker-track{animation-play-state:paused;color:#fff;text-shadow:0 0 10px #fff,0 0 18px #0057ff}body.frame-scrolled .ticker-track{animation-duration:10s;color:#fff;text-shadow:0 0 10px #fff,0 0 18px #0057ff}body.breaking-live::after{content:"★ BREAKING NEWS ★ BREAKING NEWS ★ BREAKING NEWS ★"!important;height:18px!important;font-size:11px!important;letter-spacing:6px!important;color:#fff!important;background:linear-gradient(90deg,#7a0000,#ff0000,#ffffff,#0057ff,#7a0000)!important;background-size:300% 100%!important;animation:breakingBannerPulse 1.6s ease-in-out infinite!important;opacity:.96!important;box-shadow:0 0 16px rgba(255,0,0,.85),0 0 22px rgba(255,255,255,.45)!important;text-shadow:0 0 8px #fff,0 0 14px #ff0000!important}body.breaking-live .breaking{animation:breakingBoxPulse 1.8s ease-in-out infinite!important}@keyframes breakingBoxPulse{0%,100%{box-shadow:0 0 16px rgba(255,0,0,.35),0 0 18px rgba(0,87,255,.24)}50%{box-shadow:0 0 30px rgba(255,0,0,.8),0 0 30px rgba(255,255,255,.35),0 0 24px rgba(0,87,255,.55)}}@media(max-width:700px){body.breaking-live::after{height:14px!important;font-size:9px!important;letter-spacing:3px!important}}
+.live-data-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin:14px 0 18px;padding:12px;border:1px solid rgba(255,255,255,.45);border-radius:16px;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,36,100,.20),rgba(120,0,0,.18));box-shadow:0 0 18px rgba(0,87,255,.18),inset 0 0 16px rgba(255,255,255,.04)}.live-data-pill{border:1px solid rgba(255,255,255,.35);border-radius:13px;padding:10px;background:rgba(0,0,0,.22)}.live-data-pill span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#ddd;font-weight:900}.live-data-pill strong{display:block;font-size:20px;color:#fff;text-shadow:0 0 8px rgba(255,255,255,.45);margin-top:3px}.live-data-pill small{display:block;color:#ccc;font-size:11px;margin-top:3px}.live-updated{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#fff;margin:8px 0 12px;opacity:.85}
 </style>
 </head>
-<body>
+<body class="breaking-live">
+<div class="patriot-frame-left">
+</div>
+<div class="patriot-frame-right">
+</div>
+<div class="patriot-frame-bottom">
+</div>
 <div class="container">
-
 <div class="header" id="top">
 <div class="title">BLACKSHEEP PATRIOTS NEWS ★ BIGROOSTER MEDIA</div>
-<p class="editor-note" style="max-width:850px;margin:14px auto 0 auto;"><strong>Independently owned and operated.</strong> Local-first coverage from Atlantic City with sourced national updates, coastal weather, faith, culture, and community reporting.</p>
+<p class="editor-note" style="max-width:850px;margin:10px auto">
+<strong>Independently owned and operated.</strong> Local-first coverage from Atlantic City with sourced national updates, coastal weather, faith, culture, and community reporting.</p>
 <p class="tagline">TRUTH OVER COMFORT • WE UP • INDEPENDENT VOICE</p>
 <div class="nav">
-<a href="#top">Home</a><a href="#breaking">Breaking</a><a href="#faith">Faith & God</a><a href="#biography">Biography</a><a href="#shop">Shop</a><a href="#today">Today's Desk</a><a href="#local">Atlantic City</a><a href="#whitehouse">White House</a><a href="#defense">Pentagon/CENTCOM</a><a href="#economy">Economy</a><a href="#jobs">Jobs</a><a href="#markets">Markets</a><a href="#trade">Trade</a><a href="#weather">Weather/Ocean</a><a href="#videos">Videos</a><a href="#tips">Tips</a><a href="#about">About</a><a href="#standards">Standards</a><a href="#legal">Legal</a><a href="#advertise">Advertise</a>
+<a href="#top">Home</a>
+<a href="#weather">Weather</a>
+<a href="#ocean">Ocean Stats</a>
+<a href="#crime">Crime Tracker</a>
+<a href="#food">Food Supply</a>
+<a href="#treasury">Treasury</a>
+<a href="#economy">Economy</a>
+<a href="#jobs">Jobs</a>
+<a href="#housing">Housing</a>
+<a href="#trade">Trade</a>
+<a href="#markets">Markets</a>
+<a href="#defense">Military & Defense</a>
+<a href="#whitehouse">White House</a>
+<a href="#local">Atlantic City</a>
+<a href="#sports">Sports</a>
+<a href="#conspiracy">Analysis</a>
+<a href="#breaking">Breaking</a>
+<a href="#faith">Faith</a>
+<a href="#biography">Biography</a>
+<a href="#shop">Shop</a>
+<a href="#today">Desk</a>
+<a href="#articles">Articles</a>
+<a href="#entertainment">Entertainment</a>
+<a href="#videos">Videos</a>
+<a href="#tips">Tips</a>
+<a href="#about">About</a>
+<a href="#standards">Standards</a>
+<a href="#legal">Legal</a>
+<a href="#advertise">Advertise</a>
 </div>
 </div>
-
-<div class="breaking"><strong>⚠ BREAKING NEWS ALERT</strong><br>Washington, D.C. security incident at White House Correspondents’ Dinner — senior officials reported safe, suspect reportedly in custody, federal investigation developing.</div>
-
+<div class="breaking">
+<strong>⚠ BREAKING NEWS ALERT</strong>
+<br>Federal regulators are reviewing a new coastal resilience funding package after a surge in severe spring storms along the East Coast. Officials say billions could be directed toward flood defenses, infrastructure upgrades, and shoreline protection—potentially impacting Atlantic City development, insurance rates, and local construction jobs. Initial statements indicate fast-track approvals may begin this week. <em>Developing — verification ongoing.</em>
+</div>
 <div class="section full-article detail-section" id="breaking">
-<h2>BREAKING: Shooting / Security Incident Reported at White House Correspondents’ Dinner</h2>
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" alt="Donald Trump official portrait" style="margin:15px 0;width:100%;max-height:420px;object-fit:cover;display:block;">
-<p class="source">Photo Credit: Official White House / Wikimedia Commons — Donald Trump official portrait. File image used until verified event imagery is available.</p>
-<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Developing</p>
-<p>Major outlets are reporting that the White House Correspondents’ Dinner at the Washington Hilton was disrupted by a shooting or security incident. Early reporting says senior officials were secured or evacuated by law enforcement.</p>
-<p class="editor-note"><strong>Editorial standard:</strong> This is a developing story. Early claims should be handled cautiously until confirmed by official law enforcement or White House statements.</p>
-<div style="margin:20px 0;padding:18px;border:2px solid gold;border-radius:18px;background:rgba(255,255,255,.06);"><h3 style="color:gold;margin-top:0;">Verified Video Sources</h3><p>Official and reliable video links are used to avoid broken embeds or mismatched footage.</p><a class="button" href="https://www.youtube.com/@AssociatedPress/videos" target="_blank">Watch AP News Video Updates</a> <a class="button" href="https://www.whitehouse.gov/videos/" target="_blank">Watch White House Official Videos</a></div>
+<h2>Breaking News Desk: Coastal Resilience Funding Review</h2>
+<p class="byline">By Zachary J. Blum — BlackSheep Patriots News • Developing story format</p>
+<p>Federal regulators are reviewing a new coastal resilience funding package after repeated severe spring storms along the East Coast raised pressure on infrastructure, insurance markets, flood defenses, emergency planning, and shoreline protection. For Atlantic City and South Jersey, the issue is not abstract. Coastal flooding, storm surge, beach erosion, drainage, road access, insurance costs, and tourism disruption can all become local economic issues.</p>
+<p>This developing story matters because any fast-tracked funding could affect construction jobs, municipal planning, seawall and dune projects, drainage systems, beach replenishment, and long-term decisions about where public money goes. Local governments and residents should watch for grant announcements, eligibility rules, project lists, timelines, and whether funding reaches high-risk neighborhoods as well as high-visibility tourism zones.</p>
+<div class="grid grid-4">
+<div class="card">
+<span>Local Impact</span>
+<h3>Atlantic City</h3>
+<p>Flood defenses, beach access, tourism protection, roads, and public infrastructure could be affected.</p>
 </div>
-
+<div class="card">
+<span>Economy</span>
+<h3>Construction Jobs</h3>
+<p>Major resilience packages can create engineering, contracting, labor, and planning work.</p>
+</div>
+<div class="card">
+<span>Insurance</span>
+<h3>Cost Pressure</h3>
+<p>Flood risk and storm damage can influence premiums, lending, and property costs.</p>
+</div>
+<div class="card">
+<span>Watch Next</span>
+<h3>Official Docs</h3>
+<p>Track agency releases, city statements, project lists, and funding deadlines.</p>
+</div>
+</div>
+<p class="editor-note">
+<strong>Verification note:</strong> Treat this as a developing public-interest story until official agency documents, municipal statements, or funding notices are linked directly.</p>
+<p class="source">Suggested sources to rotate: FEMA, NOAA, New Jersey DEP, City of Atlantic City, NWS Mount Holly, local emergency-management updates.</p>
+</div>
 <div class="hero">
 <h1>TRUTH WITH TEETH</h1>
-<p><strong style="color:gold">No Fear. No Favor. Just Facts.</strong><br>Independent reporting, sourced briefs, local culture, faith, weather, and accountability from Atlantic City.</p>
-<a class="button" href="#breaking">Top Breaking Story</a> <a class="button" href="#today">Read Today's Desk</a> <a class="button" href="#tips">Submit a Tip</a>
-<div class="merch-banner"><img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day T-shirt"><div><strong style="color:gold">Limited Time Mother’s Day Drop</strong><br><span style="font-size:13px;color:#ddd">Official BlackSheep Patriots merch</span><br><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Shop Now</a></div></div>
-<div class="countdown-box"><div class="countdown-title">Limited Time — Mother’s Day Drop</div><div class="countdown-grid"><div class="countdown-unit"><span class="countdown-number" id="md-days">--</span><span class="countdown-label">Days</span></div><div class="countdown-unit"><span class="countdown-number" id="md-hours">--</span><span class="countdown-label">Hours</span></div><div class="countdown-unit"><span class="countdown-number" id="md-mins">--</span><span class="countdown-label">Minutes</span></div><div class="countdown-unit"><span class="countdown-number" id="md-secs">--</span><span class="countdown-label">Seconds</span></div></div><p style="margin:10px 0 0 0;color:#ddd;font-size:14px;">Order early for Mother’s Day — available while the drop is live.</p></div>
-</div>
-
-<div class="section" id="biography-preview">
-<h2>Founder Biography Preview</h2>
-<div class="bio-preview">
+<p>
+<strong>No Fear. No Favor. Just Facts.</strong>
+<br>Independent reporting, sourced briefs, local culture, faith, weather, and accountability from Atlantic City.</p>
+<a class="button" href="#breaking">Top Story</a> <a class="button" href="#today">Read Dashboard</a> <a class="button" href="#tips">Submit a Tip</a>
+<div class="merch-banner">
+<img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day T-shirt">
 <div>
-<p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> built BlackSheep Patriots News from survival, loss, fatherhood, faith, mistakes, rebuilding, and the belief that truth matters more than comfort.</p>
-<p>This preview highlights the story behind the platform without taking over the homepage. The full biography is available in the Biography tab.</p>
-<a class="button" href="#biography">Read Full Biography</a>
-</div>
-<div class="bio-preview-photos">
-<img src="bio-assets/image1.jpeg" alt="Biography preview image 1">
-<img src="bio-assets/image2.jpeg" alt="Biography preview image 2">
-<img src="bio-assets/image4.jpeg" alt="Biography preview image 3">
-<img src="bio-assets/image5.jpeg" alt="Biography preview image 4">
-<img src="bio-assets/image6.jpeg" alt="Biography preview image 5">
-<img src="bio-assets/image7.jpeg" alt="Biography preview image 6">
+<strong>Limited Time Mother’s Day Drop</strong>
+<br>
+<span>Official BlackSheep Patriots merch</span>
+<br>
+<a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">Shop Now</a>
 </div>
 </div>
+<div class="countdown-box">
+<div class="countdown-title">Limited Time — Mother’s Day Drop</div>
+<div class="countdown-grid">
+<div class="countdown-unit">
+<span class="countdown-number" id="md-days">--</span>
+<span class="countdown-label">Days</span>
 </div>
-
-<div class="section full-article detail-section" id="biography">
-<h2>Biography Tab: Becoming BigRooster — The Full Story of Zachary J. Blum</h2>
-<p class="byline">Founder Biography • BlackSheep Patriots News / BigRooster Media</p>
-<p class="bio-lead"><strong>Zachary J. Blum — BigRooster</strong> is the founder of BlackSheep Patriots News and BigRooster Media. His story is built from survival, fatherhood, grief, mistakes, accountability, rebuilding, faith, and the mission behind an independent media platform rooted in Atlantic City and South Jersey.</p>
-
-<div class="bio-callout"><strong>Mission Statement:</strong> Truth Over Comfort. No corporate backing. No political affiliation. No filter. Just real, community-rooted reporting from someone who has lived enough life to know the difference between what is shown — and what is actually real.</div>
-
-<h3>Biography Photo Gallery</h3>
-<p class="editor-note">Full biography photo gallery featuring images from Zachary J. Blum’s story, family, sons, friends, and life journey.</p>
-<div class="grid grid-3 bio-gallery">
-<img src="bio-assets/image1.jpeg" alt="Biography image 1">
-<img src="bio-assets/image2.jpeg" alt="Biography image 2">
-<img src="bio-assets/image3.png" alt="Biography image 3">
-<img src="bio-assets/image4.jpeg" alt="Biography image 4">
-<img src="bio-assets/image5.jpeg" alt="Biography image 5">
-<img src="bio-assets/image6.jpeg" alt="Biography image 6">
-<img src="bio-assets/image7.jpeg" alt="Biography image 7">
-<img src="bio-assets/image8.png" alt="Biography image 8">
-<img src="bio-assets/image9.jpeg" alt="Biography image 9">
+<div class="countdown-unit">
+<span class="countdown-number" id="md-hours">--</span>
+<span class="countdown-label">Hours</span>
 </div>
-
-<div class="bio-story">
-<h3>Early Life</h3>
-<p>I was born in Ilion, New York in September 1989. From the beginning, life did not come slow or easy — it came fast, unpredictable, and heavy.</p>
-<p>At five years old, I moved with my mother to Canton, New York. That is where I grew up tough — playing football, lacrosse, hockey — riding dirt bikes, snowmobiles, four-wheelers, and anything with wheels or an engine. I lived outside, constantly moving, learning early that staying still was not an option.</p>
-<p>In 2002, everything shifted. We moved to Greenville, South Carolina. Different environment, different energy — but something in me never settled there.</p>
-
-<h3>Hard Lessons and Turning Points</h3>
-<p>At 14 years old, trying to find identity, structure, and belonging in a place that did not feel like home, I made a decision that pulled me in the wrong direction. I became involved with a gang in the Greenville area. At that age, it felt like loyalty, protection, and purpose. Looking back, it was the beginning of a path that came with consequences, lessons, and realities I had to face head-on.</p>
-<p>By August 25, 2005, at just fifteen years old, I made one of the biggest decisions of my life. I left my mother’s house and went back to Herkimer, New York to live with my father, Keith Blum. My aunt and uncle, Darlene Brewer and Dale Brewer Sr., helped me make that turning point happen.</p>
-
-<h3>Friends, Music, and Loss</h3>
-<p>Back in Herkimer, I found my people. Johnathan “Nabby” Nabinger and Raymond Pinney were not just friends — we were together every day. We grew up side by side through our teenage years and into our early twenties. Raymond and I spent years making rap music, building something creative out of where we came from.</p>
-<p>Losing Nabby in 2014 and Raymond in 2016 hit deeply. Those losses were not just moments — they were turning points. They shaped how I move, how I think, and how I carry everything forward.</p>
-
-<h3>Fatherhood</h3>
-<p>In 2010, my son Miguel was born in Ilion, New York. His mother and I raised him together as a co-parenting team, even while living separate lives. For the first nine years of his life, I was consistently present — showing up, learning what it meant to be a father, and doing my part alongside his mother to raise him the best we could.</p>
-<p>Over time, things became unstable. After the loss of my twin sons in 2016, my life took a turn. Mentally, emotionally, and environmentally, I was not in a place that I felt was right for raising a child the way he deserved. I made one of the hardest decisions of my life and stepped back so Miguel could have stability with his mother full-time. Not because I did not love him — but because I did.</p>
-
-<h3>Loss Upon Loss</h3>
-<p>In 2016, my identical twin sons — Zachary John Blum Jr. and Zain Xavier Blum — were born on May 5, 2016. They passed away the same day. There are no words that fully explain that kind of pain. It is not something you move past — it becomes part of you.</p>
-<p>Then in January 2019, my nephews died in a house fire in Herkimer, New York. Loss stacked on loss, year after year. The kind of weight that breaks most people. I did not break.</p>
-
-<h3>The Raleigh Decision</h3>
-<p>After everything I had been through, I called my father, Keith Blum, and asked him for help getting out. He bought me a Greyhound bus ticket to Charlotte, North Carolina. At around 5:25 in the morning in Raleigh, I was sitting there with that ticket — and something in me said: stop.</p>
-<p>I walked to the counter and asked, “How much is a ticket to Myrtle Beach?” It was thirty-three dollars. I took it. That decision changed my life. I landed in Myrtle Beach, found two jobs, got stable, and started rebuilding from nothing.</p>
-
-<h3>More Trials and the Road Back</h3>
-<p>In October 2019, someone I was close with, Khrystina, stopped responding. Days later, I saw her face tied to a story about a murdered newborn. She had told me the baby was mine. The timeline matched. I contacted law enforcement, was brought in, questioned, and left carrying even more weight.</p>
-<p>Life became movement again — New York, Myrtle Beach, Florida, kitchens, construction, hard labor, and survival. In October 2021, I returned to New York, made mistakes, and paid for them. I served a year in state prison and completed parole. Then I got back to work.</p>
-<p>In early August 2025, I was involved in a motorcycle accident that disrupted everything. I still kept going, working at a Walmart Distribution Center through August and September. Stopping has never been an option.</p>
-
-<h3>Atlantic City and the Mission</h3>
-<p>After everything, I reconnected with Jordan. I told her there was nothing left for me where I was. She asked where I wanted to go. I did not know that night, but I woke up the next morning with the answer: Atlantic City, New Jersey. We got on a train and made the move. No guarantees. No safety net. Just belief.</p>
-<p>In Atlantic City, I built BlackSheep Patriots News from the ground up. No funding. No team. No backing. Just me. I designed it, wrote it, built it, and published it. At the same time, I returned to school, pursuing communications while actively living it every day.</p>
-<p>Before that, I built an audience through AI-driven video content. Now BigRooster Media operates across journalism, video, and merchandise as a full independent brand rooted in South Jersey.</p>
-
-<h3>WE UP</h3>
-<p>Everything I have been through — bad decisions, loss, pain, survival, rebuilding — built the foundation for what I am doing now. I do not speak from theory. I speak from experience.</p>
-<p><strong>This is not a finished story. I am still building. Still moving. Still becoming. WE UP.</strong></p>
+<div class="countdown-unit">
+<span class="countdown-number" id="md-mins">--</span>
+<span class="countdown-label">Minutes</span>
+</div>
+<div class="countdown-unit">
+<span class="countdown-number" id="md-secs">--</span>
+<span class="countdown-label">Seconds</span>
 </div>
 </div>
-
-<div class="section detail-section" id="faith"><h2>Faith & God</h2><p class="editor-note">A dedicated daily section for prayer, encouragement, gratitude, strength, family, community, and keeping faith at the center of the mission.</p><div class="grid grid-3"><div class="card"><span>Daily Scripture</span><h3>Psalm 46:1</h3><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Peaceful sunrise"><p>“God is our refuge and strength, an ever-present help in trouble.”</p></div><div class="card"><span>Daily Prayer</span><h3>Prayer for Strength</h3><img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1200&auto=format&fit=crop" alt="Sunlight trees"><p>Lord, guide my steps today. Give me wisdom, discipline, courage, patience, and peace. Amen.</p></div><div class="card"><span>Positive Quote</span><h3>Today’s Encouragement</h3><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?q=80&w=1200&auto=format&fit=crop" alt="Mountains"><p>Stay grounded. Stay grateful. Keep moving with purpose. One faithful step at a time still moves you forward.</p></div></div></div>
-
-<div class="section detail-section" id="founder"><h2>Founder Spotlight</h2><div class="grid grid-2"><img src="https://i.imgur.com/YCghQCd.jpeg" alt="Founder photo"><img src="https://i.imgur.com/4bWhXsJ.jpeg" alt="Founder photo"><img src="https://i.imgur.com/jP8rFL3.jpeg" alt="Founder photo"><img src="https://i.imgur.com/TLIfR7w.png" alt="Founder photo"></div><p><strong>Zachary J. Blum (BigRooster)</strong> — Independent journalist and founder of BlackSheep Patriots News.</p></div>
-
-<div class="section detail-section" id="shop"><h2>Merch</h2><p class="editor-note">Official BlackSheep Patriots merch. Simple, direct, and supports the platform.</p><div class="card" style="margin-bottom:20px;border:2px solid #ff4d4d;box-shadow:0 0 24px rgba(255,0,0,.25);"><span>Newest Drop</span><h3>Mother’s Day T-Shirt — Patriot Mom Edition</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day shirt" style="height:360px;"><p><strong>New Mother’s Day shirt now available.</strong> Patriot Mom design with pink sleeves, rooster graphic, and BlackSheep Patriots message.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View Pink Mother’s Day Shirt in Store</a></div><div class="grid grid-3"><div class="card"><span>Official Merch</span><h3>Item #1</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-279-69ed653a05d86__360" alt="Product 1"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div><div class="card"><span>Official Merch</span><h3>Item #2</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-960-69ed658061f68__360" alt="Product 2"><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div><div class="card"><span>New Drop</span><h3>Mother’s Day T-Shirt</h3><img class="product-img" src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day shirt"><p>New Mother’s Day BlackSheep Patriots shirt now available.</p><a class="button" href="https://blacksheep-patriots.printful.me/" target="_blank">View</a></div></div></div>
-
-<div class="section" id="today">
-<h2>Homepage News Dashboard</h2>
-<p class="homepage-note">Quick previews only. Click a tab or card to open the full section, article, data board, source hub, or contact page.</p>
-
-<div class="tabs">
-<a href="#breaking">Breaking</a>
-<a href="#local">Atlantic City</a>
-<a href="#economy">Economy</a>
-<a href="#markets">Markets</a>
-<a href="#weather">Weather/Ocean</a>
-<a href="#whitehouse">White House</a>
-<a href="#defense">Defense</a>
-<a href="#faith">Faith</a>
-<a href="#shop">Shop</a>
-<a href="#biography">Biography</a>
-</div>
-
-<div class="grid grid-3">
-<a class="card" href="#breaking">
-<span>Breaking</span>
-<h3>Developing National Story</h3>
-<p>Top alert, source notes, and verified video/source links.</p>
-<p class="editor-note">Click to open full breaking coverage.</p>
-</a>
-
-<a class="card" href="#local">
-<span>Atlantic City</span>
-<h3>Local Events / Tourism / Culture</h3>
-<p>Kane Brown highlight, casino activity, local shows, Boardwalk notes, and visitor impact.</p>
-<p class="editor-note">Click to read the full Atlantic City section.</p>
-</a>
-
-<a class="card" href="#biography">
-<span>Founder</span>
-<h3>Zachary J. Blum Biography</h3>
-<p>Survival, loss, fatherhood, faith, rebuilding, and the mission behind BlackSheep Patriots News.</p>
-<p class="editor-note">Click to read the full biography.</p>
-</a>
 </div>
 </div>
-
-<div class="section" id="homepage-samples">
-<h2>Homepage Data & Section Previews</h2>
-<p class="homepage-note">Homepage cards show quick visuals only. Viewers click a card to open the full section, article, data board, source hub, or contact page.</p>
-
-<div class="grid grid-3">
-
-<a class="card" href="#local">
-<span>Atlantic City</span>
-<h3>Events / Tourism / Boardwalk</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?q=80&w=1200&auto=format&fit=crop" alt="Atlantic City boardwalk preview">
-<div class="data-row"><div class="data-pill"><strong>3+</strong>Event Notes</div><div class="data-pill"><strong>AC</strong>Local Watch</div></div>
-<p>Casino activity, live shows, entertainment, tourism, Boardwalk notes, and South Jersey culture.</p>
-<p class="editor-note">Click for full Atlantic City coverage.</p>
-</a>
-
-<a class="card" href="#economy">
-<span>Economy</span>
-<h3>GDP / Jobs / CPI / Claims</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Economy data preview">
-<div class="data-row"><div class="data-pill"><strong>+0.5%</strong>GDP</div><div class="data-pill"><strong>4.3%</strong>Unemployment</div><div class="data-pill"><strong>3.3%</strong>CPI</div><div class="data-pill"><strong>214K</strong>Claims</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:16%"><span>GDP</span></div><div style="height:68%"><span>Jobs</span></div><div style="height:44%"><span>CPI</span></div><div style="height:58%"><span>Claims</span></div></div>
-<p>Snapshot only. Full explanations and source links stay in the economy tab.</p>
-</a>
-
-<a class="card" href="#markets">
-<span>Stocks</span>
-<h3>SPY / QQQ / DIA</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop" alt="Stock market preview">
-<div class="data-row"><div class="data-pill"><strong>$713.94</strong>SPY</div><div class="data-pill"><strong>$663.88</strong>QQQ</div><div class="data-pill"><strong>$492.21</strong>DIA</div><div class="data-pill"><strong>Daily</strong>Market Move</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:45%"><span>SPY</span></div><div style="height:100%"><span>QQQ</span></div><div style="height:12%"><span>DIA</span></div></div>
-<p><span class="positive">QQQ +1.93%</span> • <span class="negative">DIA -0.17%</span></p>
-<p>Click for the full stock exchange board.</p>
-</a>
-
-<a class="card" href="#trade">
-<span>Trade</span>
-<h3>Imports / Exports</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop" alt="Shipping containers trade preview">
-<div class="data-row"><div class="data-pill"><strong>$330B</strong>Imports</div><div class="data-pill"><strong>$265B</strong>Exports</div><div class="data-pill"><strong>Ports</strong>Supply Chain</div><div class="data-pill"><strong>Trade</strong>Balance</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:100%"><span>Imports</span></div><div style="height:80%"><span>Exports</span></div><div style="height:38%"><span>Goods</span></div><div style="height:54%"><span>Services</span></div></div>
-<p>Imports, exports, ports, shipping, and trade balance preview.</p>
-<p class="editor-note">Click for full trade board.</p>
-</a>
-
-<a class="card" href="#weather">
-<span>Weather / Ocean</span>
-<h3>South Jersey Coastal Stats</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Coastal weather preview">
-<div class="data-row"><div class="data-pill"><strong>60°</strong>High</div><div class="data-pill"><strong>44°</strong>Low</div><div class="data-pill"><strong>48°</strong>Water</div><div class="data-pill"><strong>High</strong>Rip Risk</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:70%"><span>Temp</span></div><div style="height:54%"><span>Water</span></div><div style="height:88%"><span>Wind</span></div><div style="height:100%"><span>Surf</span></div></div>
-<p>Wind, tides, surf, water temperature, rip-current risk, fishing, and Boardwalk conditions.</p>
-<p class="editor-note">Click for full weather/ocean desk.</p>
-</a>
-
-<a class="card" href="#jobs">
-<span>Job Market</span>
-<h3>Labor / Hiring / Claims</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Job market preview">
-<div class="data-row"><div class="data-pill"><strong>4.3%</strong>Unemployment</div><div class="data-pill"><strong>178K</strong>Jobs</div><div class="data-pill"><strong>214K</strong>Claims</div><div class="data-pill"><strong>Hiring</strong>Watch</div></div>
-<div class="mini-chart" style="height:115px"><div style="height:55%"><span>Jobs</span></div><div style="height:43%"><span>Unemp.</span></div><div style="height:64%"><span>Claims</span></div><div style="height:70%"><span>Wages</span></div></div>
-<p>Quick labor-market preview. Click for the full job market section.</p>
-</a>
-
-<a class="card" href="#whitehouse">
-<span>Government</span>
-<h3>White House Desk</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="Government building preview">
-<p>Official releases, briefings, videos, and policy messaging organized separately from commentary.</p>
-<p class="editor-note">Click for full White House tab.</p>
-</a>
-
-<a class="card" href="#defense">
-<span>Defense</span>
-<h3>Pentagon / CENTCOM</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=1200&auto=format&fit=crop" alt="Defense preview image">
-<p>Official U.S. Central Command links, regional updates, video/image hub, and defense-source separation.</p>
-<p class="editor-note">Click for full defense tab.</p>
-</a>
-
-<a class="card" href="#videos">
-<span>Videos</span>
-<h3>Reliable Source Hub</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop" alt="News video source preview">
-<p>AP, White House, CENTCOM, NOAA, NWS Mount Holly, and Visit Atlantic City source buttons.</p>
-<p class="editor-note">Click for videos and official source links.</p>
-</a>
-
-<a class="card" href="#faith">
-<span>Faith & God</span>
-<h3>Daily Scripture + Prayer</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Faith and sunrise preview">
-<p>Scripture, prayer, positive quote, gratitude, strength, and community encouragement.</p>
-<p class="editor-note">Click for the faith section.</p>
-</a>
-
-<a class="card" href="#shop">
-<span>Merch</span>
-<h3>Mother’s Day Drop</h3>
-<img src="https://cdn.printful.me/t/quick-stores/products/w168/18077026-967-69edfc3cc63f1__360" alt="Mother's Day merch" style="height:150px;object-fit:contain;background:rgba(255,255,255,.05);">
-<p>Official BlackSheep Patriots merch with countdown and shop link.</p>
-</a>
-
-<a class="card" href="#standards">
-<span>Editorial Standards</span>
-<h3>Verification / Corrections</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop" alt="Editorial standards preview">
-<p>How BlackSheep Patriots News separates reporting, commentary, sourcing, corrections, and developing stories.</p>
-<p class="editor-note">Click for standards and corrections policy.</p>
-</a>
-
-<a class="card" href="#legal">
-<span>Legal</span>
-<h3>Disclaimer / Policy Notice</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop" alt="Legal disclaimer preview">
-<p>Important legal, editorial, opinion, source, corrections, and sponsored-content disclaimers.</p>
-<p class="editor-note">Click for full legal notice.</p>
-</a>
-
-<a class="card" href="#tips">
-<span>Contact</span>
-<h3>Tips / Corrections / Leads</h3>
-<img class="card-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Contact desk preview">
-<p>Send documents, photos, videos, public records, corrections, local leads, and community tips.</p>
-<p class="editor-note">Click for contact information.</p>
-</a>
-
-</div>
-</div>
-
-<div class="section detail-section" id="trade">
-<h2>Trade Desk: Imports / Exports / Supply Chain</h2>
-<img class="card-img" src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop" alt="Shipping containers and trade logistics" style="height:260px;">
-<p class="byline">Trade Snapshot • BlackSheep Patriots News</p>
-<p>This section tracks imports, exports, ports, supply-chain pressure, trade balance, goods movement, and how national trade activity affects local businesses, prices, fuel, food, retail, and Atlantic City tourism.</p>
-<div class="grid grid-4">
-<div class="card"><span>Imports</span><h3>Goods Coming In</h3><p class="stat">$330B</p><div class="bar-wrap"><div class="bar" style="width:100%"></div></div><p>Imported goods snapshot.</p></div>
-<div class="card"><span>Exports</span><h3>Goods Going Out</h3><p class="stat">$265B</p><div class="bar-wrap"><div class="bar" style="width:80%"></div></div><p>Exported goods snapshot.</p></div>
-<div class="card"><span>Balance</span><h3>Trade Gap</h3><p class="stat">-$65B</p><div class="bar-wrap"><div class="bar" style="width:65%"></div></div><p>Import/export difference snapshot.</p></div>
-<div class="card"><span>Supply Chain</span><h3>Port Watch</h3><p class="stat">Active</p><div class="bar-wrap"><div class="bar" style="width:74%"></div></div><p>Ports, shipping, and inventory pressure.</p></div>
-</div>
-<h3>Trade Movement Graph</h3>
-<div class="mini-chart"><div style="height:100%"><span>Imports<br>$330B</span></div><div style="height:80%"><span>Exports<br>$265B</span></div><div style="height:45%"><span>Gap<br>$65B</span></div><div style="height:70%"><span>Ports<br>Active</span></div></div>
-<p class="editor-note">Figures are placeholders for presentation until updated with official Census Bureau / BEA trade data.</p>
-<p class="source">Source placeholders: U.S. Census Bureau trade data • Bureau of Economic Analysis • Port authority releases.</p>
-</div>
-
-
-<div class="section detail-section" id="jobs">
-<h2>Job Market Desk</h2>
-<img class="card-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Workers and job market" style="height:260px;">
-<p class="byline">Labor Snapshot • BlackSheep Patriots News</p>
-<p>This section tracks unemployment, job creation, weekly claims, hiring conditions, wages, work quality, and Atlantic City / South Jersey job pressure.</p>
-<div class="grid grid-4">
-<div class="card"><span>Unemployment</span><h3>Jobless Rate</h3><p class="stat">4.3%</p><div class="bar-wrap"><div class="bar" style="width:43%"></div></div></div>
-<div class="card"><span>Payrolls</span><h3>Jobs Added</h3><p class="stat">178K</p><div class="bar-wrap"><div class="bar" style="width:68%"></div></div></div>
-<div class="card"><span>Claims</span><h3>Initial Claims</h3><p class="stat">214K</p><div class="bar-wrap"><div class="bar" style="width:58%"></div></div></div>
-<div class="card"><span>Local</span><h3>AC / SJ Hiring</h3><p class="stat">Active</p><div class="bar-wrap"><div class="bar" style="width:76%"></div></div></div>
-</div>
-</div>
-
-<div class="section detail-section" id="economy">
-<h2>Economy Desk</h2>
-<p class="byline">GDP, CPI, jobs, claims, food prices, housing pressure, and household impact.</p>
-<div class="grid grid-4">
-<div class="card"><span>Growth</span><h3>GDP</h3><p class="stat">+0.5%</p></div>
-<div class="card"><span>Inflation</span><h3>CPI</h3><p class="stat">3.3%</p></div>
-<div class="card"><span>Labor</span><h3>Unemployment</h3><p class="stat">4.3%</p></div>
-<div class="card"><span>Claims</span><h3>Initial Claims</h3><p class="stat">214K</p></div>
-</div>
-</div>
-
-<div class="section detail-section" id="markets">
-<h2>Markets Desk</h2>
-<p class="byline">Stocks, ETFs, investor sentiment, Treasury pressure, oil, and household-market connection.</p>
-<div class="grid grid-3">
-<div class="card"><h3>SPY</h3><p class="stat">$713.94</p><p class="positive">Market watch</p></div>
-<div class="card"><h3>QQQ</h3><p class="stat">$663.88</p><p class="positive">Tech watch</p></div>
-<div class="card"><h3>DIA</h3><p class="stat">$492.21</p><p class="negative">Dow watch</p></div>
-</div>
-<p class="editor-note">Market content is informational only and is not investment advice.</p>
-</div>
-
-<div class="section detail-section" id="weather">
-<h2>Weather / Ocean Desk</h2>
-<p class="byline">South Jersey coastal weather, wind, surf, tides, ocean risk, and beach conditions.</p>
-<div class="grid grid-4">
-<div class="card"><h3>Atlantic City</h3><p class="stat">60° / 44°</p><p>Coastal watch, wind, tides, and Boardwalk conditions.</p></div>
-<div class="card"><h3>Ocean Water</h3><p class="stat">48°F</p><p>Water temperature and marine conditions.</p></div>
-<div class="card"><h3>Rip Current</h3><p class="stat">High</p><p>Use official NWS/NOAA alerts before entering water.</p></div>
-<div class="card"><h3>Fishing / Marine</h3><p class="stat">Active</p><p>Wind, tide, surf, and small craft watch.</p></div>
-</div>
-</div>
-
-<div class="section detail-section" id="whitehouse">
-<h2>White House Desk</h2>
-<p>Official briefings, statements, videos, executive actions, federal policy, and local impact tracking.</p>
-<a class="button" href="https://www.whitehouse.gov/briefings-statements/" target="_blank">Official Briefings</a>
-<a class="button" href="https://www.whitehouse.gov/videos/" target="_blank">Official Videos</a>
-</div>
-
-<div class="section detail-section" id="defense">
-<h2>Pentagon / CENTCOM Desk</h2>
-<p>Defense coverage uses public, non-sensitive sources only. Track DoD releases, CENTCOM updates, sanctions, naval posture, and oil-route risk.</p>
-<a class="button" href="https://www.defense.gov/News/Releases/" target="_blank">DoD Releases</a>
-<a class="button" href="https://www.centcom.mil/MEDIA/PRESS-RELEASES/" target="_blank">CENTCOM Releases</a>
-</div>
-
-<div class="section detail-section" id="local">
-<h2>Atlantic City Watch</h2>
-<p>Local events, restaurants, Boardwalk movement, public safety, tourism, weather impact, and South Jersey culture.</p>
-<div class="grid grid-3">
-<div class="card"><h3>Restaurants</h3><p>White House Subs, Dock’s Oyster House, Knife & Fork Inn, and local food culture.</p></div>
-<div class="card"><h3>Events</h3><p>Casino shows, Boardwalk traffic, nightlife, and visitor impact.</p></div>
-<div class="card"><h3>Public Safety</h3><p>Use official police, prosecutor, court, and city records before publishing claims.</p></div>
-</div>
-</div>
-
-<div class="section detail-section" id="videos">
-<h2>Videos</h2>
-<p>Reliable video/source hub for AP, White House, CENTCOM, NOAA, NWS, local clips, and original BigRooster commentary.</p>
-<div class="grid grid-3">
-<a class="card" href="https://www.youtube.com/@AssociatedPress/videos" target="_blank"><h3>AP News</h3><p>Reliable video updates.</p></a>
-<a class="card" href="https://www.whitehouse.gov/videos/" target="_blank"><h3>White House</h3><p>Official videos.</p></a>
-<a class="card" href="https://www.youtube.com/results?search_query=atlantic+city+news+today" target="_blank"><h3>Atlantic City</h3><p>Local video search lane.</p></a>
-</div>
-</div>
-
-<div class="section detail-section" id="tips">
-<h2>Tips / Corrections / Leads</h2>
-<p>Email: <a href="mailto:BigRooster32@icloud.com">BigRooster32@icloud.com</a></p>
-<p>Send documents, photos, public records, corrections, local leads, and story tips.</p>
-</div>
-
-<div class="section detail-section" id="about">
-<h2>About BlackSheep Patriots News</h2>
-<p>Independently owned and operated by Zachary J. Blum / BigRooster Media. Local-first reporting from Atlantic City and South Jersey.</p>
-</div>
-
-<div class="section detail-section" id="standards">
-<h2>Editorial Standards & Corrections Policy</h2>
-<p>Claims should be checked against official statements, public records, direct evidence, credible sources, or firsthand documentation. Developing stories should be clearly labeled.</p>
-</div>
-
-<div class="section detail-section" id="legal">
-<h2>Legal / Editorial Disclaimer</h2>
-<p>Content is for general informational and editorial purposes only. It is not legal, financial, medical, investment, emergency, or professional advice.</p>
-</div>
-
-<div class="section detail-section" id="advertise">
-<h2>Advertise / Sponsor / Partner</h2>
-<p>Local businesses, creators, restaurants, events, shops, and community organizations can support the platform through ads, sponsored posts, and partnerships.</p>
-</div>
-
-<div class="footer">© 2026 BlackSheep Patriots News ★ BigRooster Media<br>Independently owned and operated by Zachary J. Blum. Truth over comfort. WE UP.</div>
-</div>
-
 <script>
-/* PROFESSIONAL HASH ROUTER — NO BLANK TABS */
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
 (function(){
-  function ensureBackButtons(){
-    document.querySelectorAll('.detail-section').forEach(function(sec){
-      if(sec.querySelector('.presentation-back-home')) return;
-      var a=document.createElement('a');
-      a.href='#top';
-      a.className='presentation-back-home';
-      a.textContent='← Back Home';
-      sec.insertBefore(a, sec.firstChild);
-    });
-  }
-
-  function showPage(){
-    var hash=(location.hash || '#top').replace('#','');
-    var target=document.getElementById(hash);
-    var isDetail=target && target.classList.contains('detail-section');
-
-    document.querySelectorAll('.detail-section').forEach(function(sec){
-      sec.classList.remove('active-page');
-    });
-
-    document.querySelectorAll('.nav a[href^="#"]').forEach(function(a){
-      a.classList.toggle('active-tab', a.getAttribute('href') === '#'+hash);
-    });
-
-    if(isDetail){
-      document.body.classList.add('site-page-open');
-      target.classList.add('active-page');
-      setTimeout(function(){ target.scrollIntoView({behavior:'smooth',block:'start'}); }, 20);
-    }else{
-      document.body.classList.remove('site-page-open');
-      if(hash === 'top'){
-        setTimeout(function(){ window.scrollTo({top:0,behavior:'smooth'}); }, 20);
-      }else if(target){
-        setTimeout(function(){ target.scrollIntoView({behavior:'smooth',block:'start'}); }, 20);
-      }
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
     }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
   }
-
-  function warnMissingLinks(){
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      var id=a.getAttribute('href').slice(1);
-      if(id && !document.getElementById(id)){
-        console.warn('Missing section for link:', a.getAttribute('href'));
-      }
-    });
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
   }
-
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',function(){ensureBackButtons();showPage();warnMissingLinks();});
-  }else{
-    ensureBackButtons();showPage();warnMissingLinks();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
   }
-  window.addEventListener('hashchange',showPage);
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
 })();
 </script>
-</body>
-</html>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<script>
+/* MOTHER'S DAY COUNTDOWN TIMER — SAFE ADD */
+(function(){
+  function getNextMothersDay(){
+    var now = new Date();
+    var year = now.getFullYear();
+    function calc(y){
+      var mayFirst = new Date(y,4,1,0,0,0);
+      var firstSundayOffset = (7 - mayFirst.getDay()) % 7;
+      var secondSunday = 1 + firstSundayOffset + 7;
+      return new Date(y,4,secondSunday,23,59,59);
+    }
+    var target = calc(year);
+    if(now > target) target = calc(year + 1);
+    return target;
+  }
+  function setCountdown(id,value){
+    var el = document.getElementById(id);
+    if(el) el.textContent = value;
+  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateMothersDayCountdown(){
+    var target = getNextMothersDay();
+    var diff = target - new Date();
+    if(diff < 0) diff = 0;
+    var totalSeconds = Math.floor(diff / 1000);
+    var days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    var hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    var minutes = Math.floor(totalSeconds / 60);
+    var seconds = totalSeconds % 60;
+    setCountdown('md-days', days);
+    setCountdown('md-hours', pad(hours));
+    setCountdown('md-mins', pad(minutes));
+    setCountdown('md-secs', pad(seconds));
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', updateMothersDayCountdown);
+  } else {
+    updateMothersDayCountdown();
+  }
+  setInterval(updateMothersDayCountdown, 1000);
+})();
+</script>
+<div class="section" id="quality-of-life">
+<h2>Quality of Life Command Center</h2>
+<p class="homepage-note">Priority order: what affects people’s daily life first — weather, safety, food, money, jobs, housing, trade, and markets.</p>
+<div class="grid grid-4">
+<a class="card" href="#weather">
+<span>1 • Weather</span>
+<h3>Live Weather Command</h3>
+<p class="stat" id="weather-ac-qol">46°F</p>
+<p>
+<strong>Atlantic City:</strong> Sunny<br>
+<strong>NYC:</strong> Mostly sunny<br>
+<strong>DC:</strong> Partly sunny<br>
+<strong>Richmond:</strong> Partly sunny<br>
+<strong>LA:</strong> Mostly clear<br>
+<strong>Dallas:</strong> Partly cloudy<br>
+<strong>Chicago:</strong> Cool / partly cloudy<br>
+<strong>Florida coast:</strong> Clear to light rain<br>
+<strong>Alaska:</strong> Cloudy / cold<br>
+<strong>Hawaii:</strong> Partly sunny / warm<br>
+<strong>Puerto Rico:</strong> Showers / humid</p>
+</a>
+<a class="card" href="#ocean">
+<span>1B • Ocean</span>
+<h3>Ocean Statistics Command</h3>
+<p class="stat">11 zones</p>
+<p>South Jersey, NYC, Florida, Myrtle Beach, Alaska, Hawaii, Puerto Rico, tides, wind, waves, water temps, and marine links.</p>
+</a>
+<a class="card" href="#crime">
+<span>2 • Safety</span>
+<h3>Crime Tracker Live</h3>
+<p class="stat">4 zones</p>
+<p>Public-source crime tracker by timezone, agency releases, and enforcement dashboards.</p>
+</a>
+<a class="card" href="#food">
+<span>3 • Food</span>
+<h3>Food Supply Chain Watch</h3>
+<p class="stat">6 feeds</p>
+<p>Food prices, recalls, USDA/FDA alerts, crops, trucking, ports, funding, and new process updates.</p>
+</a>
+<a class="card" href="#treasury">
+<span>4 • Money</span>
+<h3>U.S. Treasury Tracker</h3>
+<p class="stat">$37T+</p>
+<p>Debt, cash balance, receipts, outlays, interest, auctions, OFAC, and sanctions watch.</p>
+</a>
+<a class="card" href="#economy">
+<span>5 • Economy</span>
+<h3>Economy Board</h3>
+<p class="sta
