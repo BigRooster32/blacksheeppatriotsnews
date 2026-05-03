@@ -223,6 +223,52 @@ body{line-height:1.45}.container{padding-top:18px}.header{padding-top:16px}.sect
 .personal-video-card{background:rgba(0,0,0,.34)!important;border-color:rgba(255,255,255,.56)!important}
 @media(min-width:900px){.personal-video-grid{grid-template-columns:repeat(2,minmax(260px,420px));justify-content:center}}
 
+
+/* LIGHTER IPHONE / MOBILE PERFORMANCE MODE */
+@media(max-width:820px){
+  html{scroll-behavior:auto!important;scroll-padding-top:12px!important}
+  body{background:#050505!important;background-image:linear-gradient(180deg,rgba(10,10,10,.98),rgba(18,18,24,.98))!important;background-attachment:scroll!important;background-size:auto!important;overflow-x:hidden!important}
+  body::after,.patriot-frame-left,.patriot-frame-right,.patriot-frame-bottom{display:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important;filter:none!important;text-shadow:none!important}
+  .title,.tagline,.hero h1,.section h2,.card h3,.full-article h2{-webkit-text-fill-color:#fff!important;background:none!important;filter:none!important;letter-spacing:.4px!important}
+  .header,.hero,.section,.card,.video-box,.countdown-box,.merch-banner,.local-spotlight,.adult-spotlight,.sponsor-hub,.personal-video-section{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-width:1px!important;background:rgba(0,0,0,.72)!important}
+  .header::before,.hero::before,.section::before{display:none!important}
+  .container{padding:8px!important;max-width:100%!important}
+  .header{position:relative!important;padding:12px 8px!important;margin-bottom:10px!important}
+  .title{font-size:24px!important;line-height:1.05!important}
+  .tagline{font-size:11px!important;line-height:1.35!important}
+  .nav{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important;max-height:none!important;padding:8px 2px!important;gap:6px!important;-webkit-overflow-scrolling:touch!important}
+  .nav a{white-space:nowrap!important;font-size:11px!important;min-height:34px!important;display:flex!important;align-items:center!important}
+  .broadcast-strip,.sports-ticker{display:none!important}
+  .broadcast-status{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .status-card,.live-data-pill,.card{min-height:auto!important;margin-bottom:10px!important}
+  .section{padding:14px!important;margin-bottom:14px!important;border-radius:12px!important}
+  .section h2{font-size:26px!important;line-height:1.05!important;margin:4px 0 10px!important}
+  .section h3{font-size:19px!important;line-height:1.12!important}
+  .hero{padding:18px 12px!important}
+  .hero h1{font-size:34px!important;line-height:1!important}
+  .hero p,.sponsor-lead,.bio-lead{font-size:15px!important;line-height:1.5!important}
+  .grid,.grid-2,.grid-3,.grid-4,.video-grid,.personal-video-grid,.broadcast-grid,.live-data-strip{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+  .mini-chart{display:none!important}
+  .bar-wrap{height:10px!important;margin:6px 0 10px!important}
+  .stat{font-size:28px!important}
+  img,.card-img,.product-img{box-shadow:none!important;max-height:240px!important;object-fit:contain!important}
+  .video-frame,.personal-video-frame{border-radius:12px!important;box-shadow:none!important}
+  .personal-video-frame{max-height:70vh!important;margin:auto!important}
+  iframe,video{max-width:100%!important}
+  .homepage-note,.byline,.source,.editor-note{font-size:13px!important;line-height:1.5!important;padding:10px!important}
+}
+@media(max-width:420px){
+  .title{font-size:21px!important}
+  .hero h1{font-size:30px!important}
+  .section h2{font-size:23px!important}
+  .broadcast-status{grid-template-columns:1fr!important}
+  .button{width:100%!important;text-align:center!important;justify-content:center!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
 </style>
 </head>
 <body class="breaking-live">
