@@ -396,80 +396,77 @@ body{line-height:1.45}.container{padding-top:18px}.header{padding-top:16px}.sect
 </script>
 
 <script>
-/* REAL TOPIC IMAGES FOR CARDS */
+/* OFFICIAL SOURCE IMAGES FOR CARDS */
 (function(){
-  var fallback='https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1000&q=88';
-  var photos={
-    newsroom:'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1000&q=88',
-    hazmat:'https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1000&q=88',
-    weather:'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1000&q=88',
-    ocean:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=88',
-    police:'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=1000&q=88',
-    food:'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=88',
-    lab:'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1000&q=88',
-    money:'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1000&q=88',
-    economy:'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1000&q=88',
-    jobs:'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=88',
-    housing:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=88',
-    markets:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=88',
-    trade:'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1000&q=88',
-    sports:'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=88',
-    defense:'https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=1000&q=88',
-    whitehouse:'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1000&q=88',
-    atlanticcity:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=88',
-    faith:'https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1000&q=88',
-    merch:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=88',
-    video:'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=88',
-    entertainment:'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=88',
-    sponsor:'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=88',
-    mission:'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1000&q=88',
-    tips:'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1000&q=88',
-    documents:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=88',
-    earth:'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1000&q=88',
-    paddle:'https://somerspointpaddleclub.com/content/uploads/2022/10/hero-homepage.jpg'
+  var official={
+    bspn:'https://bigrooster32.github.io/blacksheeppatriotsnews/ChatGPT%20Image%20Apr%2027,%202026,%2002_55_07%20PM.png',
+    paddle:'https://somerspointpaddleclub.com/content/uploads/2022/10/hero-homepage.jpg',
+    whitehouse:'https://www.whitehouse.gov/wp-content/uploads/2021/01/wh_social-share.png',
+    cdc:'https://www.cdc.gov/TemplatePackage/4.0/assets/img/cdc-logo.svg',
+    noaa:'https://www.noaa.gov/themes/custom/noaa/images/noaa_digital_logo.svg',
+    weather:'https://www.weather.gov/images/nws/nws_logo.png',
+    treasury:'https://home.treasury.gov/themes/custom/omega_uswds_treasury/logo.svg',
+    bls:'https://www.bls.gov/images/bls_emblem.png',
+    bea:'https://www.bea.gov/themes/custom/beagov/images/BEA_logo.svg',
+    census:'https://www.census.gov/etc.clientlibs/census/clientlibs/census-pattern-library/resources/images/USCENSUS_IDENTITY_SOLO_White_2in_TM.svg',
+    usda:'https://www.usda.gov/themes/custom/usda/img/usda-symbol.svg',
+    fda:'https://www.fda.gov/themes/custom/preview/assets/images/fda-logo.png',
+    fbi:'https://www.fbi.gov/++theme++fbigov.theme/images/fbi_seal_new.png',
+    doj:'https://www.justice.gov/themes/custom/usdoj_uswds/images/doj-logo-main.png',
+    defense:'https://media.defense.gov/2021/Apr/12/2002619416/2000/2000/0/210412-D-ZZ999-001.JPG',
+    centcom:'https://www.centcom.mil/Portals/6/CENTCOM%20Logo.png',
+    visitac:'https://www.visitatlanticcity.com/includes/public/assets/shared/logo.svg',
+    acnj:'https://www.acnj.gov/Content/Images/logo.png',
+    nba:'https://cdn.nba.com/logos/leagues/logo-nba.svg',
+    mlb:'https://www.mlbstatic.com/team-logos/league-on-dark/1.svg',
+    nhl:'https://www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg',
+    nfl:'https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NFL',
+    youtube:'https://www.youtube.com/img/desktop/yt_1200.png',
+    github:'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
   };
   var sectionImages={
-    'daily-brief':photos.newsroom,'breaking':photos.hazmat,'current-update':photos.newsroom,'quality-of-life':photos.housing,'earth-health':photos.earth,'faith':photos.faith,'shop':photos.merch,'articles':photos.newsroom,'crime':photos.police,'food':photos.food,'hantavirus-tracker':photos.lab,'treasury':photos.money,'economy':photos.economy,'jobs':photos.jobs,'housing':photos.housing,'markets':photos.markets,'trade':photos.trade,'today':photos.newsroom,'sports':photos.sports,'defense':photos.defense,'whitehouse':photos.whitehouse,'local':photos.atlanticcity,'conspiracy':photos.documents,'weather':photos.weather,'ocean':photos.ocean,'mission':photos.mission,'tips':photos.tips,'about':photos.newsroom,'standards':photos.documents,'advertise':photos.sponsor,'videos':photos.video,'entertainment':photos.entertainment,'zach-jordan-videos':photos.video,'legal':photos.documents,'broadcast-desk':photos.newsroom
+    'daily-brief':official.bspn,'breaking':official.cdc,'current-update':official.bspn,'quality-of-life':official.noaa,'earth-health':official.noaa,'faith':official.bspn,'shop':official.bspn,'articles':official.bspn,'crime':official.fbi,'food':official.usda,'hantavirus-tracker':official.cdc,'treasury':official.treasury,'economy':official.bea,'jobs':official.bls,'housing':official.census,'markets':official.treasury,'trade':official.census,'today':official.bspn,'sports':official.mlb,'defense':official.defense,'whitehouse':official.whitehouse,'local':official.visitac,'conspiracy':official.doj,'weather':official.weather,'ocean':official.noaa,'mission':official.bspn,'tips':official.bspn,'about':official.bspn,'standards':official.doj,'advertise':official.bspn,'videos':official.youtube,'entertainment':official.youtube,'zach-jordan-videos':official.bspn,'legal':official.doj,'broadcast-desk':official.bspn
   };
   var keywordImages=[
-    [/somers|paddle club|pool club|bay ave/i,photos.paddle],
-    [/weather|forecast|storm|rain|temperature|wind|sunny|cloud/i,photos.weather],
-    [/ocean|marine|tide|surf|beach|coast|harbor|buoy|waves|shore/i,photos.ocean],
-    [/crime|police|safety|doj|fbi|arrest|court|legal|marshal|dea|atf/i,photos.police],
-    [/food|restaurant|grocery|farm|crop|livestock|recall|seafood|subs|steak|oyster|kitchen|chef|dining|menu/i,photos.food],
-    [/hanta|virus|ebola|health|cdc|doctor|medical|disease|laboratory|prevention|quarantine/i,photos.lab],
-    [/treasury|debt|cash|money|finance|fiscal|auction|ofac|receipts|outlays/i,photos.money],
-    [/economy|gdp|cpi|inflation|payroll|wage|trade gap|household|consumer/i,photos.economy],
-    [/job|work|hiring|worker|employment|claims|labor|restaurant lane/i,photos.jobs],
-    [/housing|mortgage|rent|home|real estate|insurance|buyer/i,photos.housing],
-    [/market|spy|qqq|dia|stock|investor|rates|oil|energy/i,photos.markets],
-    [/trade|shipping|imports|exports|ports|cargo|tariff|supply chain|chokepoint/i,photos.trade],
-    [/sport|mlb|nba|nhl|nfl|ufc|phillies|sixers|flyers|baseball|hockey/i,photos.sports],
-    [/military|defense|navy|centcom|hormuz|sanctions|tankers|dod/i,photos.defense],
-    [/white house|briefing|federal|policy|government|executive/i,photos.whitehouse],
-    [/atlantic city|boardwalk|tourism|airshow|local|somers point|city updates/i,photos.atlanticcity],
-    [/faith|god|scripture|prayer|encouragement|church|gratitude/i,photos.faith],
-    [/merch|shop|shirt|hoodie|apparel|gear|product/i,photos.merch],
-    [/article|journalism|news|breaking|daily brief|briefing|source board|read/i,photos.newsroom],
-    [/video|youtube|movie|entertainment|comedy|podcast|trailer|broadcast/i,photos.video],
-    [/sponsor|advertise|business|partner|placement|media kit|supporter/i,photos.sponsor],
-    [/mission|truth|accountability|independent|principles/i,photos.mission],
-    [/tip|contact|email|phone|text/i,photos.tips],
-    [/conspiracy|investigation|evidence|documents|records|analysis|surveillance/i,photos.documents],
-    [/earth|climate|quake|space|volcano|ecosystem|co2|sea level/i,photos.earth],
-    [/legal|disclaimer|standards|corrections|public records/i,photos.documents]
+    [/somers|paddle club|pool club|bay ave/i,official.paddle],
+    [/weather|forecast|storm|rain|temperature|wind|sunny|cloud/i,official.weather],
+    [/ocean|marine|tide|surf|beach|coast|harbor|buoy|waves|shore/i,official.noaa],
+    [/crime|fbi|arrest|property crime|violent crime/i,official.fbi],
+    [/doj|justice|legal|court|public records|corrections|standards/i,official.doj],
+    [/food|usda|farm|crop|livestock|market news|food supply/i,official.usda],
+    [/fda|recall|fsis|medical food/i,official.fda],
+    [/hanta|virus|ebola|health|cdc|doctor|medical|disease|laboratory|prevention|quarantine/i,official.cdc],
+    [/treasury|debt|cash|fiscal|auction|ofac|receipts|outlays/i,official.treasury],
+    [/economy|gdp|bea|growth/i,official.bea],
+    [/cpi|inflation|payroll|wage|job|work|hiring|worker|employment|claims|labor|bls/i,official.bls],
+    [/housing|mortgage|rent|home|real estate|insurance|buyer|census/i,official.census],
+    [/trade|imports|exports|trade gap|census/i,official.census],
+    [/market|spy|qqq|dia|stock|investor|rates|money/i,official.treasury],
+    [/shipping|ports|cargo|tariff|supply chain|chokepoint/i,official.census],
+    [/mlb|baseball|phillies/i,official.mlb],
+    [/nba|sixers|basketball/i,official.nba],
+    [/nhl|flyers|hockey/i,official.nhl],
+    [/nfl|football|eagles/i,official.nfl],
+    [/sport|ufc|scores|stadium/i,official.mlb],
+    [/military|defense|navy|dod|hormuz|tankers/i,official.defense],
+    [/centcom|sanctions|regional stability/i,official.centcom],
+    [/white house|briefing|federal|policy|government|executive/i,official.whitehouse],
+    [/atlantic city|boardwalk|tourism|airshow|visit atlantic city/i,official.visitac],
+    [/city updates|acnj|local notices/i,official.acnj],
+    [/video|youtube|movie|entertainment|comedy|podcast|trailer|broadcast/i,official.youtube],
+    [/mission|truth|accountability|independent|faith|god|scripture|prayer|encouragement|church|gratitude|sponsor|advertise|business|partner|placement|media kit|tip|contact|email|phone|text|article|journalism|news|daily brief|briefing|source board|read|merch|shop|shirt|hoodie|apparel|gear|product/i,official.bspn]
   ];
   function pick(card){
     var text=(card.textContent||'').toLowerCase();
     for(var i=0;i<keywordImages.length;i++){if(keywordImages[i][0].test(text))return keywordImages[i][1];}
     var section=card.closest('.section[id]');
-    return sectionImages[section&&section.id]||fallback;
+    return sectionImages[section&&section.id]||official.bspn;
   }
   function cardImage(card){
     if(card.querySelector('img,.auto-card-image,video,iframe'))return;
     if(card.classList.contains('live-data-pill')||card.classList.contains('data-pill'))return;
     var img=document.createElement('div');
-    img.className='auto-card-image';
+    img.className='auto-card-image official-card-image';
     img.style.backgroundImage='url("'+pick(card)+'")';
     img.setAttribute('aria-hidden','true');
     card.insertBefore(img,card.firstChild);
