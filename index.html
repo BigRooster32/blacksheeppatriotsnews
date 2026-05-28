@@ -398,51 +398,84 @@ body{line-height:1.45}.container{padding-top:18px}.header{padding-top:16px}.sect
 <script>
 /* THEMED IMAGE BANNERS FOR CARDS */
 (function(){
-  var fallback='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=70';
-  var images={
-    'daily-brief':'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=70',
-    'breaking':'https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=70',
-    'current-update':'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=70',
-    'quality-of-life':'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=70',
-    'earth-health':'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=70',
-    'faith':'https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=70',
-    'shop':'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=70',
-    'articles':'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=70',
-    'crime':'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=900&q=70',
-    'food':'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=70',
-    'hantavirus-tracker':'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=900&q=70',
-    'treasury':'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=900&q=70',
-    'economy':'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=70',
-    'jobs':'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=70',
-    'housing':'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=70',
-    'markets':'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=70',
-    'trade':'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=70',
-    'today':'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=70',
-    'sports':'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=70',
-    'defense':'https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=900&q=70',
-    'whitehouse':'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=70',
-    'local':'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=70',
-    'conspiracy':'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=70',
-    'weather':'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=900&q=70',
-    'ocean':'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=70',
-    'mission':'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=70',
-    'tips':'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=70',
-    'about':'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=70',
-    'standards':'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70',
-    'advertise':'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=70',
-    'videos':'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=70',
-    'entertainment':'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=70',
-    'zach-jordan-videos':'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=70',
-    'legal':'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=70'
+  function unsplash(query){return 'https://source.unsplash.com/900x500/?'+encodeURIComponent(query);}
+  var sectionImages={
+    'daily-brief':'newspaper newsroom briefing',
+    'breaking':'hazmat emergency response',
+    'current-update':'breaking news control room',
+    'quality-of-life':'american neighborhood family home',
+    'earth-health':'planet earth from space climate',
+    'faith':'church cross sunrise',
+    'shop':'patriotic apparel store',
+    'articles':'newspaper journalism desk',
+    'crime':'police lights public safety',
+    'food':'fresh food supply chain market',
+    'hantavirus-tracker':'public health laboratory microscope',
+    'treasury':'us treasury money finance',
+    'economy':'economic chart business finance',
+    'jobs':'workers hiring restaurant kitchen',
+    'housing':'new jersey homes real estate',
+    'markets':'stock market trading screen',
+    'trade':'cargo ship port containers',
+    'today':'newsroom dashboard screens',
+    'sports':'stadium sports action',
+    'defense':'military ship ocean defense',
+    'whitehouse':'white house washington dc',
+    'local':'atlantic city boardwalk beach',
+    'conspiracy':'documents investigation evidence board',
+    'weather':'storm clouds weather radar',
+    'ocean':'ocean waves beach coastline',
+    'mission':'american flag community journalism',
+    'tips':'journalist laptop phone tipline',
+    'about':'independent journalist camera',
+    'standards':'court documents public records',
+    'advertise':'small business storefront sponsor',
+    'videos':'video camera production studio',
+    'entertainment':'movie theater comedy stage',
+    'zach-jordan-videos':'friends video camera memory',
+    'legal':'law books courthouse',
+    'broadcast-desk':'broadcast news studio'
   };
+  var keywordImages=[
+    [/somers|paddle club|pool club|bay ave/i,'private pool club restaurant marina'],
+    [/weather|forecast|storm|rain|temperature|wind/i,'weather forecast storm clouds'],
+    [/ocean|marine|tide|surf|beach|coast|harbor|buoy/i,'ocean waves coastline'],
+    [/crime|police|safety|doj|fbi|arrest|court|legal/i,'police public safety lights'],
+    [/food|restaurant|grocery|farm|crop|livestock|recall|seafood|subs|steak|oyster|kitchen|chef/i,'restaurant fresh food kitchen'],
+    [/hanta|virus|ebola|health|cdc|doctor|medical|disease|laboratory|prevention/i,'public health laboratory'],
+    [/treasury|debt|cash|money|finance|fiscal|auction|ofac/i,'us money treasury finance'],
+    [/economy|gdp|cpi|inflation|payroll|wage|trade gap|household/i,'economy financial chart'],
+    [/job|work|hiring|worker|employment|claims|labor/i,'workers hiring office restaurant'],
+    [/housing|mortgage|rent|home|real estate|insurance/i,'homes real estate neighborhood'],
+    [/market|spy|qqq|dia|stock|investor|rates|oil/i,'stock market trading screen'],
+    [/trade|shipping|imports|exports|ports|cargo|tariff|supply chain/i,'cargo ship containers port'],
+    [/sport|mlb|nba|nhl|nfl|ufc|phillies|sixers|flyers/i,'sports stadium action'],
+    [/military|defense|navy|centcom|hormuz|sanctions|tankers/i,'military navy ship'],
+    [/white house|briefing|federal|policy|government/i,'white house washington dc'],
+    [/atlantic city|boardwalk|shore|tourism|airshow|local|somers point/i,'atlantic city boardwalk beach'],
+    [/faith|god|scripture|prayer|encouragement|church/i,'church cross sunrise'],
+    [/merch|shop|shirt|hoodie|apparel|gear|product/i,'clothing store apparel'],
+    [/article|journalism|news|breaking|daily brief|briefing|source board/i,'newspaper journalism desk'],
+    [/video|youtube|movie|entertainment|comedy|podcast|trailer|broadcast/i,'video production studio'],
+    [/sponsor|advertise|business|partner|placement|media kit/i,'small business meeting sponsor'],
+    [/mission|truth|accountability|independent/i,'american flag journalist'],
+    [/tip|contact|email|phone|text/i,'phone laptop journalist desk'],
+    [/conspiracy|investigation|evidence|documents|records|analysis/i,'investigation documents evidence'],
+    [/earth|climate|quake|space|volcano|ecosystem/i,'planet earth climate'],
+    [/legal|disclaimer|standards|corrections|public records/i,'law courthouse documents']
+  ];
+  function pick(card){
+    var text=(card.textContent||'').toLowerCase();
+    for(var i=0;i<keywordImages.length;i++){if(keywordImages[i][0].test(text))return unsplash(keywordImages[i][1]);}
+    var section=card.closest('.section[id]');
+    return unsplash(sectionImages[section&&section.id]||'independent news america');
+  }
   function cardImage(card){
     if(card.querySelector('img,.auto-card-image,video,iframe'))return;
     if(card.classList.contains('live-data-pill')||card.classList.contains('data-pill'))return;
-    var section=card.closest('.section[id]');
-    var url=images[section&&section.id]||fallback;
     var img=document.createElement('div');
     img.className='auto-card-image';
-    img.style.backgroundImage='url(\"'+url+'\")';
+    img.style.backgroundImage='url("'+pick(card)+'")';
     img.setAttribute('aria-hidden','true');
     card.insertBefore(img,card.firstChild);
     card.classList.add('has-auto-image');
