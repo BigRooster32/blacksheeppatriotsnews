@@ -117,7 +117,7 @@ body{line-height:1.45}.container{padding-top:18px}.header{padding-top:16px}.sect
 .article-image{margin:18px 0 22px}.article-image img{width:100%;max-height:520px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.45);box-shadow:0 0 22px rgba(0,0,0,.35)}.article-image figcaption{font-size:12px;opacity:.78;margin-top:8px;text-align:center}
 .personal-video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.personal-video-card{min-height:auto}.personal-video-frame{position:relative;width:100%;aspect-ratio:9/16;border:2px solid rgba(255,255,255,.72);border-radius:18px;overflow:hidden;background:#000;box-shadow:0 0 18px rgba(0,87,255,.24),0 0 14px rgba(176,0,0,.18)}.personal-video-frame video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
 .us-contact-map{position:relative;min-height:360px;margin:16px 0 18px;padding:18px;border:1px solid rgba(255,255,255,.45);border-radius:16px;background:linear-gradient(135deg,rgba(0,0,0,.38),rgba(0,36,90,.24));overflow:hidden}.us-contact-map::before{content:"USA Exposure Monitoring Map";position:absolute;left:18px;top:14px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);font-size:12px}.state-dot{position:absolute;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;border:2px solid rgba(255,255,255,.78);box-shadow:0 0 16px rgba(255,255,255,.18);font-weight:900;text-align:center;font-size:13px;line-height:1}.state-dot small{display:block;font-size:10px;opacity:.9;margin-top:3px}.state-monitor{background:rgba(255,145,0,.82)}.state-care{background:rgba(0,120,255,.82)}.state-local{background:rgba(255,215,0,.88);color:#111}.state-info{background:rgba(115,115,115,.52)}.state-ca{left:7%;top:45%}.state-ne{left:44%;top:43%}.state-ks{left:47%;top:56%}.state-mn{left:52%;top:30%}.state-il{left:58%;top:47%}.state-ga{left:70%;top:66%}.state-nj{left:87%;top:36%}.map-legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}.legend-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:7px 10px;background:rgba(0,0,0,.22);font-size:12px;font-weight:900;text-transform:uppercase}.legend-swatch{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.8)}@media(max-width:768px){.us-contact-map{min-height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-top:44px}.state-dot{position:static;width:100%;height:58px;border-radius:12px}.us-contact-map::before{top:12px}.map-legend{display:grid;grid-template-columns:1fr;gap:8px}}
-.section-share-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px}.share-x-button{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.72);border-radius:999px;padding:7px 12px;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,87,255,.65));color:#fff!important;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;box-shadow:0 0 12px rgba(0,87,255,.22)}.share-x-button:hover{background:linear-gradient(90deg,#000,#fff,#0057ff)!important;color:#000!important}
+.section-share-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px}.share-x-button{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.72);border-radius:999px;padding:7px 12px;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,87,255,.65));color:#fff!important;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;box-shadow:0 0 12px rgba(0,87,255,.22)}.share-x-button:hover{background:linear-gradient(90deg,#000,#fff,#0057ff)!important;color:#000!important}.auto-card-image{height:132px;margin:-2px -2px 14px;border-radius:18px 18px 10px 10px;border:1px solid rgba(255,255,255,.55);background-size:cover;background-position:center;box-shadow:inset 0 -65px 55px rgba(0,0,0,.55),0 0 18px rgba(0,87,255,.18);position:relative;overflow:hidden}.auto-card-image::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(176,0,0,.18),rgba(0,0,0,.08),rgba(0,87,255,.22))}.card.has-auto-image{padding-top:12px}.card.has-auto-image .auto-card-image+span,.card.has-auto-image .auto-card-image+h3{margin-top:0}
 </style>
 </head>
 <body class="breaking-live">
@@ -392,6 +392,63 @@ body{line-height:1.45}.container{padding-top:18px}.header{padding-top:16px}.sect
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateEarthHealth);else updateEarthHealth();
   setInterval(updateEarthHealth,600000);
+})();
+</script>
+
+<script>
+/* THEMED IMAGE BANNERS FOR CARDS */
+(function(){
+  var fallback='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=70';
+  var images={
+    'daily-brief':'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=70',
+    'breaking':'https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=70',
+    'current-update':'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=70',
+    'quality-of-life':'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=70',
+    'earth-health':'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=70',
+    'faith':'https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=70',
+    'shop':'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=70',
+    'articles':'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=70',
+    'crime':'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=900&q=70',
+    'food':'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=70',
+    'hantavirus-tracker':'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=900&q=70',
+    'treasury':'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=900&q=70',
+    'economy':'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=70',
+    'jobs':'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=70',
+    'housing':'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=70',
+    'markets':'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=70',
+    'trade':'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=70',
+    'today':'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=70',
+    'sports':'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=70',
+    'defense':'https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=900&q=70',
+    'whitehouse':'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=70',
+    'local':'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=70',
+    'conspiracy':'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=70',
+    'weather':'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=900&q=70',
+    'ocean':'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=70',
+    'mission':'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=70',
+    'tips':'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=70',
+    'about':'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=70',
+    'standards':'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=70',
+    'advertise':'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=70',
+    'videos':'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=70',
+    'entertainment':'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=70',
+    'zach-jordan-videos':'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=70',
+    'legal':'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=70'
+  };
+  function cardImage(card){
+    if(card.querySelector('img,.auto-card-image,video,iframe'))return;
+    if(card.classList.contains('live-data-pill')||card.classList.contains('data-pill'))return;
+    var section=card.closest('.section[id]');
+    var url=images[section&&section.id]||fallback;
+    var img=document.createElement('div');
+    img.className='auto-card-image';
+    img.style.backgroundImage='url(\"'+url+'\")';
+    img.setAttribute('aria-hidden','true');
+    card.insertBefore(img,card.firstChild);
+    card.classList.add('has-auto-image');
+  }
+  function run(){document.querySelectorAll('.section[id] .card').forEach(cardImage);}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
 })();
 </script>
 
